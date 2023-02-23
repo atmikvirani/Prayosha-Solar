@@ -1,0 +1,22 @@
+<label for="password">Password:</label>
+<input type="password" id="password" name="password">
+<label for="confirmPassword">Confirm Password:</label>
+<input type="password" id="confirmPassword" name="confirmPassword">
+<p id="message"></p>
+
+<script>
+const password = document.getElementById('password');
+const confirmPassword = document.getElementById('confirmPassword');
+const message = document.getElementById('message');
+
+password.addEventListener('keyup', validate);
+confirmPassword.addEventListener('keyup', validate);
+
+function validate() {
+  if (password.value != confirmPassword.value) {
+    message.innerHTML = "Passwords do not match";
+  } else {
+    message.innerHTML = "Passwords Matched!";
+  }
+}
+</script>

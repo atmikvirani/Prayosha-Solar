@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Project:  Typhoon - Solar Energy HTML Template
+Project:  Prayosha Solar HTML
 Version:  1.0.0
 Author:   Atmik X Prapti
 
@@ -39,6 +39,7 @@ Author:   Atmik X Prapti
     <link rel="shortcut icon" type="image/icon" href="images/favicon.png" />
 </head>
 
+
 <body>
     <div class="login_main_wrapper res_main_wrapper">
         <div class="container-fluid p-0">
@@ -56,61 +57,66 @@ Author:   Atmik X Prapti
                                 <div class="sw_left_heading_wraper sw_dark_heading_wraper">
                                     <h1>Register</h1>
                                     <img src="images/heading_line.png" alt="title">
-                                    <p>Donec quis magna sit amet risus vulputate maximus eget eget arcu. Praesent sed
-                                        molestie tortor. </p>
                                 </div>
                                 <div class="row">
-                                    <form>
+                                    <form action="regdb.php" method="post">
                                         <div class="cont_main_section">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="contect_form1">
-                                                    <input type="text" name="full_name" placeholder="Username*"
-                                                        class="require">
+                                                    <input type="text" name="txtuser" placeholder="Username*"
+                                                        class="require" required title="Enter Username">
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="contect_form1">
-                                                    <input type="email" name="full_name" placeholder="Enter Email*"
-                                                        class="require">
+                                                    <input type="email" name="txtemail" placeholder="Enter Email*"
+                                                        class="require" required title="Enter Email">
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="contect_form1">
-                                                    <input type="password" name="Password" placeholder="Password*"
+                                                    <input type="password" name="txtpass" placeholder="Password*"
                                                         class="require" data-valid="email"
-                                                        data-error="Email should be valid.">
+                                                        data-error="Email should be valid." id="password" required
+                                                        title="Enter Password">
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="contect_form1">
-                                                    <input type="password" name="Password" placeholder="Confirm Password*"
-                                                        class="require" data-valid="email"
-                                                        data-error="Email should be valid.">
+                                                    <input type="password" name="txtcpass"
+                                                        placeholder="Confirm Password*" class="require"
+                                                        data-valid="email" data-error="Email should be valid."
+                                                        id="confirmPassword" required title="Re-Enter Password">
                                                 </div>
-                                            </div>
+                                                <div id="message"></div>
+                                            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input type="checkbox" class="none" onclick="myFunction()" id="show" />
+                                            <label for="show">Show Password</label>
                                             <ul>
-                                                <li>
+                                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                     <input type="checkbox" name="" id="check">
-                                                    <label for="check">Yes, I understand and agree
-                                                        <a href="javascript:;" class="text-color">Terms &amp; Conditions.</a>    
+                                                    <label for="check" required
+                                                        title="You need to accept Terms &amp; Conditions">Yes, I
+                                                        understand and agree
+                                                        <a href="javascript:;" class="text-color">Terms &amp;
+                                                            Conditions.</a>
                                                     </label>
                                                 </li>
                                             </ul>
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="buttons">
-                                                    <a href="javascript:;" class="form-btn">Signin</a>
+                                                    <input type="submit" value="Signin" class="form-btn" name="submit" id="submit" disabled>
 
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12">
-                                                <div class="login-sec">
-                                                    <span>Already have an account</span>
-                                                <a href="login.html"> Login Now</a>
-                                                </div>
-                                            </div>
-                                         
-                                        </div>
                                     </form>
+                                    <div class="col-lg-12">
+                                        <div class="login-sec">
+                                            <span>Already have an account?</span>
+                                            <u><a href="login.html"> Login Now.</a></u>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -118,6 +124,7 @@ Author:   Atmik X Prapti
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -139,5 +146,56 @@ Author:   Atmik X Prapti
 
     <!--js code-->
 </body>
+<script>
+    // show password
+    function myFunction() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+        var x = document.getElementById("confirmPassword");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+
+    // password match   
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirmPassword');
+    const message = document.getElementById('message');
+
+    password.addEventListener('keyup', validate);
+    confirmPassword.addEventListener('keyup', validate);
+
+    function validate() {
+        if (password.value != confirmPassword.value) {
+            message.innerHTML = "Passwords do not match";
+            // document.getElementById("submit").disabled = false;
+        } else {
+            message.innerHTML = "";
+        }
+    }
+    
+    // if password and confirm password is matching then allow user to submit
+    const passwordInput = document.getElementById('password');
+    const confirmPasswordInput = document.getElementById('confirmPassword');
+    const submitBtn = document.getElementById('submit');
+
+
+    function checkPasswords() {
+        if (passwordInput.value === confirmPasswordInput.value) {
+            submitBtn.disabled = false;
+        } else {
+            submitBtn.disabled = true;
+        }
+    }
+    passwordInput.addEventListener('input', checkPasswords);
+    confirmPasswordInput.addEventListener('input', checkPasswords);
+    
+</script>
 
 </html>

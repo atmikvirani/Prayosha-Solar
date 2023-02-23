@@ -1,7 +1,7 @@
 /***************-----------------------***********************
 [Master Stylesheet]
 
-Project:  Typhoon - Solar Energy HTML Template
+Project:  Prayosha Solar HTML
 Version:  1.0.0
 Author:   Atmik X Prapti
 -----------------********************-------------------
@@ -37,8 +37,8 @@ html {
     font-weight: 400;
     font-size: 16px;
     color: #6b84ad;
-	overflow-x:hidden;
-	background:#fff !important;
+    overflow-x:hidden;
+    background:#fff !important;
 }
 
 
@@ -7167,7 +7167,7 @@ nav ul li:nth-child(9) > ul {
 .sw_contact_form_wrapper.sw_contact_form_padder.login_form_wrapper ul li label{
     color: #111111;
     font-weight: 400;
-    padding-left: 25px;
+    padding-left: 21px;
 }
 .sw_contact_form_wrapper.sw_contact_form_padder.login_form_wrapper ul li a{
     color: #111111;

@@ -6182,7 +6182,7 @@ form p:last-child {
 
 [type="checkbox"]:not(:checked) + label, [type="checkbox"]:checked + label {
   position: relative;
-  padding-left: 35px;
+  padding-left: 23px;
   cursor: pointer;
   display: inline-block;
   height: 25px;
@@ -6195,14 +6195,15 @@ form p:last-child {
   -khtml-user-select: none;
   /* webkit (konqueror) browsers */
   -ms-user-select: none;
-  /* IE10+ */ }
+  /* IE10+ */
+  }
 
 /* checkbox aspect */
 [type="checkbox"] + label:before {
   content: '';
   position: absolute;
   margin-top: 2px;
-  left: 0;
+  left: 2px;
   z-index: 0;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -6212,7 +6213,8 @@ form p:last-child {
   -moz-transition: 0.2s;
   -o-transition: 0.2s;
   -ms-transition: 0.2s;
-  transition: 0.2s; }
+  transition: 0.2s;
+  }
 
 /* Unchecked styles */
 [type="checkbox"]:not(:checked) + label:before {
@@ -6223,9 +6225,9 @@ form p:last-child {
 
 /* Checked styles */
 [type="checkbox"]:checked + label:before {
-  left: -3px;
-  top: -4px;
-  width: 12px;
+  left: -6px;
+  top: -5px;
+  width: 10px;
   height: 22px;
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
@@ -6241,7 +6243,8 @@ form p:last-child {
   -moz-transform-origin: 100% 100%;
   -ms-transform-origin: 100% 100%;
   -o-transform-origin: 100% 100%;
-  transform-origin: 100% 100%; }
+  transform-origin: 100% 100%;
+  }
 
 /* disabled checkbox */
 [type="checkbox"]:disabled:not(:checked) + label:before {
