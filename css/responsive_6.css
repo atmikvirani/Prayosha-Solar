@@ -78,12 +78,12 @@
     .tc_login_btn {
         left: -20px;
     }
-    .et_search_bar i {
+    /* .et_search_bar i {
         left: -14px;
     }
     .et_search_box {
         right: 21%;
-    }
+    } */
     nav > ul > li > a {
         padding-left: 10px;
         padding-right: 8px;

@@ -461,7 +461,7 @@ nav ul li.active {
     line-height: 18px;
 }
 /********-------------search css start---------***********/
-.et_search_bar a {
+/* .et_search_bar a {
     float: right;
     width: auto;
     text-align: center;
@@ -565,7 +565,7 @@ nav ul li.active {
 }
 .et_navbar_search_wrapper {
     float: none;
-}
+} */
 .tc_login_btn {
     display: inline-block;
     position: relative;

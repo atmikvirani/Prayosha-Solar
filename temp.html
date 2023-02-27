@@ -1,4 +1,4 @@
-<label for="password">Password:</label>
+<!-- <label for="password">Password:</label>
 <input type="password" id="password" name="password">
 <label for="confirmPassword">Confirm Password:</label>
 <input type="password" id="confirmPassword" name="confirmPassword">
@@ -19,4 +19,39 @@ function validate() {
     message.innerHTML = "Passwords Matched!";
   }
 }
+</script> -->
+
+<input id="search-input" type="text" placeholder="Search...">
+<button id="search-button" type="button">Search</button>
+<div id="search-results"></div>
+
+<script>
+  const searchInput = document.getElementById('search-input');
+const searchButton = document.getElementById('search-button');
+const searchResults = document.getElementById('search-results');
+
+searchButton.addEventListener('click', () => {
+  const query = searchInput.value.trim().toLowerCase();
+  if (query !== '') {
+    searchResults.innerHTML = '';
+    let count = 0;
+    const elements = document.querySelectorAll('*:not(script):not(style)');
+    elements.forEach(element => {
+      const text = element.textContent.trim().toLowerCase();
+      if (text.includes(query)) {
+        count++;
+        const searchResult = document.createElement('div');
+        searchResult.innerHTML = `<span>${count}. </span><a href="#${element.id}">${text}</a>`;
+        searchResults.appendChild(searchResult);
+      }
+    });
+    if (count === 0) {
+      const searchResult = document.createElement('div');
+      searchResult.textContent = 'No results found';
+      searchResults.appendChild(searchResult);
+    }
+  }
+});
+
 </script>
+hello Atmik
