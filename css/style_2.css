@@ -1791,7 +1791,7 @@ margin-top: 15px;
 }
 .abotus_content {
     float: left;
-    width: 90%;
+    width: 100  %;
 }
 .abotus_content {
     padding-bottom: 10px;
@@ -1890,7 +1890,7 @@ margin-top: 15px;
     font-size: 20px;
 }
 .wrapper_second_useful_2 ul li a {
-    text-transform: lowercase;
+    text-transform: initial;
 }
 .wrapper_second_useful_2 li h1{
 	font-size:38px;
