@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['submit'])){
-    
+    session_start();    
     $user=$_POST['txtuser'];
     $pass=md5($_POST['txtpass']);
     $conn=mysqli_connect("localhost","root","","project");
@@ -16,8 +16,11 @@ if(isset($_POST['submit'])){
         include "login.html";
     }
     else
-        // Header("Location: ./home.php");
+    
     {    
+        // $row= mysqli_fetch_array($result);
+        $_SESSION['user']=$row['email'];
+        // echo $query;
         header("Location: ./index.html");
     }
 }

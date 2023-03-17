@@ -40,6 +40,9 @@ Author:   Atmik X Prapti
 </head>
 
 <body>
+    <?php
+        session_start();
+    ?>
     <!-- preloader Start -->
     <div id="preloader">
         <div id="status">
@@ -126,11 +129,14 @@ Author:   Atmik X Prapti
                             <li><a href="shop.html" title="">shop</a>
                             </li>
                             <li><a href="contact_us.html" title="">Contact us</a>
+                                
                             </li>
+
                             <li class="caret_btn">
                                 <a href="javascript:;"><i class="fa-regular fa-user"></i></a>
                                 <ul>
-                                    <li>
+                                    
+                                    <!-- <li>
                                         <div class="cc_cart_wrapper1 menu-button">
                                             <div class="cc_cart_img_wrapper">
                                                 <img src="images/cart_1.png" alt="cart_img" />
@@ -175,7 +181,7 @@ Author:   Atmik X Prapti
                                                 class="waves-effect waves-purple  waves-ripple">checkout</a>
 
                                         </div>
-                                    </li>
+                                    </li> -->
 
                                 </ul>
                             </li>
@@ -336,10 +342,11 @@ Author:   Atmik X Prapti
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="content">
-
+                                            
                                             <h2 data-animation="animated fadeInUp">Gujarat's biggest bidder</h2>
                                             <p data-animation="animated fadeInUp">Prayosha Solar is the Gujarat's
                                                 Biggest Bid taker for household projects in the year 2023-24.</p>
+                                                <?php hi ?>
                                             <div data-animation="animated fadeInUp" class="disc_btn slider_btn">
                                                 <!-- <ul>
                                                         <li>
