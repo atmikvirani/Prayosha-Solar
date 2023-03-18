@@ -1,10 +1,10 @@
 <?php
 if(isset($_POST['submit'])){
     session_start();    
-    $user=$_POST['txtuser'];
+    $email=$_POST['txtemail'];
     $pass=md5($_POST['txtpass']);
     $conn=mysqli_connect("localhost","root","","project");
-    $query="select * from regdb where username='$user' and password='$pass'";
+    $query="select * from regdb where email='$email' and password='$pass'";
     $result=mysqli_query($conn,$query);
     $row= mysqli_fetch_array($result);
 
@@ -17,14 +17,15 @@ if(isset($_POST['submit'])){
     }
     else
     
-    {    
-        // $row= mysqli_fetch_array($result);
-        $_SESSION['user']=$row['email'];
-        // echo $query;
-        header("Location: ./index.html");
+    {   
+        $_SESSION['uid']=$row['id'];
+        $_SESSION['user']=$row['username'];
+        $_SESSION['email']=$row['email'];
+        $_SESSION['status']=$row['stat'];
+        header("Location: ./index.php");
     }
 }
 else{
-    header("Location: ./index.html");
+    header("Location: ./index.php");
 }
 ?>

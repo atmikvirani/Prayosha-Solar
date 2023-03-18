@@ -57,16 +57,16 @@ Author:   Atmik X Prapti
                 <div class="main-menu-wrapper clear-fix">
 
                     <div class="logo float-left">
-                        <a href="index.html"><img src="images/inner_logo.png" class="img-responsive" alt="logo"></a>
+                        <a href="index.php"><img src="images/inner_logo.png" class="img-responsive" alt="logo"></a>
                     </div>
 
                 </div>
                 <div class="sc_navigation hidden-sm hidden-xs">
                     <nav id="primary-nav" class="dropdown nav_left_margin">
                         <ul class="dropdown menu navigation cart_dropdown_wrapper" style="left:35px;top:3px">
-                            <li><a href="index.html" title="">Home</a>
+                            <li><a href="index.php" title="">Home</a>
                                 <ul>
-                                    <li class="dropdown_hover"><a href="index.html" title=""> home 1</a></li>
+                                    <li class="dropdown_hover"><a href="index.php" title=""> home 1</a></li>
                                     <li class="dropdown_hover"><a href="index_2.html" title=""> home 2</a></li>
                                     <li class="dropdown_hover"><a href="index_3.html" title=""> home 3</a></li>
                                     <li class="dropdown_hover"><a href="index_4.html" title=""> home 4</a></li>
@@ -74,9 +74,9 @@ Author:   Atmik X Prapti
                                     <li class="dropdown_hover"><a href="index_6.html" title=""> home 6</a></li>
                                 </ul>
                             </li>
-                            <li><a href="about_us.html" title="">about us</a>
+                            <li><a href="about_us.php" title="">about us</a>
                             </li>
-                            <li><a href="services.html" title="">services</a>
+                            <li><a href="services.php" title="">services</a>
                             </li>
                             <li><a href="project_2.html" title="">projects</a>
                                 <ul>
@@ -90,83 +90,47 @@ Author:   Atmik X Prapti
 
                                 </ul>
                             </li>
-                            <li><a href="team.html" title="">team</a>
+                            <li><a href="team.php" title="">team</a>
                                 <ul>
-                                    <li class="dropdown_hover"><a href="team.html" title=""> team</a></li>
+                                    <li class="dropdown_hover"><a href="team.php" title=""> team</a></li>
                                     <li class="dropdown_hover"><a href="team_details.html" title="">team details</a>
                                     </li>
                                 </ul>
                             </li>
                             <li><a href="blog_single.html" title="">blog</a>
                                 <ul>
-                                    <li class="dropdown_hover"><a href="blog.html" title=""> blog
+                                    <li class="dropdown_hover"><a href="blog.php" title=""> blog
                                             categories</a></li>
                                     <li class="dropdown_hover"><a href="blog_category.html" title=""> blog category</a>
                                     </li>
                                     <li class="dropdown_hover"><a href="blog_single.html" title=""> blog single</a></li>
                                 </ul>
                             </li>
-                            <li><a href="shop.html" title="">shop</a>
+                            <li><a href="shop.php" title="">shop</a>
                                 <ul>
-                                    <li class="dropdown_hover"><a href="shop.html" title="">shop sidebar</a>
+                                    <li class="dropdown_hover"><a href="shop.php" title="">shop sidebar</a>
                                     </li>
                                     <li class="dropdown_hover"><a href="shop_fullwidth.html" title=""> shop
                                             fullwidth</a></li>
                                     <li class="dropdown_hover"><a href="shop_single.html" title=""> shop single</a></li>
-                                    <li class="dropdown_hover"><a href="cart.html" title="">Cart </a></li>
-                                <li class="dropdown_hover"><a href="checkout.html" title=""> Checkout</a></li>
+                                    <li class="dropdown_hover"><a href="cart.php" title="">Cart </a></li>
+                                <li class="dropdown_hover"><a href="checkout.php" title=""> Checkout</a></li>
                                 </ul>
                             </li>
-                            <li><a href="contact_us.html" title="">Contact us</a>
+                            <li><a href="contact_us.php" title="">Contact us</a>
                                         </li>
                             <li class="caret_btn">
                                 <a href="javascript:;"><i class="fa-regular fa-user"></i></a>
                                 <ul>
-                                    <li>
-                                        <div class="cc_cart_wrapper1 menu-button">
-                                            <div class="cc_cart_img_wrapper">
-                                                <img src="images/cart_1.png" alt="cart_img" />
-                                            </div>
-                                            <div class="cc_cart_cont_wrapper">
-                                                <h4><a href="javascript:;">put a title here</a></h4>
-                                                <p>1 <span> $145 </span> </p>
-                                                <h5><i class="fa fa-times"></i></h5>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="cc_cart_wrapper1 menu-button">
-                                            <div class="cc_cart_img_wrapper">
-                                                <img src="images/cart_2.png" alt="cart_img" />
-                                            </div>
-                                            <div class="cc_cart_cont_wrapper">
-                                                <h4><a href="javascript:;">put a title here</a></h4>
-                                                <p>1 <span> $145 </span></p>
-                                                <h5><i class="fa fa-times"></i></h5>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="cc_cart_wrapper1 menu-button">
-                                            <div class="cc_cart_img_wrapper">
-                                                <img src="images/cart_3.png" alt="cart_img" />
-                                            </div>
-                                            <div class="cc_cart_cont_wrapper">
-                                                <h4><a href="javascript:;">put a title here</a></h4>
-                                                <p>1 <span> $145 </span></p>
-                                                <h5><i class="fa fa-times"></i></h5>
-                                            </div>
-                                        </div>
-                                        <div class="btm_cart_wrapper">
-                                            <h5>$450.00</h5>
-                                            <p>3 items</p>
-                                        </div>
-                                        <div class="cart_checkout_btn">
-
-                                            <a href="checkout.html" class="waves-effect waves-light waves-ripple">checkout</a>
-
-                                        </div>
-                                    </li>
+                                    <?php
+                                    session_start();
+                                    if(isset($_SESSION['email'])){  
+                                        echo '<p style="font-weight:625;font-family:Montserrat;text-transform:initial;font-size:15px;">'.'<font style="text-transform:initial;font-size:12px;">'.'hello, '.'</font>'.$_SESSION['user'].'</p>';
+                                    }
+                                    else{
+                                        echo '<p style="font-weight:550;font-family:Montserrat;text-transform:initial;font-size:15px;">'.'<font style="text-transform:initial;color:white;font-size:12px;">'.'<!--hello, --> '.'</font>'.'Guest User'.'</p>';
+                                    }
+                                    ?>
 
                                 </ul>
                             </li>
@@ -193,9 +157,20 @@ Author:   Atmik X Prapti
                                         <a class="dropdown-toggle hvr-float-shadow active waves-effect waves-light"
                                             data-toggle="dropdown" href="javascript:;"><i class="fa fa-ellipsis-v"></i></a>
                                     <ul class="dropdown-menu tc_menu_fixed_border">
-                                            <li class="dropdown_hover"><a href="create_account.html">Create Account</a></li>
-                                            <li class="dropdown_hover"><a href="login.html">Login</a></li>
-                                            <li class="dropdown_hover hidden-lg"><a href="contact_us.html">Free Quote</a></li>
+                                            <?php
+                                                if(isset($_SESSION['email'])){
+                                                    echo '<li class="dropdown_hover"><a href="logout.php">Log Out</a></li>';
+                                                }
+                                                elseif('')
+                                                {
+                                                    echo '<li class="dropdown_hover"><a href="login.html">Login</a></li>';
+                                                    echo '<li class="dropdown_hover"><a href="create_account.html">Create Account</a></li>';
+                                                }
+                                                else{                                                    
+                                                    echo '<li class="dropdown_hover"><a href="login.html">Login</a></li>';
+                                                    echo '<li class="dropdown_hover"><a href="create_account.html">Create Account</a></li>';
+                                                }
+                                            ?>
                                         </ul>
                                     </li>
                                 </ul>
@@ -216,26 +191,38 @@ Author:   Atmik X Prapti
                                 <div class="mobile-menu">
                                     <nav>
                                         <ul class="nav">
-                                            <li><a href="index.html" title="">Home</a>
+                                            <li><a href="index.php" title="">Home</a>
                                             </li>
-                                            <li><a href="about_us.html" title="">about us</a>
+                                            <li><a href="about_us.php" title="">about us</a>
                                             </li>
-                                            <li><a href="services.html" title="">services</a>
+                                            <li><a href="services.php" title="">services</a>
                                             </li>
-                                            <li><a href="project.html" title="">projects</a>
+                                            <li><a href="project.php" title="">projects</a>
                                             </li>
-                                            <li><a href="team.html" title="">team</a>
+                                            <li><a href="team.php" title="">team</a>
                                             </li>
-                                            <li><a href="blog.html" title="">blog</a>
+                                            <li><a href="blog.php" title="">blog</a>
                                             </li>
-                                            <li><a href="shop.html" title="">shop</a>
+                                            <li><a href="shop.php" title="">shop</a>
                                             </li>
-                                            <li><a href="contact_us.html" title="">Contact us</a>
+                                            <li><a href="contact_us.php" title="">Contact us</a>
                                                 
                                             </li>
                                                 </li>
-                                                <li><a href="login.html">Login</a></li>
-                                                <li><a href="create_account.html">Create Account</a></li>
+                                                <?php
+                                                if(isset($_SESSION['email'])){
+                                                    echo '<li class="dropdown_hover"><a href="logout.php">Log Out</a></li>';
+                                                }
+                                                elseif('')
+                                                {
+                                                    echo '<li class="dropdown_hover"><a href="login.html">Login</a></li>';
+                                                    echo '<li class="dropdown_hover"><a href="create_account.html">Create Account</a></li>';
+                                                }
+                                                else{                                                    
+                                                    echo '<li class="dropdown_hover"><a href="login.html">Login</a></li>';
+                                                    echo '<li class="dropdown_hover"><a href="create_account.html">Create Account</a></li>';
+                                                }
+                                            ?>
                                             <li class="caret_btn">
                                                 <a href="javascript:;"><i class="fa-regular fa-user"></i></a>
                                                 <ul>
@@ -280,7 +267,7 @@ Author:   Atmik X Prapti
                                                         </div>
                                                         <div class="cart_checkout_btn">
 
-                                                            <a href="checkout.html#!"
+                                                            <a href="checkout.php#!"
                                                                 class="waves-effect waves-light waves-ripple">checkout</a>
 
                                                         </div>
@@ -306,7 +293,7 @@ Author:   Atmik X Prapti
         <div class="header_btn">
             <ul>
                 <li>
-                    <a href="contact_us.html" class="waves-effect waves-light waves-ripple">free quote</a>
+                    <a href="contact_us.php" class="waves-effect waves-light waves-ripple">free quote</a>
                 </li>
             </ul>
         </div>
@@ -322,7 +309,7 @@ Author:   Atmik X Prapti
 
                         <div class="sub_title_section">
                             <ul class="sub_title">
-                                <li><a href="index.html"> Home </a></li>
+                                <li><a href="index.php"> Home </a></li>
                                 <li>Checkout</li>
                             </ul>
                         </div>
@@ -365,7 +352,7 @@ Author:   Atmik X Prapti
                     <div class="panel-heading checkout_panel_heading">
                         <h4 class="panel-title">
 								<i class="fa fa-user"></i> Have a coupone? 
-                              <a data-toggle="collapse" data-parent="#accordion_oneLeft" href="checkout.html#collapseFiveLeftone" aria-expanded="false">
+                              <a data-toggle="collapse" data-parent="#accordion_oneLeft" href="checkout.php#collapseFiveLeftone" aria-expanded="false">
                              Click here to enter your code
                               </a>
                             </h4>
@@ -393,7 +380,7 @@ Author:   Atmik X Prapti
                     <div class="panel-heading checkout_panel_heading">
                         <h4 class="panel-title">
 								<i class="fa fa-user"></i> Returning customer? 
-                              <a data-toggle="collapse" data-parent="#accordion_oneLeft" href="checkout.html#collapseFiveLefttwo" aria-expanded="false">
+                              <a data-toggle="collapse" data-parent="#accordion_oneLeft" href="checkout.php#collapseFiveLefttwo" aria-expanded="false">
                              Click here to login
                               </a>
                             </h4>
@@ -699,7 +686,7 @@ Author:   Atmik X Prapti
                         <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
                             <div class="wrapper_second_about">
                                 <div class="wrapper_first_image">
-                                    <a href="index.html"><img src="images/hd_logo.png" class="img-responsive"
+                                    <a href="index.php"><img src="images/hd_logo.png" class="img-responsive"
                                             alt="logo" /></a>
                                 </div>
                                 <div class="abotus_content">
@@ -723,15 +710,15 @@ Author:   Atmik X Prapti
                             <h4>useful links </h4>
                             <img src="images/heading_line3.png" alt="title" class="pd_btm_3">
                             <ul>
-                                <li><a href="about_us.html"><i class="fa fa-angle-right"></i>About us</a>
+                                <li><a href="about_us.php"><i class="fa fa-angle-right"></i>About us</a>
                                 </li>
-                                <li><a href="shop.html"><i class="fa fa-angle-right"></i>shop </a>
+                                <li><a href="shop.php"><i class="fa fa-angle-right"></i>shop </a>
                                 </li>
-                                <li><a href="contact_us.html"><i class="fa fa-angle-right"></i>contact </a>
+                                <li><a href="contact_us.php"><i class="fa fa-angle-right"></i>contact </a>
                                 </li>
-                                <li><a href="services.html"><i class="fa fa-angle-right"></i>services</a>
+                                <li><a href="services.php"><i class="fa fa-angle-right"></i>services</a>
                                 </li>
-                                <li><a href="blog.html"><i class="fa fa-angle-right"></i>news</a> </li>
+                                <li><a href="blog.php"><i class="fa fa-angle-right"></i>news</a> </li>
                             </ul>
 
                         </div>
@@ -781,7 +768,7 @@ Author:   Atmik X Prapti
                 </div>
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                     <div class="section3_copyright">
-                        <p>Copyright 2022-23 <a href="index.html"> Prayosha Solar</a>. all right reserved - designed by
+                        <p>Copyright 2022-23 <a href="index.php"> Prayosha Solar</a>. all right reserved - designed by
                             <a href="https://www.linkedin.com/in/atmik-virani-7b7316241/">Atmik X Prapti. </a></p>
                     </div>
                 </div>
