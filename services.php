@@ -605,17 +605,49 @@ Systems</a></h4>
                         <p>Use the form below to get in contact with our services. </p>
                     </div>
                     <div class="row">
-                        <form>
+                        <form action="contact.php" method="post">
                             <div class="cont_main_section">
 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="contect_form1">
-                                        <input type="text" name="full_name" placeholder="Name*" class="require">
+                                    <?php
+                                    
+                                    if(isset($_SESSION['uid']))
+                                    {
+                                        $id=$_SESSION['uid'];
+                                        $conn=mysqli_connect("localhost","root","","project");
+                                        $query="select * from regdb where id=$id";
+                                        $records=mysqli_query($conn,$query);
+                                        $row=mysqli_fetch_array($records);
+                                        echo '<input type="text" name="name" class="require" value="'.$row["username"].'"disabled>';
+                                    }
+                                    else
+                                    {
+                                        echo'<input type="text" name="name" placeholder="Name*" class="require">';
+                                    }
+                                ?>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="contect_form1">
-                                        <input type="email" name="email" placeholder="Email*" class="require" data-valid="email" data-error="Email should be valid.">
+                                    <?php
+                                    
+                                    if(isset($_SESSION['uid']))
+                                    {
+                                        $id=$_SESSION['uid'];
+                                        $conn=mysqli_connect("localhost","root","","project");
+                                        $query="select * from regdb where id=$id";
+                                        $records=mysqli_query($conn,$query);
+                                        $row=mysqli_fetch_array($records);
+                                        echo '<input type="text" name="email" class="require" value="'.$row["email"].'"disabled>';
+                                    }
+                                    else
+                                    {
+                                        echo'<input type="text" name="email"
+                                        placeholder="Email*" class="require" data-valid="email"
+                                        data-error="Email should be valid.">';
+                                    }
+                                ?>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -631,7 +663,7 @@ Systems</a></h4>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="response"></div>
                                     <div class="cntct_2_btn_wrapper">
-                                        <button type="button" class="submitForm waves-effect waves-light waves-ripple">send</button>
+                                        <button type="submit" class="submitForm waves-effect waves-light waves-ripple">send</button>
                                     </div>
                                 </div>
                             </div>

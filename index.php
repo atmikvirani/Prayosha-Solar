@@ -44,11 +44,11 @@ Author:   Atmik X Prapti
 
 <body>
     <!-- preloader Start -->
-    <!-- <div id="preloader">
+    <div id="preloader">
         <div id="status">
             <img src="images/preloader.gif" id="preloader_image" alt="loader">
         </div>
-    </div> -->
+    </div>
     <!-- top header start -->
     <div class="topbar top2 float_left">
         <div class="container-fluid">
