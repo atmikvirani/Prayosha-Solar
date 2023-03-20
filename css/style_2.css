@@ -3386,7 +3386,7 @@ font-weight:400;
     position: relative;
 }
 .main_wrapper_three_content h2 span:last-child{
-	margin-left: -20px;
+	margin-left: -26px;
     z-index: 1;
     position: relative;
 }
@@ -6368,8 +6368,8 @@ nav {
 }
 nav ul li:nth-child(9) > ul {
     right: 5px !important;
-    width: 320px;
-    padding: 20px;
+    width: 150px;
+    padding: 15px;
 }
 .sw_icon_bar ul li ul:after{
 	display:none;
