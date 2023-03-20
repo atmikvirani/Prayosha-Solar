@@ -643,7 +643,7 @@ Author:   Atmik X Prapti
                 <div class="disc_btn ltr_btn">
                     <ul>
                         <li>
-                            <a href="about_us.php#!" class="waves-effect waves-light waves-ripple">ask a question</a>
+                            <a href="contact_us.php#contact-section" class="waves-effect waves-light waves-ripple">ask a question</a>
                         </li>
                     </ul>
 
@@ -756,7 +756,7 @@ Author:   Atmik X Prapti
                             </div>
                             <div class="icon_content_right">
                                 <h4><a href="javascript:;">Used for Many Purposes</a></h4>
-                                <p>Quisque ut nunc elit. Lorem ipsum dolor Sit amet consectetur.</p>
+                                <p>Powering homes, businesses, schools, communities, transportation and agriculture.</p>
                             </div>
                         </div>
                         <div class="chose_icon_wrapper_list">
@@ -767,7 +767,7 @@ Author:   Atmik X Prapti
 
                             <div class="icon_content_right">
                                 <h4><a href="javascript:;">Low Installation Costs</a></h4>
-                                <p>Quisque ut nunc elit. Lorem ipsum dolor Sit amet consectetur.</p>
+                                <p>Advancement in solar technology have resulted in lower installation costs .</p>
                             </div>
                         </div>
                         <div class="chose_icon_wrapper_list">
@@ -777,7 +777,7 @@ Author:   Atmik X Prapti
                             </div>
                             <div class="icon_content_right">
                                 <h4><a href="javascript:;">Easy Installation</a></h4>
-                                <p>Quisque ut nunc elit. Lorem ipsum dolor Sit amet consectetur.</p>
+                                <p>Easy to install, making them convenient and accessible energy.</p>
                             </div>
                         </div>
                     </div>
@@ -792,7 +792,7 @@ Author:   Atmik X Prapti
     </div>
     <!-- sw choose service wrapper end-->
     <!--sw our newsletter wrapper start-->
-    <div class="sw_our_newsletter_wrapper">
+    <!-- <div class="sw_our_newsletter_wrapper">
 
         <div class="container">
             <div class="row">
@@ -820,7 +820,7 @@ Author:   Atmik X Prapti
             </div>
         </div>
 
-    </div>
+    </div> -->
     <!-- sw our newsletter section end-->
     <!-- sw partners section start-->
     <div class="sw_partners_wrapper">

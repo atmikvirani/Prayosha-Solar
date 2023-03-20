@@ -6368,8 +6368,8 @@ nav {
 }
 nav ul li:nth-child(9) > ul {
     right: 5px !important;
-    width: 320px;
-    padding: 20px;
+    width: 150px;
+    padding: 15px;
 }
 .sw_icon_bar ul li ul:after{
 	display:none;

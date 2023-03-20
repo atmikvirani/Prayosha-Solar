@@ -797,7 +797,7 @@ about decarbonising heat?</h5>
     </div>
 
     <!--sw our newsletter wrapper start-->
-    <div class="sw_our_newsletter_wrapper">
+    <!-- <div class="sw_our_newsletter_wrapper">
 
         <div class="container">
             <div class="row">
@@ -825,7 +825,7 @@ about decarbonising heat?</h5>
             </div>
         </div>
 
-    </div>
+    </div> -->
     <!-- sw our newsletter section end-->
     <!-- sw footer section start-->
     <div class="sw_footer_main_wrapper">

@@ -543,7 +543,7 @@ Author:   Atmik X Prapti
     </div>
     <!-- sw project section end-->
     <!--sw our newsletter wrapper start-->
-    <div class="sw_our_newsletter_wrapper">
+    <!-- <div class="sw_our_newsletter_wrapper">
 
         <div class="container">
             <div class="row">
@@ -571,7 +571,7 @@ Author:   Atmik X Prapti
             </div>
         </div>
 
-    </div>
+    </div> -->
     <!-- sw our newsletter section end-->
     <!-- sw footer section start-->
     <div class="sw_footer_main_wrapper">

@@ -301,7 +301,7 @@ Author:   Atmik X Prapti
                                                     else{
                                                         echo '<b><p style="font-weight:550;font-family:Montserrat; text-transform:initial; color:Black; font-size:15px;">'.'<font style="text-transform:initial;color:black;font-size:12px;">'.'<!--hello, --> '.'</font>'.'Guest User'.'</p></b>';
                                                     }
-                                                    ?>
+                                                
                                             ?>
                                             </ul>
                                         </li>

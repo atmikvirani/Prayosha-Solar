@@ -67,11 +67,11 @@ Author:   Atmik X Prapti
 
     ?>
     <!-- preloader Start -->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div id="status">
             <img src="images/preloader.gif" id="preloader_image" alt="loader">
         </div>
-    </div>
+    </div> -->
     <!--sw header wrapper start-->
 
     <div class="transparent-menu header-area hidden-menu-bar stick">
@@ -304,20 +304,51 @@ Author:   Atmik X Prapti
             <div class="holder">
                 <div class=" row">
                     <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                        <form action="contact_us.php">
+                        <form action="contact.php" method="post">
                             <div class="sw_left_heading_wraper">
                                 <h1>Fill Free To Contact Us</h1>
                                 <img src="images/heading_line.png" alt="title">
                                 <p>Use the form below to get in contact with our services.</p>
                             </div>
                             <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" name="full_name" placeholder="Name*" class="require">
+                            <div class="col-md-6">
+                                <?php
+                                    
+                                    if(isset($_SESSION['uid']))
+                                    {
+                                        $id=$_SESSION['uid'];
+                                        $conn=mysqli_connect("localhost","root","","project");
+                                        $query="select * from regdb where id=$id";
+                                        $records=mysqli_query($conn,$query);
+                                        $row=mysqli_fetch_array($records);
+                                        echo '<input type="text" name="name" class="require" value="'.$row["username"].'"disabled>';
+                                    }
+                                    else
+                                    {
+                                        echo'<input type="text" name="name" placeholder="Name*" class="require">';
+                                    }
+                                ?>
                                 </div>
+                                
                                 <div class="col-md-6">
-                                    <input type="text" autocomplete="false" name="hidden" name="email"
+                                <?php
+                                    
+                                    if(isset($_SESSION['uid']))
+                                    {
+                                        $id=$_SESSION['uid'];
+                                        $conn=mysqli_connect("localhost","root","","project");
+                                        $query="select * from regdb where id=$id";
+                                        $records=mysqli_query($conn,$query);
+                                        $row=mysqli_fetch_array($records);
+                                        echo '<input type="text" name="email" class="require" value="'.$row["email"].'"disabled>';
+                                    }
+                                    else
+                                    {
+                                        echo'<input type="text" name="email"
                                         placeholder="Email*" class="require" data-valid="email"
-                                        data-error="Email should be valid.">
+                                        data-error="Email should be valid.">';
+                                    }
+                                ?>
                                 </div>
                                 <div class="col-md-12">
                                     <input type="text" name="subject" placeholder="Subject*">
@@ -330,7 +361,8 @@ Author:   Atmik X Prapti
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="response response_2"></div>
                                     <div class="cntct_2_btn_wrapper cntct_2_btn_inner">
-                                        <button type="button"
+                                        <!-- <input type="submit" class="submitForm waves-effect waves-light waves-ripple" value="SEND"> -->
+                                        <button type="submit"
                                             class="submitForm waves-effect waves-light waves-ripple">send</button>
                                     </div>
                                 </div>
