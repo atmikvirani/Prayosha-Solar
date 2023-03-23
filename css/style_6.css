@@ -1507,7 +1507,7 @@ Close Portfolio page style
     background: url(../images/banner.jpg) 50% 0 repeat-y;
     background-position: center 0;
     background-size: cover;
-    height: 100%;
+    height: auto;
 	float:left;
 	width:100%;
     position: relative;

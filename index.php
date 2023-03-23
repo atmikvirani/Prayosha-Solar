@@ -44,11 +44,11 @@ Author:   Atmik X Prapti
 
 <body>
     <!-- preloader Start -->
-    <!-- <div id="preloader">
+    <div id="preloader">
         <div id="status">
             <img src="images/preloader.gif" id="preloader_image" alt="loader">
         </div>
-    </div> -->
+    </div>
     <!-- top header start -->
     <div class="topbar top2 float_left">
         <div class="container-fluid">
@@ -1130,18 +1130,21 @@ Author:   Atmik X Prapti
         <div class="icon_5">
             <img src="images/icon_5.png" alt="img">
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
-                    <div class="sw_nl_heading_wrapper sw_our_news_txt">
-                        <i class="flaticon-rocket"></i>
-                        <h2>Subscribe Our Newsletter</h2>
-                        <h6>Get the latest News & Offers..</h6>
-
-                        <div class="prs_newsletter_field">
-                            <input type="text" placeholder="Email*">
-                            <button type="submit" class="waves-effect waves-purple waves-ripple">Subscribe</button>
-                        </div>
+        <form action="newsletter.php" method="post">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
+                        <div class="sw_nl_heading_wrapper sw_our_news_txt">
+                            <i class="flaticon-rocket"></i>
+                            <h2>Subscribe Our Newsletter</h2>
+                            <h6>Get the latest News & Offers..</h6>
+                            
+                            <form action="newsletter.php">
+                                <div class="prs_newsletter_field">
+                                    <input type="email" name="txtnews" placeholder="Email*">
+                                    <button type="submit" class="waves-effect waves-purple waves-ripple">Subscribe</button>
+                                </div>
+                            </form>
                         <p>True environmental protection lies in loving the mountains, the oceans and in cher
                             <br> all creation.
                         </p>
