@@ -387,14 +387,14 @@ Systems</a></h4>
                                 <p>Extended Guarantee include the duration, coverage, conditions, cost, and reputation of the manufacturer or warranty provider and ensures the longevity and performance of the solar energy system over the long term.</p>
                             </div>
                         </div>
-                        <div class="disc_btn">
+                        <!-- <div class="disc_btn">
                             <ul>
                                 <li>
                                     <a href="services.php#!" class="waves-effect waves-light waves-ripple">view all</a>
                                 </li>
                             </ul>
 
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>

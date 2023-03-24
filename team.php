@@ -617,7 +617,7 @@ Author:   Atmik X Prapti
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="cart_checkout_btn gallery_II_btn ">
                             <ul>
                                 <li>
@@ -627,7 +627,7 @@ Author:   Atmik X Prapti
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

@@ -463,7 +463,7 @@ Author:   Atmik X Prapti
     </div>
     <!-- sw leads section end-->
     <!--sw best product wrapper start-->
-    <div class="sw_best_product_wrapper">
+    <!-- <div class="sw_best_product_wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
@@ -471,10 +471,10 @@ Author:   Atmik X Prapti
                         <h1>Our Expert Team</h1>
                         <img src="images/heading_line.png" alt="title">
                     </div>
-                </div>
+                </div> -->
 
                 <!-- slider start -->
-                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 sw_spectrm_padding">
+                <!-- <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 sw_spectrm_padding">
                     <div class="best_product_slider_wrapper">
                         <div class="owl-carousel owl-theme">
                             <div class="item">
@@ -627,7 +627,7 @@ Author:   Atmik X Prapti
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--sw best product wrapper end-->
     <!--sw newsletter wrapper start-->
     <div class="sw_news_letter_wrapper">

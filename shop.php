@@ -231,7 +231,7 @@ Author:   Atmik X Prapti
                         <div class="sub_title_section">
                             <ul class="sub_title">
                                 <li><a href="index.php"> Home </a></li>
-                                <li>shop sidebar</li>
+                                <li>shop</li>
                             </ul>
                         </div>
                     </div>

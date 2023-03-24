@@ -232,7 +232,7 @@ Author:   Atmik X Prapti
                         <div class="sub_title_section">
                             <ul class="sub_title">
                                 <li><a href="index.php"> Home </a></li>
-                                <li>blog categories</li>
+                                <li>blog</li>
                             </ul>
                         </div>
                     </div>

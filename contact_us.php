@@ -424,10 +424,12 @@ Author:   Atmik X Prapti
                         <h2>Subscribe Our Newsletter</h2>
                         <h6>Get the latest News & Offers..</h6>
 
-                        <div class="prs_newsletter_field">
-                            <input type="text" placeholder="Email*">
-                            <button type="submit" class="waves-effect waves-light waves-ripple">Submit</button>
-                        </div>
+                        <form action="newsletter.php" method="post">
+                                <div class="prs_newsletter_field">
+                                    <input type="email" name="txtnews" placeholder="Email*">
+                                    <button type="submit" class="waves-effect waves-light waves-ripple">Subscribe</button>
+                                </div>
+                            </form>
                         <p>True environmental protection lies in loving the mountains, the oceans and in cher
                             <br> all creation.
                         </p>

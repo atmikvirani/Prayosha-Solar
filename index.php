@@ -1069,8 +1069,8 @@ Author:   Atmik X Prapti
                                         <div class="cc_li_img_overlay">
                                             <div class="cc_li_img_text">
                                                 <ul>
-                                                    <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a>
-                                                    </li>
+                                                    <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a></li>
+                                                    
                                                     <li><a href="javascript:;"><i class="fa fa-heart"></i></a></li>
 
                                                     <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>
@@ -1130,7 +1130,7 @@ Author:   Atmik X Prapti
         <div class="icon_5">
             <img src="images/icon_5.png" alt="img">
         </div>
-        <form action="newsletter.php" method="post">
+        
             <div class="container">
                 <div class="row">
                     <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
@@ -1139,7 +1139,7 @@ Author:   Atmik X Prapti
                             <h2>Subscribe Our Newsletter</h2>
                             <h6>Get the latest News & Offers..</h6>
                             
-                            <form action="newsletter.php">
+                            <form action="newsletter.php" method="post">
                                 <div class="prs_newsletter_field">
                                     <input type="email" name="txtnews" placeholder="Email*">
                                     <button type="submit" class="waves-effect waves-purple waves-ripple">Subscribe</button>
