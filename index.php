@@ -1069,8 +1069,8 @@ Author:   Atmik X Prapti
                                         <div class="cc_li_img_overlay">
                                             <div class="cc_li_img_text">
                                                 <ul>
-                                                    <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a>
-                                                    </li>
+                                                    <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a></li>
+                                                    
                                                     <li><a href="javascript:;"><i class="fa fa-heart"></i></a></li>
 
                                                     <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>

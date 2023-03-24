@@ -1492,7 +1492,7 @@ nav ul li.active {
 	float:left;
 	width:100%;
 	padding-top:100px;
-	padding-bottom:100px;
+	padding-bottom:25px;
 	background:#f6fbff;
 } 
 .chose_text_wrapper_left{
@@ -1639,7 +1639,7 @@ margin-top: 15px;
 	float: left;
     width: 100%;
 	padding-top:100px;
-	padding-bottom:80px;
+	padding-bottom:50px;
 	background:#f6fbff;
 }
 .partners_slider_wrapper {
