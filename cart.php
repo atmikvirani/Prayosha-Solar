@@ -20,6 +20,7 @@ Author:   Atmik X Prapti
     <meta name="author" content="" />
     <meta name="MobileOptimized" content="320" />
     <!--start theme style -->
+    
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
@@ -36,11 +37,16 @@ Author:   Atmik X Prapti
     <link rel="stylesheet" type="text/css" href="css/camera.css">
     <link rel="stylesheet" type="text/css" href="css/style_2.css" />
     <link rel="stylesheet" type="text/css" href="css/responsive_2.css" />
+    
+    <!-- <script src="angular/angular.js"></script> -->
+    <!-- <script src="script.js"></script>   -->
+    
+
     <!-- favicon link-->
     <link rel="shortcut icon" type="image/icon" href="images/favicon.png" />
 </head>
 
-<body>
+<body ng-app="Items" ng-controller="dispItems">
     <!-- preloader Start -->
     <div id="preloader">
         <div id="status">
@@ -151,7 +157,7 @@ Author:   Atmik X Prapti
                                 <!-- mobile menu start -->
                                 <div class="mobile-menu">
                                     <nav>
-                                        <ul class="nav">
+                                    <ul class="nav">
                                             <li><a href="index.php" title="">Home</a>
                                             </li>
                                             <li><a href="about_us.php" title="">about us</a>
@@ -187,52 +193,14 @@ Author:   Atmik X Prapti
                                             <li class="caret_btn">
                                                 <a href="javascript:;"><i class="fa-regular fa-user"></i></a>
                                                 <ul>
-                                                    <li>
-                                                        <div class="cc_cart_wrapper1 menu-button">
-                                                            <div class="cc_cart_img_wrapper">
-                                                                <img src="images/cart_1.png" alt="cart_img" />
-                                                            </div>
-                                                            <div class="cc_cart_cont_wrapper">
-                                                                <h4><a href="javascript:;">put a title here</a></h4>
-                                                                <p>1 <span> $145 </span> </p>
-                                                                <h5><i class="fa fa-times"></i></h5>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cc_cart_wrapper1 menu-button">
-                                                            <div class="cc_cart_img_wrapper">
-                                                                <img src="images/cart_2.png" alt="cart_img" />
-                                                            </div>
-                                                            <div class="cc_cart_cont_wrapper">
-                                                                <h4><a href="javascript:;">put a title here</a></h4>
-                                                                <p>1 <span> $145 </span></p>
-                                                                <h5><i class="fa fa-times"></i></h5>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="cc_cart_wrapper1 menu-button">
-                                                            <div class="cc_cart_img_wrapper">
-                                                                <img src="images/cart_3.png" alt="cart_img" />
-                                                            </div>
-                                                            <div class="cc_cart_cont_wrapper">
-                                                                <h4><a href="javascript:;">put a title here</a></h4>
-                                                                <p>1 <span> $145 </span></p>
-                                                                <h5><i class="fa fa-times"></i></h5>
-                                                            </div>
-                                                        </div>
-                                                        <div class="btm_cart_wrapper">
-                                                            <h5>$450.00</h5>
-                                                            <p>3 items</p>
-                                                        </div>
-                                                        <div class="cart_checkout_btn">
-
-                                                            <a href="cart.php#!"
-                                                                class="waves-effect waves-light waves-ripple">checkout</a>
-
-                                                        </div>
-                                                    </li>
+                                                    <?php
+                                                    if(isset($_SESSION['email'])){  
+                                                    echo '<b><p style="font-weight:625;font-family:Montserrat;text-transform:initial;color:Black;font-size:15px;">'.'<font style="font-weight:525;text-transform:initial;color:black;font-size:12px;">'.'hello, '.'</font>'.$_SESSION['user'].'</p></b>';
+                                                    }
+                                                    else{
+                                                        echo '<b><p style="font-weight:550;font-family:Montserrat; text-transform:initial; color:Black; font-size:15px;">'.'<font style="text-transform:initial;color:black;font-size:12px;">'.'<!--hello, --> '.'</font>'.'Guest User'.'</p></b>';
+                                                    }
+                                                    ?>
 
                                                 </ul>
                                             </li>
@@ -254,7 +222,7 @@ Author:   Atmik X Prapti
         <div class="header_btn">
             <ul>
                 <li>
-                    <a href="contact_us.php" class="waves-effect waves-light waves-ripple">free quote</a>
+                    <a href="checkout.php" class="waves-effect waves-light waves-ripple">Checkout</a>
                 </li>
             </ul>
         </div>
@@ -281,7 +249,7 @@ Author:   Atmik X Prapti
     </div>
     <!-- page_title_section end -->
     <!--sw about us top start-->
-    <div class="sw_about_top_wrapper">
+    <!-- <div class="sw_about_top_wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
@@ -304,18 +272,18 @@ Author:   Atmik X Prapti
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--sw about us top end-->
     <div class="cart_product_wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="btc_shop_single_prod_right_section shop_product_single_head related_pdt_shop_head">
-                        <h1>Your cart Products (04)</h1>
+                        <h1>Your Cart</h1>
                     </div>
                 </div>
-                <div class="shop_cart_page_wrapper">
-                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <div class="shop_cart_page_wrapper" >
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" >
                         <div class="table-responsive cart-calculations">
                             <table class="table">
 
@@ -333,162 +301,60 @@ Author:   Atmik X Prapti
                                         <th>&nbsp;</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            1
-                                        </td>
-                                        <td>
-                                            <div class="table_cart_img">
-                                                <figure>
-                                                    <img src="images/cart_1.png" alt="" />
-                                                </figure>
-                                            </div>
-                                            <div class="table_cart_cntnt">
-                                                <h1>SolarWorld 280</h1>
-                                                <p>color : black </p>
-                                            </div>
-                                        </td>
-                                        <td></td>
-                                        <td class="cart_page_price">$199.00</td>
-                                        <td>
-                                            <div class="counter">
-                                                <span class="down" onClick='decreaseCount(event, this)'>-</span>
-                                                <input type="text" value="1">
-                                                <span class="up" onClick='increaseCount(event, this)'>+</span>
-                                            </div>
-                                        </td>
-                                        <td class="cart_page_totl">$299.00</td>
-                                        <td>
-                                            <a href="javascript:;"> <i class="fa fa-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            2
-                                        </td>
-                                        <td>
-                                            <div class="table_cart_img">
-                                                <figure>
-                                                    <img src="images/cart_2.png" alt="" />
-                                                </figure>
-                                            </div>
-                                            <div class="table_cart_cntnt">
-                                                <h1>SolarWorld 280</h1>
-                                                <p>color : black </p>
-                                            </div>
-                                        </td>
-                                        <td></td>
-                                        <td class="cart_page_price">$199.00</td>
-                                        <td>
-                                            <div class="counter">
-                                                <span class="down" onClick='decreaseCount(event, this)'>-</span>
-                                                <input type="text" value="1">
-                                                <span class="up" onClick='increaseCount(event, this)'>+</span>
-                                            </div>
-                                        </td>
-                                        <td class="cart_page_totl">$399.00</td>
-                                        <td>
-                                            <a href="javascript:;"> <i class="fa fa-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            3
-                                        </td>
-                                        <td>
-                                            <div class="table_cart_img">
-                                                <figure>
-                                                    <img src="images/cart_3.png" alt="" />
-                                                </figure>
-                                            </div>
-                                            <div class="table_cart_cntnt">
-                                                <h1>SolarWorld 280</h1>
-                                                <p>color : black </p>
-                                            </div>
-                                        </td>
-                                        <td></td>
-                                        <td class="cart_page_price">$99.00</td>
-                                        <td>
-                                            <div class="counter">
-                                                <span class="down" onClick='decreaseCount(event, this)'>-</span>
-                                                <input type="text" value="1">
-                                                <span class="up" onClick='increaseCount(event, this)'>+</span>
-                                            </div>
-                                        </td>
-                                        <td class="cart_page_totl">$199.00</td>
-                                        <td>
-                                            <a href="javascript:;"> <i class="fa fa-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            4
-                                        </td>
-                                        <td>
-                                            <div class="table_cart_img">
-                                                <figure>
-                                                    <img src="images/cart_5.png" alt="" />
-                                                </figure>
-                                            </div>
-                                            <div class="table_cart_cntnt">
-                                                <h1>SolarWorld 280</h1>
-                                                <p>color : black </p>
-                                            </div>
-                                        </td>
-                                        <td></td>
-                                        <td class="cart_page_price">$199.00</td>
-                                        <td>
-                                            <div class="counter">
-                                                <span class="down" onClick='decreaseCount(event, this)'>-</span>
-                                                <input type="text" value="1">
-                                                <span class="up" onClick='increaseCount(event, this)'>+</span>
-                                            </div>
-                                        </td>
-                                        <td class="cart_page_totl">$299.00</td>
-                                        <td>
-                                            <a href="javascript:;"> <i class="fa fa-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
+                                <div id="label"></div>
+                                    
+                                
+                                <tbody id="shopping-cart">
 
-                                        <td> </td>
-                                        <td class="shop_btn_wrapper shop_car_btn_wrapper">
-
-                                            <ul>
-                                                <li><a href="javascript:;">continue shopping</a>
-                                                </li>
-                                            </ul>
-
-                                        </td>
-                                        <td> </td>
-                                        <td> </td>
-                                        <td></td>
-
-                                        <td class="cart_btn_cntnt"> Sub Total : <span>$1192.00 </span> </td>
-                                        <td></td>
-
-                                    </tr>
                                 </tbody>
-                            </table>
-                        </div>
+                            
+                            
+                        <tfoot>
+                            <td><b>Total</b></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td style="text-align: center;"><b><span id="cartAmount"></span></b></td>
+                            <td><b><span id="cartTotal"></span></b></td>
+                            <tr>
+                            <td class="shop_btn_wrapper shop_car_btn_wrapper">
 
-                        <div class="estimate_shiping_Wrapper_cntnt estimate_shiping_Wrapper_cntnt_2">
+                                <ul>
+                                    <li><a href="shop.php">continue shopping</a>
+                                    </li>
+                                </ul>
+    
+                            </td>
+                        </tr>
+                        </tfoot>
+                        
+                    
+                    
+                        
+                    </table>
+                </div>
+
+                        <!-- coupon code -->
+                        <!-- <div class="estimate_shiping_Wrapper_cntnt estimate_shiping_Wrapper_cntnt_2">
                             <div
                                 class="btc_shop_single_prod_right_section shop_product_single_head related_pdt_shop_head related_pdt_shop_head_2">
-                                <h1>coupan code enetr here : </h1>
+                                <h1> code enetr here : </h1>
                                 <div class="lr_nl_form_wrapper">
                                     <input type="text" placeholder="Type Your Code">
                                     <button type="submit">apply</button>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
+                        <!-- coupon code ends -->
 
                     </div>
+                    <div id="label" class="text-center"></div>
+
+                    <div class="shopping-cart" id="shopping-cart"></div>
 
                     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-
-                        <div class="shipping_Wrapper">
+                        <!-- estimate shipping -->
+                        <!-- <div class="shipping_Wrapper">
                             <div
                                 class="btc_shop_single_prod_right_section shop_product_single_head related_pdt_shop_head related_pdt_shop_head_2">
                                 <h1>estimate shipping : </h1>
@@ -518,30 +384,32 @@ Author:   Atmik X Prapti
                                         </li>
                                     </ul>
                                 </div>
-                            </div> 
+                            </div>  -->
+                        <!-- estimate shipping ends -->
+
                             <div class="estimate_shiping_Wrapper_cntnt estimate_shiping_Wrapper_repsnse">
 
                                 <table class="table">
                                     <tbody>
                                         <tr>
                                             <th>Sub Total : </th>
-                                            <td><span class="price">$1,00.00</span></td>
+                            <td><b><span id="cartTotal1"></span></b></td>
                                         </tr>
                                         <tr>
                                             <th>IGST 18% :</th>
-                                            <td><span class="price">$200.00</span></td>
+                                            <td><span id="cgst"></span></td>
                                         </tr>
                                         <tr>
                                             <th>CGST 20% :</th>
-                                            <td><span class="price">$200.00</span></td>
+                                            <td><span id="sgst"></span></td>
                                         </tr>
                                         <tr>
                                             <th> Discount:</th>
-                                            <td><span class="price">-$200.00</span></td>
+                                            <td><span id="discount"></span></td>
                                         </tr>
                                         <tr>
                                             <th class="cart_btn_cntnt"> Sub Total :</th>
-                                            <td><span class="cart_btn_cntnt_clr">$1192.00 </span> </td>
+                                            <td><span class="cart_btn_cntnt_clr" id="Total"></span> </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -669,7 +537,8 @@ Author:   Atmik X Prapti
     <!-- sw footer section end-->
     <!--main js files-->
 
-    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery_min.js"></script>
+    <!-- <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
+    <script src="js/jquery_min.js"></script>
     <script src="js/materialize.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jqu_menu.js"></script>
@@ -684,6 +553,7 @@ Author:   Atmik X Prapti
     <script src="js/owl.carousel.js"></script>
     <script src="js/camera.min.js"></script>
     <script src="js/custom_2.js"></script>
+    
     <script>
         const body = document.querySelector("body");
         const fab_nav = document.querySelector(".fab-container");
@@ -781,3 +651,7 @@ $('select').each(function(){
 </body>
 
 </html>
+    
+    <!-- <script src="main.js"></script> -->
+    <script src="Data.js"></script>
+    <script src="cart.js"></script> 

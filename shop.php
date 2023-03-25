@@ -36,11 +36,26 @@ Author:   Atmik X Prapti
     <link rel="stylesheet" type="text/css" href="css/camera.css">
     <link rel="stylesheet" type="text/css" href="css/style_2.css" />
     <link rel="stylesheet" type="text/css" href="css/responsive_2.css" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <script src="angular/angular.js"></script> -->
+    <!-- <script src="script.js"></script> -->
+
     <!-- favicon link-->
     <link rel="shortcut icon" type="image/icon" href="images/favicon.png" />
 </head>
-
-<body>
+<style>
+    .counter{
+        background-color: white;
+    }
+    /* .counter:hover{
+        
+        
+    } */
+</style>
+<body ng-app="Items" ng-controller="dispItems">
+    <?php
+    session_start();
+    ?>
     <!-- preloader Start -->
     <div id="preloader">
         <div id="status">
@@ -79,12 +94,12 @@ Author:   Atmik X Prapti
                             <li><a href="shop.php" title="">shop</a>
                             </li>
                             <li><a href="contact_us.php" title="">Contact us</a>
-                                        </li>
+                            </li>
                             <li class="caret_btn">
                                 <a href="javascript:;"><i class="fa-regular fa-user"></i></a>
                                 <ul>
                                     <?php
-                                    session_start();
+                                    
                                     if(isset($_SESSION['email'])){  
                                         echo '<p style="font-weight:625;font-family:Montserrat;text-transform:initial;font-size:15px;">'.'<font style="text-transform:initial;font-size:12px;">'.'hello, '.'</font>'.$_SESSION['user'].'</p>';
                                     }
@@ -114,8 +129,10 @@ Author:   Atmik X Prapti
                             <div class="sw_icon_bar">
                                 <ul class="tc_login_btn_wrapper">
                                     <li class="dropdown tc_login_btn">
-                                        <a class="dropdown-toggle hvr-float-shadow active waves-effect waves-light" data-toggle="dropdown" href="javascript:;"><i class="fa fa-ellipsis-v"></i></a>
-                                    <ul class="dropdown-menu tc_menu_fixed_border">
+                                        <a class="dropdown-toggle hvr-float-shadow active waves-effect waves-light"
+                                            data-toggle="dropdown" href="javascript:;"><i
+                                                class="fa fa-ellipsis-v"></i></a>
+                                        <ul class="dropdown-menu tc_menu_fixed_border">
                                             <?php
                                                 if(isset($_SESSION['email'])){
                                                     echo '<li class="dropdown_hover"><a href="logout.php">Log Out</a></li>';
@@ -165,10 +182,10 @@ Author:   Atmik X Prapti
                                             <li><a href="shop.php" title="">shop</a>
                                             </li>
                                             <li><a href="contact_us.php" title="">Contact us</a>
-                                                
+
                                             </li>
-                                                </li>
-                                                <?php
+                                            </li>
+                                            <?php
                                                 if(isset($_SESSION['email'])){
                                                     echo '<li class="dropdown_hover"><a href="logout.php">Log Out</a></li>';
                                                 }
@@ -214,7 +231,20 @@ Author:   Atmik X Prapti
         <div class="header_btn">
             <ul>
                 <li>
-                    <a href="contact_us.php" class="waves-effect waves-light waves-ripple">free quote</a>
+                    <a href="cart.php" class="waves-effect waves-light waves-ripple">Cart <span style="width: 15px;
+                        height: 15px;
+                        color: #ffffff;
+                        background: #ff3232;
+                        border-radius: 100%;
+                        font-size: 10px;
+                        float: left;
+                        line-height: 15px;
+                        text-align: center;
+                        position: absolute;
+                        left: 90px;
+                        top: 7px;
+                    ;" id="cartAmount"
+                        class="cartAmount"></span></a>
                 </li>
             </ul>
         </div>
@@ -241,7 +271,7 @@ Author:   Atmik X Prapti
     </div>
     <!-- page_title_section end -->
     <!--sw about us top start-->
-    <div class="sw_about_top_wrapper">
+    <!-- <div class="sw_about_top_wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
@@ -262,7 +292,7 @@ Author:   Atmik X Prapti
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--sw about us top end-->
 
     <!-- blog_section start -->
@@ -288,12 +318,14 @@ Author:   Atmik X Prapti
                             <ul>
                                 <li>
                                     <a href="javascript:;">
-                                        <i class="fa fa-caret-right" aria-hidden="true"></i> electricity <span>(02)</span>
+                                        <i class="fa fa-caret-right" aria-hidden="true"></i> electricity
+                                        <span>(02)</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="javascript:;">
-                                        <i class="fa fa-caret-right" aria-hidden="true"></i>organization <span>(25)</span>
+                                        <i class="fa fa-caret-right" aria-hidden="true"></i>organization
+                                        <span>(25)</span>
                                     </a>
                                 </li>
                                 <li>
@@ -320,11 +352,12 @@ Author:   Atmik X Prapti
 
                                     <div id="range-price" class="range-box"></div>
                                     <span>price:</span>
-                                    <input type="text" id="price" class="price-box" readonly/>
+                                    <input type="text" id="price" class="price-box" readonly />
                                 </li>
                                 <li class="shop_btn_wrapper">
                                     <ul>
-                                        <li><a href="shop.php#!" class="waves-effect waves-light waves-ripple">filter</a>
+                                        <li><a href="shop.php#!"
+                                                class="waves-effect waves-light waves-ripple">filter</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -342,11 +375,11 @@ Author:   Atmik X Prapti
                                 </div>
                                 <div class="sc_blog_text">
                                     <h5><a href="javascript:;">SolarWorld 280</a></h5>
-                                     <div class="btc_shop_product_price_wrapper pdt">
-										<ul>
-											<li>$150</li>
-										</ul>
-									</div>
+                                    <div class="btc_shop_product_price_wrapper pdt">
+                                        <ul>
+                                            <li>$150</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <div class="blog_wrapper2">
@@ -355,11 +388,12 @@ Author:   Atmik X Prapti
                                 </div>
                                 <div class="sc_blog_text">
                                     <h5><a href="javascript:;">canadian 450xp
-</a></h5> 							 <div class="btc_shop_product_price_wrapper pdt">
-											<ul>
-												<li>$150</li>
-											</ul>
-										</div>
+                                        </a></h5>
+                                    <div class="btc_shop_product_price_wrapper pdt">
+                                        <ul>
+                                            <li>$150</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <div class="blog_wrapper3">
@@ -368,12 +402,12 @@ Author:   Atmik X Prapti
                                 </div>
                                 <div class="sc_blog_text">
                                     <h5><a href="javascript:;">SolarWorld 280
-</a></h5>
-                                      <div class="btc_shop_product_price_wrapper pdt">
-										<ul>
-											<li>$150</li>
-										</ul>
-									</div>
+                                        </a></h5>
+                                    <div class="btc_shop_product_price_wrapper pdt">
+                                        <ul>
+                                            <li>$150</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -414,10 +448,15 @@ Author:   Atmik X Prapti
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
                                 <div class="filter-area">
-								 <div class="list-grid">
+                                    <div class="list-grid">
                                         <ul class="list-inline nav nav-pills">
-                                            <li class="active_pagination active_shop"><a data-toggle="pill" href="shop.php#grid" class="waves-effect waves-light waves-ripple"><i class="flaticon-menu"></i></a></li>
-                                            <li><a data-toggle="pill" href="shop.php#list" class="waves-effect waves-light waves-ripple"><i class="flaticon-list"></i></a></li>
+                                            <li class="active_pagination active_shop"><a data-toggle="pill"
+                                                    href="shop.php#grid"
+                                                    class="waves-effect waves-light waves-ripple"><i
+                                                        class="flaticon-menu"></i></a></li>
+                                            <li><a data-toggle="pill" href="shop.php#list"
+                                                    class="waves-effect waves-light waves-ripple"><i
+                                                        class="flaticon-list"></i></a></li>
                                         </ul>
                                     </div>
                                     <div class="showpro">
@@ -431,23 +470,34 @@ Author:   Atmik X Prapti
                                     </select>
                                 </div>
 
+                                <!-- index content tab -->
+
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="tab-content btc_shop_index_content_tabs_main">
-                                    <div id="grid" class="tab-pane fade in active">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div id="grid" class="tab-pane fade in active" >
+                                        <div class="row" >
+                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" class="shop" id="shop">
+                                                <!-- here is the card -->
+                                                <div >
+
+                                                </div>
+                                                <!-- card ends -->
+                                            </div>
+                                            <!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                                 <div class="sw_product_box_wrapper sw_shop_sider_pder">
                                                     <div class="sw_product_indx_img_wrapper">
 
-                                                        <img src="images/prdct_2.jpg" alt="shop_img" class="img-responsive" />
+                                                        <img src="cart/prdct_4.png" alt="shop_img"
+                                                            class="img-responsive" />
                                                     </div>
 
-                                                    <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
+                                                    <div
+                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
                                                         <div class="sw_pdct_img">
                                                             <img src="images/line.png" alt="img" />
                                                         </div>
-                                                        <h5>$  156</h5>
+                                                        <h5>$ 156</h5>
                                                         <h1><a href="javascript:;">SolarWorld 280</a></h1>
 
                                                         <div class="cc_li_cont_wrapper">
@@ -460,10 +510,14 @@ Author:   Atmik X Prapti
                                                         <div class="cc_li_img_overlay">
                                                             <div class="cc_li_img_text">
                                                                 <ul>
-                                                                    <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="javascript:;"><i class="fa fa-heart"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-shopping-cart"></i></a>
+                                                                    </li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-heart"></i></a></li>
 
-                                                                    <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-expand"></i></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -474,14 +528,16 @@ Author:   Atmik X Prapti
                                                 <div class="sw_product_box_wrapper sw_shop_sider_pder">
                                                     <div class="sw_product_indx_img_wrapper">
 
-                                                        <img src="images/prdct_4.png" alt="shop_img" class="img-responsive" />
+                                                        <img src="cart/prdct_5.png" alt="shop_img"
+                                                            class="img-responsive" />
                                                     </div>
 
-                                                    <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
+                                                    <div
+                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
                                                         <div class="sw_pdct_img">
                                                             <img src="images/line.png" alt="img" />
                                                         </div>
-                                                        <h5>$  156</h5>
+                                                        <h5>$ 156</h5>
                                                         <h1><a href="javascript:;">SolarWorld 280</a></h1>
 
                                                         <div class="cc_li_cont_wrapper">
@@ -494,10 +550,14 @@ Author:   Atmik X Prapti
                                                         <div class="cc_li_img_overlay">
                                                             <div class="cc_li_img_text">
                                                                 <ul>
-                                                                    <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="javascript:;"><i class="fa fa-heart"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-shopping-cart"></i></a>
+                                                                    </li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-heart"></i></a></li>
 
-                                                                    <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-expand"></i></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -508,48 +568,16 @@ Author:   Atmik X Prapti
                                                 <div class="sw_product_box_wrapper sw_shop_sider_pder">
                                                     <div class="sw_product_indx_img_wrapper">
 
-                                                        <img src="images/prdct_5.png" alt="shop_img" class="img-responsive" />
+                                                        <img src="cart/prdct_4.png" alt="shop_img"
+                                                            class="img-responsive" />
                                                     </div>
 
-                                                    <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
+                                                    <div
+                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
                                                         <div class="sw_pdct_img">
                                                             <img src="images/line.png" alt="img" />
                                                         </div>
-                                                        <h5>$  156</h5>
-                                                        <h1><a href="javascript:;">SolarWorld 280</a></h1>
-
-                                                        <div class="cc_li_cont_wrapper">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-                                                        <div class="cc_li_img_overlay">
-                                                            <div class="cc_li_img_text">
-                                                                <ul>
-                                                                    <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="javascript:;"><i class="fa fa-heart"></i></a></li>
-
-                                                                    <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                <div class="sw_product_box_wrapper sw_shop_sider_pder">
-                                                    <div class="sw_product_indx_img_wrapper">
-
-                                                        <img src="images/prdct_4.png" alt="shop_img" class="img-responsive" />
-                                                    </div>
-
-                                                    <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                                        <div class="sw_pdct_img">
-                                                            <img src="images/line.png" alt="img" />
-                                                        </div>
-                                                        <h5>$  156</h5>
+                                                        <h5>$ 156</h5>
                                                         <h1><a href="javascript:;">Canadian Solar 255</a></h1>
 
                                                         <div class="cc_li_cont_wrapper">
@@ -562,10 +590,14 @@ Author:   Atmik X Prapti
                                                         <div class="cc_li_img_overlay">
                                                             <div class="cc_li_img_text">
                                                                 <ul>
-                                                                    <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="javascript:;"><i class="fa fa-heart"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-shopping-cart"></i></a>
+                                                                    </li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-heart"></i></a></li>
 
-                                                                    <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-expand"></i></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -576,14 +608,16 @@ Author:   Atmik X Prapti
                                                 <div class="sw_product_box_wrapper sw_shop_sider_pder">
                                                     <div class="sw_product_indx_img_wrapper">
 
-                                                        <img src="images/prdct_6.png" alt="shop_img" class="img-responsive" />
+                                                        <img src="cart/prdct_6.png" alt="shop_img"
+                                                            class="img-responsive" />
                                                     </div>
 
-                                                    <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
+                                                    <div
+                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
                                                         <div class="sw_pdct_img">
                                                             <img src="images/line.png" alt="img" />
                                                         </div>
-                                                        <h5>$  156</h5>
+                                                        <h5>$ 156</h5>
                                                         <h1><a href="javascript:;">SolarWorld 280</a></h1>
 
                                                         <div class="cc_li_cont_wrapper">
@@ -596,10 +630,14 @@ Author:   Atmik X Prapti
                                                         <div class="cc_li_img_overlay">
                                                             <div class="cc_li_img_text">
                                                                 <ul>
-                                                                    <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="javascript:;"><i class="fa fa-heart"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-shopping-cart"></i></a>
+                                                                    </li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-heart"></i></a></li>
 
-                                                                    <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-expand"></i></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -610,14 +648,16 @@ Author:   Atmik X Prapti
                                                 <div class="sw_product_box_wrapper sw_shop_sider_pder">
                                                     <div class="sw_product_indx_img_wrapper">
 
-                                                        <img src="images/prdct_4.png" alt="shop_img" class="img-responsive" />
+                                                        <img src="cart/prdct_4.png" alt="shop_img"
+                                                            class="img-responsive" />
                                                     </div>
 
-                                                    <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
+                                                    <div
+                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
                                                         <div class="sw_pdct_img">
                                                             <img src="images/line.png" alt="img" />
                                                         </div>
-                                                        <h5>$  156</h5>
+                                                        <h5>$ 156</h5>
                                                         <h1><a href="javascript:;">Canadian Solar 255</a></h1>
 
                                                         <div class="cc_li_cont_wrapper">
@@ -630,10 +670,14 @@ Author:   Atmik X Prapti
                                                         <div class="cc_li_img_overlay">
                                                             <div class="cc_li_img_text">
                                                                 <ul>
-                                                                    <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="javascript:;"><i class="fa fa-heart"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-shopping-cart"></i></a>
+                                                                    </li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-heart"></i></a></li>
 
-                                                                    <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-expand"></i></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -644,14 +688,16 @@ Author:   Atmik X Prapti
                                                 <div class="sw_product_box_wrapper sw_shop_sider_pder">
                                                     <div class="sw_product_indx_img_wrapper">
 
-                                                        <img src="images/prdct_2.jpg" alt="shop_img" class="img-responsive" />
+                                                        <img src="cart/prdct_2.jpg" alt="shop_img"
+                                                            class="img-responsive" />
                                                     </div>
 
-                                                    <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
+                                                    <div
+                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
                                                         <div class="sw_pdct_img">
                                                             <img src="images/line.png" alt="img" />
                                                         </div>
-                                                        <h5>$  156</h5>
+                                                        <h5>$ 156</h5>
                                                         <h1><a href="javascript:;">SolarWorld 280</a></h1>
 
                                                         <div class="cc_li_cont_wrapper">
@@ -664,10 +710,14 @@ Author:   Atmik X Prapti
                                                         <div class="cc_li_img_overlay">
                                                             <div class="cc_li_img_text">
                                                                 <ul>
-                                                                    <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="javascript:;"><i class="fa fa-heart"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-shopping-cart"></i></a>
+                                                                    </li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-heart"></i></a></li>
 
-                                                                    <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-expand"></i></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -678,14 +728,16 @@ Author:   Atmik X Prapti
                                                 <div class="sw_product_box_wrapper sw_shop_sider_pder">
                                                     <div class="sw_product_indx_img_wrapper">
 
-                                                        <img src="images/prdct_1.jpg" alt="shop_img" class="img-responsive" />
+                                                        <img src="cart/prdct_1.jpg" alt="shop_img"
+                                                            class="img-responsive" />
                                                     </div>
 
-                                                    <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
+                                                    <div
+                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
                                                         <div class="sw_pdct_img">
                                                             <img src="images/line.png" alt="img" />
                                                         </div>
-                                                        <h5>$  156</h5>
+                                                        <h5>$ 156</h5>
                                                         <h1><a href="javascript:;">SolarWorld 280</a></h1>
 
                                                         <div class="cc_li_cont_wrapper">
@@ -698,10 +750,14 @@ Author:   Atmik X Prapti
                                                         <div class="cc_li_img_overlay">
                                                             <div class="cc_li_img_text">
                                                                 <ul>
-                                                                    <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="javascript:;"><i class="fa fa-heart"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-shopping-cart"></i></a>
+                                                                    </li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-heart"></i></a></li>
 
-                                                                    <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-expand"></i></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -712,14 +768,16 @@ Author:   Atmik X Prapti
                                                 <div class="sw_product_box_wrapper sw_shop_sider_pder">
                                                     <div class="sw_product_indx_img_wrapper">
 
-                                                        <img src="images/prdct_3.jpg" alt="shop_img" class="img-responsive" />
+                                                        <img src="cart/prdct_3.jpg" alt="shop_img"
+                                                            class="img-responsive" />
                                                     </div>
 
-                                                    <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
+                                                    <div
+                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
                                                         <div class="sw_pdct_img">
                                                             <img src="images/line.png" alt="img" />
                                                         </div>
-                                                        <h5>$  156</h5>
+                                                        <h5>$ 156</h5>
                                                         <h1><a href="javascript:;">solar pannel 280</a></h1>
 
                                                         <div class="cc_li_cont_wrapper">
@@ -732,10 +790,14 @@ Author:   Atmik X Prapti
                                                         <div class="cc_li_img_overlay">
                                                             <div class="cc_li_img_text">
                                                                 <ul>
-                                                                    <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="javascript:;"><i class="fa fa-heart"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-shopping-cart"></i></a>
+                                                                    </li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-heart"></i></a></li>
 
-                                                                    <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-expand"></i></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -746,14 +808,16 @@ Author:   Atmik X Prapti
                                                 <div class="sw_product_box_wrapper sw_shop_sider_pder">
                                                     <div class="sw_product_indx_img_wrapper">
 
-                                                        <img src="images/prdct_4.png" alt="shop_img" class="img-responsive" />
+                                                        <img src="cart/prdct_4.png" alt="shop_img"
+                                                            class="img-responsive" />
                                                     </div>
 
-                                                    <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
+                                                    <div
+                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
                                                         <div class="sw_pdct_img">
                                                             <img src="images/line.png" alt="img" />
                                                         </div>
-                                                        <h5>$  156</h5>
+                                                        <h5>$ 156</h5>
                                                         <h1><a href="javascript:;">SolarWorld 280</a></h1>
 
                                                         <div class="cc_li_cont_wrapper">
@@ -766,10 +830,14 @@ Author:   Atmik X Prapti
                                                         <div class="cc_li_img_overlay">
                                                             <div class="cc_li_img_text">
                                                                 <ul>
-                                                                    <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="javascript:;"><i class="fa fa-heart"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-shopping-cart"></i></a>
+                                                                    </li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-heart"></i></a></li>
 
-                                                                    <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-expand"></i></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -780,14 +848,16 @@ Author:   Atmik X Prapti
                                                 <div class="sw_product_box_wrapper sw_shop_sider_pder">
                                                     <div class="sw_product_indx_img_wrapper">
 
-                                                        <img src="images/prdct_6.png" alt="shop_img" class="img-responsive" />
+                                                        <img src="cart/prdct_6.png" alt="shop_img"
+                                                            class="img-responsive" />
                                                     </div>
 
-                                                    <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
+                                                    <div
+                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
                                                         <div class="sw_pdct_img">
                                                             <img src="images/line.png" alt="img" />
                                                         </div>
-                                                        <h5>$  156</h5>
+                                                        <h5>$ 156</h5>
                                                         <h1><a href="javascript:;">SolarWorld 280</a></h1>
 
                                                         <div class="cc_li_cont_wrapper">
@@ -800,29 +870,35 @@ Author:   Atmik X Prapti
                                                         <div class="cc_li_img_overlay">
                                                             <div class="cc_li_img_text">
                                                                 <ul>
-                                                                    <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="javascript:;"><i class="fa fa-heart"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-shopping-cart"></i></a>
+                                                                    </li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-heart"></i></a></li>
 
-                                                                    <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-expand"></i></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                           
+
                                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                                 <div class="sw_product_box_wrapper sw_shop_sider_pder">
                                                     <div class="sw_product_indx_img_wrapper">
 
-                                                        <img src="images/prdct_3.jpg" alt="shop_img" class="img-responsive" />
+                                                        <img src="cart/prdct_3.jpg" alt="shop_img"
+                                                            class="img-responsive" />
                                                     </div>
 
-                                                    <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
+                                                    <div
+                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
                                                         <div class="sw_pdct_img">
                                                             <img src="images/line.png" alt="img" />
                                                         </div>
-                                                        <h5>$  156</h5>
+                                                        <h5>$ 156</h5>
                                                         <h1><a href="javascript:;">SolarWorld 280</a></h1>
 
                                                         <div class="cc_li_cont_wrapper">
@@ -835,17 +911,21 @@ Author:   Atmik X Prapti
                                                         <div class="cc_li_img_overlay">
                                                             <div class="cc_li_img_text">
                                                                 <ul>
-                                                                    <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="javascript:;"><i class="fa fa-heart"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-shopping-cart"></i></a>
+                                                                    </li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-heart"></i></a></li>
 
-                                                                    <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>
+                                                                    <li><a href="javascript:;"><i
+                                                                                class="fa fa-expand"></i></a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                           
+                                            </div> -->
+
                                         </div>
                                     </div>
                                     <div id="list" class="tab-pane fade">
@@ -854,30 +934,38 @@ Author:   Atmik X Prapti
                                                 <div class="btc_shop_indx_cont_list_box_wrapper">
                                                     <div class="btc_shop_list_img_wrapper">
 
-                                                        <img src="images/prdct_5.png" alt="shop_img" class="img-responsive" />
+                                                        <img src="cart/prdct_5.png" alt="shop_img"
+                                                            class="img-responsive" />
                                                     </div>
                                                     <div class="btc_shop_list_img_cont_wrapper">
-													 <div class="btc_shop_product_price_wrapper pdt">
-																<ul>
-																	<li>$150</li>
-																</ul>
-															</div>
+                                                        <div class="btc_shop_product_price_wrapper pdt">
+                                                            <ul>
+                                                                <li>$150</li>
+                                                            </ul>
+                                                        </div>
 
                                                         <h1><a href="javascript:;">Solaris Panel V405</a></h1>
-														  <div class="cc_shop_list">
+                                                        <div class="cc_shop_list">
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star-o"></i>
                                                             <i class="fa fa-star-o"></i>
                                                         </div>
-                                                       
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minimveniam, quis do enim ad minimven trud exercitation ullamco.</p>
-                                                      
+
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                                            do enim ad minimveniam, quis do enim ad minimven trud
+                                                            exercitation ullamco.</p>
+
                                                         <div class="btc_shop_list_bottom_social_wrapper ">
                                                             <ul>
-                                                                <li class="shop_list_first_btn"><a href="shop.php#!" class="waves-effect waves-light waves-ripple"><i class="fa fa-heart"></i>wishlist</a></li>
-                                                                <li><a href="shop.php#!" class="waves-effect waves-light waves-ripple"><i class="fa fa-shopping-cart"></i>add to cart</a></li>
+                                                                <li class="shop_list_first_btn"><a href="shop.php#!"
+                                                                        class="waves-effect waves-light waves-ripple"><i
+                                                                            class="fa fa-heart"></i>wishlist</a></li>
+                                                                <li><a href="shop.php#!"
+                                                                        class="waves-effect waves-light waves-ripple"><i
+                                                                            class="fa fa-shopping-cart"></i>add to
+                                                                        cart</a></li>
 
                                                             </ul>
                                                         </div>
@@ -888,30 +976,38 @@ Author:   Atmik X Prapti
                                                 <div class="btc_shop_indx_cont_list_box_wrapper">
                                                     <div class="btc_shop_list_img_wrapper">
 
-                                                        <img src="images/prdct_6.png" alt="shop_img" class="img-responsive" />
+                                                        <img src="cart/prdct_6.png" alt="shop_img"
+                                                            class="img-responsive" />
                                                     </div>
                                                     <div class="btc_shop_list_img_cont_wrapper">
-													 <div class="btc_shop_product_price_wrapper pdt">
-																<ul>
-																	<li>$150</li>
-																</ul>
-															</div>
+                                                        <div class="btc_shop_product_price_wrapper pdt">
+                                                            <ul>
+                                                                <li>$150</li>
+                                                            </ul>
+                                                        </div>
 
                                                         <h1><a href="javascript:;">Solaris Panel V405</a></h1>
-														  <div class="cc_shop_list">
+                                                        <div class="cc_shop_list">
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star-o"></i>
                                                             <i class="fa fa-star-o"></i>
                                                         </div>
-                                                      
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minimveniam, quis do enim ad minimven trud exercitation ullamco.</p>
-                                                      
+
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                                            do enim ad minimveniam, quis do enim ad minimven trud
+                                                            exercitation ullamco.</p>
+
                                                         <div class="btc_shop_list_bottom_social_wrapper ">
                                                             <ul>
-                                                                <li class="shop_list_first_btn"><a href="shop.php#!" class="waves-effect waves-light waves-ripple"><i class="fa fa-heart"></i>wishlist</a></li>
-                                                                <li><a href="shop.php#!" class="waves-effect waves-light waves-ripple"><i class="fa fa-shopping-cart"></i>add to cart</a></li>
+                                                                <li class="shop_list_first_btn"><a href="shop.php#!"
+                                                                        class="waves-effect waves-light waves-ripple"><i
+                                                                            class="fa fa-heart"></i>wishlist</a></li>
+                                                                <li><a href="shop.php#!"
+                                                                        class="waves-effect waves-light waves-ripple"><i
+                                                                            class="fa fa-shopping-cart"></i>add to
+                                                                        cart</a></li>
 
                                                             </ul>
                                                         </div>
@@ -922,30 +1018,38 @@ Author:   Atmik X Prapti
                                                 <div class="btc_shop_indx_cont_list_box_wrapper">
                                                     <div class="btc_shop_list_img_wrapper">
 
-                                                        <img src="images/prdct_5.png" alt="shop_img" class="img-responsive" />
+                                                        <img src="cart/prdct_5.png" alt="shop_img"
+                                                            class="img-responsive" />
                                                     </div>
                                                     <div class="btc_shop_list_img_cont_wrapper">
-													 <div class="btc_shop_product_price_wrapper pdt">
-																<ul>
-																	<li>$150</li>
-																</ul>
-															</div>
+                                                        <div class="btc_shop_product_price_wrapper pdt">
+                                                            <ul>
+                                                                <li>$150</li>
+                                                            </ul>
+                                                        </div>
 
                                                         <h1><a href="javascript:;">Solaris Panel V405</a></h1>
-														 <div class="cc_shop_list">
+                                                        <div class="cc_shop_list">
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star-o"></i>
                                                             <i class="fa fa-star-o"></i>
                                                         </div>
-                                                      
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minimveniam, quis do enim ad minimven trud exercitation ullamco.</p>
-                                                       
+
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                                            do enim ad minimveniam, quis do enim ad minimven trud
+                                                            exercitation ullamco.</p>
+
                                                         <div class="btc_shop_list_bottom_social_wrapper ">
                                                             <ul>
-                                                                <li class="shop_list_first_btn"><a href="shop.php#!" class="waves-effect waves-light waves-ripple"><i class="fa fa-heart"></i>wishlist</a></li>
-                                                                <li><a href="shop.php#!" class="waves-effect waves-light waves-ripple"><i class="fa fa-shopping-cart"></i>add to cart</a></li>
+                                                                <li class="shop_list_first_btn"><a href="shop.php#!"
+                                                                        class="waves-effect waves-light waves-ripple"><i
+                                                                            class="fa fa-heart"></i>wishlist</a></li>
+                                                                <li><a href="shop.php#!"
+                                                                        class="waves-effect waves-light waves-ripple"><i
+                                                                            class="fa fa-shopping-cart"></i>add to
+                                                                        cart</a></li>
 
                                                             </ul>
                                                         </div>
@@ -956,30 +1060,38 @@ Author:   Atmik X Prapti
                                                 <div class="btc_shop_indx_cont_list_box_wrapper">
                                                     <div class="btc_shop_list_img_wrapper">
 
-                                                        <img src="images/prdct_4.png" alt="shop_img" class="img-responsive" />
+                                                        <img src="cart/prdct_4.png" alt="shop_img"
+                                                            class="img-responsive" />
                                                     </div>
                                                     <div class="btc_shop_list_img_cont_wrapper">
-													 <div class="btc_shop_product_price_wrapper pdt">
-																<ul>
-																	<li>$150</li>
-																</ul>
-															</div>
+                                                        <div class="btc_shop_product_price_wrapper pdt">
+                                                            <ul>
+                                                                <li>$150</li>
+                                                            </ul>
+                                                        </div>
 
                                                         <h1><a href="javascript:;">Solaris Panel V405</a></h1>
-														   <div class="cc_shop_list">
+                                                        <div class="cc_shop_list">
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star-o"></i>
                                                             <i class="fa fa-star-o"></i>
                                                         </div>
-                                                       
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minimveniam, quis do enim ad minimven trud exercitation ullamco.</p>
-                                                     
+
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                                            do enim ad minimveniam, quis do enim ad minimven trud
+                                                            exercitation ullamco.</p>
+
                                                         <div class="btc_shop_list_bottom_social_wrapper ">
                                                             <ul>
-                                                                <li class="shop_list_first_btn"><a href="shop.php#!" class="waves-effect waves-light waves-ripple"><i class="fa fa-heart"></i>wishlist</a></li>
-                                                                <li><a href="shop.php#!" class="waves-effect waves-light waves-ripple"><i class="fa fa-shopping-cart"></i>add to cart</a></li>
+                                                                <li class="shop_list_first_btn"><a href="shop.php#!"
+                                                                        class="waves-effect waves-light waves-ripple"><i
+                                                                            class="fa fa-heart"></i>wishlist</a></li>
+                                                                <li><a href="shop.php#!"
+                                                                        class="waves-effect waves-light waves-ripple"><i
+                                                                            class="fa fa-shopping-cart"></i>add to
+                                                                        cart</a></li>
 
                                                             </ul>
                                                         </div>
@@ -990,30 +1102,38 @@ Author:   Atmik X Prapti
                                                 <div class="btc_shop_indx_cont_list_box_wrapper">
                                                     <div class="btc_shop_list_img_wrapper">
 
-                                                        <img src="images/prdct_3.jpg" alt="shop_img" class="img-responsive" />
+                                                        <img src="cart/prdct_3.jpg" alt="shop_img"
+                                                            class="img-responsive" />
                                                     </div>
                                                     <div class="btc_shop_list_img_cont_wrapper">
-													 <div class="btc_shop_product_price_wrapper pdt">
-																<ul>
-																	<li>$150</li>
-																</ul>
-															</div>
+                                                        <div class="btc_shop_product_price_wrapper pdt">
+                                                            <ul>
+                                                                <li>$150</li>
+                                                            </ul>
+                                                        </div>
 
                                                         <h1><a href="javascript:;">Solaris Panel V405</a></h1>
-														    <div class="cc_shop_list">
+                                                        <div class="cc_shop_list">
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star-o"></i>
                                                             <i class="fa fa-star-o"></i>
                                                         </div>
-                                                       
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minimveniam, quis do enim ad minimven trud exercitation ullamco.</p>
-                                                    
+
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                                            do enim ad minimveniam, quis do enim ad minimven trud
+                                                            exercitation ullamco.</p>
+
                                                         <div class="btc_shop_list_bottom_social_wrapper ">
                                                             <ul>
-                                                                <li class="shop_list_first_btn"><a href="shop.php#!" class="waves-effect waves-light waves-ripple"><i class="fa fa-heart"></i>wishlist</a></li>
-                                                                <li><a href="shop.php#!" class="waves-effect waves-light waves-ripple"><i class="fa fa-shopping-cart"></i>add to cart</a></li>
+                                                                <li class="shop_list_first_btn"><a href="shop.php#!"
+                                                                        class="waves-effect waves-light waves-ripple"><i
+                                                                            class="fa fa-heart"></i>wishlist</a></li>
+                                                                <li><a href="shop.php#!"
+                                                                        class="waves-effect waves-light waves-ripple"><i
+                                                                            class="fa fa-shopping-cart"></i>add to
+                                                                        cart</a></li>
 
                                                             </ul>
                                                         </div>
@@ -1024,29 +1144,37 @@ Author:   Atmik X Prapti
                                                 <div class="btc_shop_indx_cont_list_box_wrapper">
                                                     <div class="btc_shop_list_img_wrapper">
 
-                                                        <img src="images/prdct_2.jpg" alt="shop_img" class="img-responsive" />
+                                                        <img src="cart/prdct_2.jpg" alt="shop_img"
+                                                            class="img-responsive" />
                                                     </div>
                                                     <div class="btc_shop_list_img_cont_wrapper">
-													 <div class="btc_shop_product_price_wrapper pdt">
-																<ul>
-																	<li>$150</li>
-																</ul>
-															</div>
+                                                        <div class="btc_shop_product_price_wrapper pdt">
+                                                            <ul>
+                                                                <li>$150</li>
+                                                            </ul>
+                                                        </div>
                                                         <h1><a href="javascript:;">Solaris Panel V405</a></h1>
-														   <div class="cc_shop_list">
+                                                        <div class="cc_shop_list">
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star-o"></i>
                                                             <i class="fa fa-star-o"></i>
                                                         </div>
-                                                       
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minimveniam, quis do enim ad minimven trud exercitation ullamco.</p>
-                                                     
+
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                                            do enim ad minimveniam, quis do enim ad minimven trud
+                                                            exercitation ullamco.</p>
+
                                                         <div class="btc_shop_list_bottom_social_wrapper ">
                                                             <ul>
-                                                                <li class="shop_list_first_btn"><a href="shop.php#!" class="waves-effect waves-light waves-ripple"><i class="fa fa-heart"></i>wishlist</a></li>
-                                                                <li><a href="shop.php#!" class="waves-effect waves-light waves-ripple"><i class="fa fa-shopping-cart"></i>add to cart</a></li>
+                                                                <li class="shop_list_first_btn"><a href="shop.php#!"
+                                                                        class="waves-effect waves-light waves-ripple"><i
+                                                                            class="fa fa-heart"></i>wishlist</a></li>
+                                                                <li><a href="shop.php#!"
+                                                                        class="waves-effect waves-light waves-ripple"><i
+                                                                            class="fa fa-shopping-cart"></i>add to
+                                                                        cart</a></li>
 
                                                             </ul>
                                                         </div>
@@ -1058,29 +1186,37 @@ Author:   Atmik X Prapti
                                                 <div class="btc_shop_indx_cont_list_box_wrapper">
                                                     <div class="btc_shop_list_img_wrapper">
 
-                                                        <img src="images/prdct_1.jpg" alt="shop_img" class="img-responsive" />
+                                                        <img src="cart/prdct_1.jpg" alt="shop_img"
+                                                            class="img-responsive" />
                                                     </div>
                                                     <div class="btc_shop_list_img_cont_wrapper">
-														 <div class="btc_shop_product_price_wrapper pdt">
-																<ul>
-																	<li>$150</li>
-																</ul>
-															</div>
+                                                        <div class="btc_shop_product_price_wrapper pdt">
+                                                            <ul>
+                                                                <li>$150</li>
+                                                            </ul>
+                                                        </div>
                                                         <h1><a href="javascript:;">Solaris Panel V405</a></h1>
-														 <div class="cc_shop_list">
+                                                        <div class="cc_shop_list">
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star"></i>
                                                             <i class="fa fa-star-o"></i>
                                                             <i class="fa fa-star-o"></i>
                                                         </div>
-                                                      
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minimveniam, quis do enim ad minimven trud exercitation ullamco.</p>
-                                                       
+
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                                            do enim ad minimveniam, quis do enim ad minimven trud
+                                                            exercitation ullamco.</p>
+
                                                         <div class="btc_shop_list_bottom_social_wrapper ">
                                                             <ul>
-                                                                <li class="shop_list_first_btn"><a href="shop.php#!" class="waves-effect waves-light waves-ripple"><i class="fa fa-heart"></i>wishlist</a></li>
-                                                                <li><a href="shop.php#!" class="waves-effect waves-light waves-ripple"><i class="fa fa-shopping-cart"></i>add to cart</a></li>
+                                                                <li class="shop_list_first_btn"><a href="shop.php#!"
+                                                                        class="waves-effect waves-light waves-ripple"><i
+                                                                            class="fa fa-heart"></i>wishlist</a></li>
+                                                                <li><a href="shop.php#!"
+                                                                        class="waves-effect waves-light waves-ripple"><i
+                                                                            class="fa fa-shopping-cart"></i>add to
+                                                                        cart</a></li>
 
                                                             </ul>
                                                         </div>
@@ -1135,12 +1271,14 @@ Author:   Atmik X Prapti
                             <ul>
                                 <li>
                                     <a href="javascript:;">
-                                        <i class="fa fa-caret-right" aria-hidden="true"></i> electricity <span>(02)</span>
+                                        <i class="fa fa-caret-right" aria-hidden="true"></i> electricity
+                                        <span>(02)</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="javascript:;">
-                                        <i class="fa fa-caret-right" aria-hidden="true"></i>organization <span>(25)</span>
+                                        <i class="fa fa-caret-right" aria-hidden="true"></i>organization
+                                        <span>(25)</span>
                                     </a>
                                 </li>
                                 <li>
@@ -1167,11 +1305,12 @@ Author:   Atmik X Prapti
 
                                     <div id="range-price_2" class="range-box"></div>
                                     <span>price:</span>
-                                    <input type="text" id="price_2" class="price-box" readonly/>
+                                    <input type="text" id="price_2" class="price-box" readonly />
                                 </li>
                                 <li class="shop_btn_wrapper">
                                     <ul>
-                                        <li><a href="shop.php#!" class="waves-effect waves-light waves-ripple">filter</a>
+                                        <li><a href="shop.php#!"
+                                                class="waves-effect waves-light waves-ripple">filter</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -1189,7 +1328,7 @@ Author:   Atmik X Prapti
                                 </div>
                                 <div class="sc_blog_text">
                                     <h5><a href="javascript:;">Electricity is on
-track for what.</a></h5>
+                                            track for what.</a></h5>
                                     <div class="sc_blog_date">June 28, 2022</div>
                                 </div>
                             </div>
@@ -1199,7 +1338,7 @@ track for what.</a></h5>
                                 </div>
                                 <div class="sc_blog_text">
                                     <h5><a href="javascript:;">Electricity is on
-track for what.</a></h5>
+                                            track for what.</a></h5>
                                     <div class="sc_blog_date">June 28, 2022</div>
                                 </div>
                             </div>
@@ -1209,7 +1348,7 @@ track for what.</a></h5>
                                 </div>
                                 <div class="sc_blog_text">
                                     <h5><a href="javascript:;">Electricity is on
-track for what.</a></h5>
+                                            track for what.</a></h5>
                                     <div class="sc_blog_date">June 28, 2022</div>
                                 </div>
                             </div>
@@ -1295,12 +1434,14 @@ track for what.</a></h5>
                         <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
                             <div class="wrapper_second_about">
                                 <div class="wrapper_first_image">
-                                    <a href="index.php"><img src="images/hd_logo.png" class="img-responsive" alt="logo" /></a>
+                                    <a href="index.php"><img src="images/hd_logo.png" class="img-responsive"
+                                            alt="logo" /></a>
                                 </div>
                                 <div class="abotus_content">
                                     <p>Prayosha Solar is a highly respected and trusted company in the solar
-                                    industry. Our commitment to excellence in every aspect of our business has earned us
-                                    a reputation as a reliable and customer-focused organization.</p>
+                                        industry. Our commitment to excellence in every aspect of our business has
+                                        earned us
+                                        a reputation as a reliable and customer-focused organization.</p>
                                     <ul>
                                         <li><a href="javascript:;"><i class="fa fa-facebook"></i></a></li>
                                         <li><a href="javascript:;"><i class="fa fa-twitter"></i></a></li>
@@ -1314,23 +1455,23 @@ track for what.</a></h5>
                         </div>
 
                         <div class="col-lg-2 col-md-2 col-xs-12 col-sm-4" style="left:70px">
-                        <div class="wrapper_second_useful">
-                            <h4>useful links </h4>
-                            <img src="images/heading_line3.png" alt="title" class="pd_btm_3">
-                            <ul>
-                                <li><a href="about_us.php"><i class="fa fa-angle-right"></i>About us</a>
-                                </li>
-                                <li><a href="shop.php"><i class="fa fa-angle-right"></i>shop </a>
-                                </li>
-                                <li><a href="contact_us.php"><i class="fa fa-angle-right"></i>contact </a>
-                                </li>
-                                <li><a href="services.php"><i class="fa fa-angle-right"></i>services</a>
-                                </li>
-                                <li><a href="blog.php"><i class="fa fa-angle-right"></i>news</a> </li>
-                            </ul>
+                            <div class="wrapper_second_useful">
+                                <h4>useful links </h4>
+                                <img src="images/heading_line3.png" alt="title" class="pd_btm_3">
+                                <ul>
+                                    <li><a href="about_us.php"><i class="fa fa-angle-right"></i>About us</a>
+                                    </li>
+                                    <li><a href="shop.php"><i class="fa fa-angle-right"></i>shop </a>
+                                    </li>
+                                    <li><a href="contact_us.php"><i class="fa fa-angle-right"></i>contact </a>
+                                    </li>
+                                    <li><a href="services.php"><i class="fa fa-angle-right"></i>services</a>
+                                    </li>
+                                    <li><a href="blog.php"><i class="fa fa-angle-right"></i>news</a> </li>
+                                </ul>
 
+                            </div>
                         </div>
-                    </div>
                         <!-- <div class="col-lg-2 col-md-2 col-xs-12 col-sm-4">
                             <div class="wrapper_second_useful wrapper_second_links">
 
@@ -1349,35 +1490,36 @@ track for what.</a></h5>
                             </div>
                         </div> -->
 
-                       
-                        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12" style="left:100px">
-                        <div class="wrapper_second_useful wrapper_second_useful_2">
-                            <h4>contact us</h4>
-                            <img src="images/heading_line3.png" alt="title" class="pd_btm_3">
-                            <ul>
-                                <li>
-                                    <h1><a class="contact-info" href="tel:+919879182811"></a>(+91) 987 918 2811</h1>
-                                </li>
-                                <li><a class="contact-info" href="mailto:sales.prayoshacorporation@gmail.com"><i
-                                            class="flaticon-new-email-outline"
-                                            aria-hidden="true"></i>sales.prayoshacorporation@gmail.com</a></li>
 
-                                </li>
-                                <!-- <li><a href="javascript:;"><i class="flaticon-internet"></i>www.example.com</a>
+                        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12" style="left:100px">
+                            <div class="wrapper_second_useful wrapper_second_useful_2">
+                                <h4>contact us</h4>
+                                <img src="images/heading_line3.png" alt="title" class="pd_btm_3">
+                                <ul>
+                                    <li>
+                                        <h1><a class="contact-info" href="tel:+919879182811"></a>(+91) 987 918 2811</h1>
+                                    </li>
+                                    <li><a class="contact-info" href="mailto:sales.prayoshacorporation@gmail.com"><i
+                                                class="flaticon-new-email-outline"
+                                                aria-hidden="true"></i>sales.prayoshacorporation@gmail.com</a></li>
+
+                                    </li>
+                                    <!-- <li><a href="javascript:;"><i class="flaticon-internet"></i>www.example.com</a>
                                 </li> -->
 
-                                <li>
-                                    <a href="https://goo.gl/maps/pSnrrjZaDm2GzbCw7"><i
-                                            class="flaticon-placeholder"></i>Katargam, Surat GJ, 395004</a>
-                                </li>
-                            </ul>
+                                    <li>
+                                        <a href="https://goo.gl/maps/pSnrrjZaDm2GzbCw7"><i
+                                                class="flaticon-placeholder"></i>Katargam, Surat GJ, 395004</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                     <div class="section3_copyright">
-                        <p>Copyright 2022-23 <a href="index.php"> Prayosha Solar</a>. all right reserved - designed by <a href="https://www.linkedin.com/in/atmik-virani-7b7316241/">Atmik X Prapti. </a></p>
+                        <p>Copyright 2022-23 <a href="index.php"> Prayosha Solar</a>. all right reserved - designed by
+                            <a href="https://www.linkedin.com/in/atmik-virani-7b7316241/">Atmik X Prapti. </a></p>
                     </div>
                 </div>
             </div>
@@ -1388,7 +1530,8 @@ track for what.</a></h5>
     <!-- sw footer section end-->
     <!--main js files-->
 
-    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery_min.js"></script>
+    <!-- <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
+    <script src="js/jquery_min.js"></script>
     <script src="js/materialize.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jqu_menu.js"></script>
@@ -1411,7 +1554,7 @@ track for what.</a></h5>
             min: 0,
             max: 1200,
             values: [100, 875],
-            slide: function(event, ui) {
+            slide: function (event, ui) {
                 $("#price").val("$" + ui.values[0] + " - " + " $" + ui.values[1]);
             }
         });
@@ -1424,7 +1567,7 @@ track for what.</a></h5>
             min: 0,
             max: 1200,
             values: [100, 875],
-            slide: function(event, ui) {
+            slide: function (event, ui) {
                 $("#price_2").val("$" + ui.values[0] + " - " + " $" + ui.values[1]);
             }
         });
@@ -1435,3 +1578,5 @@ track for what.</a></h5>
 </body>
 
 </html>
+<script src="Data.js"></script>
+<script src="main.js"></script>
