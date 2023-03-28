@@ -285,6 +285,7 @@ Author:   Atmik X Prapti
                 <div class="shop_cart_page_wrapper" >
                     <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" >
                         <div class="table-responsive cart-calculations">
+                            <form action="cartadd.php" method="post">
                             <table class="table">
 
                                 <thead class="cart_table_heading">
@@ -302,12 +303,11 @@ Author:   Atmik X Prapti
                                     </tr>
                                 </thead>
                                 <div id="label"></div>
-                                    
+                                
                                 
                                 <tbody id="shopping-cart">
 
                                 </tbody>
-                            
                             
                         <tfoot>
                             <td><b>Total</b></td>
@@ -325,13 +325,26 @@ Author:   Atmik X Prapti
                                 </ul>
     
                             </td>
+                            <td>
+
+                                <!-- <ul>
+                                    <input type="submit" value="Checkout" name="submit">
+                                </ul> -->
+
+                                <div class="shop_btn_wrapper shop_btn_wrapper_shipping">
+                                    <ul>
+                                        <li><a href="#" id="checkout-link" name="submit">Checkout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+    
+                            </td>
                         </tr>
                         </tfoot>
                         
-                    
-                    
-                        
                     </table>
+                    </form>
                 </div>
 
                         <!-- coupon code -->
@@ -396,19 +409,19 @@ Author:   Atmik X Prapti
                             <td><b><span id="cartTotal1"></span></b></td>
                                         </tr>
                                         <tr>
-                                            <th>IGST 18% :</th>
+                                            <th>CGST 18% :</th>
                                             <td><span id="cgst"></span></td>
                                         </tr>
                                         <tr>
-                                            <th>CGST 20% :</th>
+                                            <th>SGST 20% :</th>
                                             <td><span id="sgst"></span></td>
                                         </tr>
                                         <tr>
-                                            <th> Discount:</th>
+                                            <th> Discount :</th>
                                             <td><span id="discount"></span></td>
                                         </tr>
                                         <tr>
-                                            <th class="cart_btn_cntnt"> Sub Total :</th>
+                                            <th class="cart_btn_cntnt">Total :</th>
                                             <td><span class="cart_btn_cntnt_clr" id="Total"></span> </td>
                                         </tr>
                                     </tbody>
@@ -419,6 +432,7 @@ Author:   Atmik X Prapti
                                         </li>
                                     </ul>
                                 </div>
+                                
                             </div>
                         </div>
 
@@ -655,3 +669,9 @@ $('select').each(function(){
     <!-- <script src="main.js"></script> -->
     <script src="Data.js"></script>
     <script src="cart.js"></script> 
+    <script>
+    document.getElementById('checkout-link').addEventListener('click', function(event) {
+    event.preventDefault(); // prevent the default link behavior
+    document.querySelector('form').submit(); // submit the form
+  });
+</script>

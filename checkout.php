@@ -272,7 +272,7 @@ Author:   Atmik X Prapti
 
             <div class="panel-group" id="accordionFourLeft">
                 <div class="panel panel-default panel-checkout">
-                    <div class="panel-heading checkout_panel_heading">
+                    <!-- <div class="panel-heading checkout_panel_heading">
                         <h4 class="panel-title">
 								<i class="fa fa-user"></i> Have a coupone? 
                               <a data-toggle="collapse" data-parent="#accordion_oneLeft" href="checkout.php#collapseFiveLeftone" aria-expanded="false">
@@ -296,9 +296,9 @@ Author:   Atmik X Prapti
 
                             </div>
                         </div>
-                        <!-- end of panel-body -->
+                        
                     </div>
-                </div>
+                </div> -->
                 <div class="panel panel-default panel-checkout panel-checkout-2">
                     <div class="panel-heading checkout_panel_heading">
                         <h4 class="panel-title">
@@ -528,19 +528,77 @@ Author:   Atmik X Prapti
             <!--Order Box-->
             <div class="order-box">
                 <div class="btc_shop_single_prod_right_section related_pdt_shop_head checkout_heading">
-                    <h1>your order </h1>
+                    <h1>your order</h1>
                 </div>
-                <div class="title-box">
-                    <div class="col">PRODUCT</div>
-                    <div class="col">TOTAL</div>
-                </div>
-                <ul>
-                    <li class="clearfix"><strong>Patient Ninja 1</strong><span>$35.00</span></li>
-                    <li class="clearfix">Sub Total<span>$35.00</span></li>
-                    <li class="clearfix">Shipping<span class="free">Free Shipping</span></li>
-                    <li class="clearfix">TOTAL<span>$35.00</span></li>
-                </ul>
+                
             </div>
+            <table class="table">
+                <thead class="cart_table_head">
+                    <th>Total Products</th>
+                    <th>Total Quantity</th>
+                    <th>Total Price</th>
+                </thead>
+                <tbody>
+                    <div id="label" class="text-center"></div>
+                    
+                    <div class="shopping-cart" id="shopping-cart"></div>
+                    <td></td>
+                    <td style="text-align: left;"><b><span id="cartAmount"></span></b></td>
+                    <td style="text-align: left;"><b><span id="Total"></span></b></td>
+                </tbody>
+            </table>
+            <!-- <div class="shop_cart_page_wrapper" >
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" >
+                        <div class="table-responsive cart-calculations">
+                            <form action="cartadd.php" method="post">
+                            <table class="table">
+
+                                <thead class="cart_table_heading">
+                                    <tr>
+                                        <th>item</th>
+
+                                        <th>product</th>
+                                        <th>&nbsp;</th>
+                                        <th> price</th>
+
+                                        <th>Quantity</th>
+
+                                        <th>Total price</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <div id="label"></div>
+                                    
+                                
+                                <tbody id="shopping-cart">
+
+                                </tbody>
+                            
+                            
+                        <tfoot>
+                            <td><b>Total</b></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td style="text-align: center;"><b><span id="cartAmount"></span></b></td>
+                            <td><b><span id="cartTotal"></span></b></td>
+                            <tr>
+                            <td class="shop_btn_wrapper shop_car_btn_wrapper">
+
+                                <ul>
+                                    <li><a href="shop.php">continue shopping</a>
+                                    </li>
+                                </ul>
+    
+                            </td>
+                        </tr>
+                        </tfoot>
+                        
+                    
+                    
+                        
+                    </table> -->
+            
             <!--End Order Box-->
 
             <!--Payment Box-->
@@ -703,7 +761,8 @@ Author:   Atmik X Prapti
     <!-- sw footer section end-->
     <!--main js files-->
 
-    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery_min.js"></script>
+    <!-- <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
+    <script src="js/jquery_min.js"></script>
     <script src="js/materialize.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jqu_menu.js"></script>
@@ -718,6 +777,7 @@ Author:   Atmik X Prapti
     <script src="js/owl.carousel.js"></script>
     <script src="js/camera.min.js"></script>
     <script src="js/custom_2.js"></script>
+
     <script>
         const body = document.querySelector("body");
         const fab_nav = document.querySelector(".fab-container");
@@ -742,3 +802,6 @@ Author:   Atmik X Prapti
 </body>
 
 </html>
+<script src="checkout.js"></script>
+<script src="Data.js"></script>
+<script src="cart.js"></script>

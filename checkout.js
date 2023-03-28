@@ -39,45 +39,39 @@ calculation();
 let generateCartItems = () => {
   if (basket.length !== 0) {
     ShoppingCart.innerHTML = basket
-      .map((x,index) => {
+      .map((x) => {
         let { id, item } = x;
         let search = shopItemsData.find((y) => y.id === id) || {};
         return `
-        <input type="hidden" name="pid" value="${id}">
-<input type="hidden" name="pname" value="${search.name}">
-<input type="hidden" name="pdesc" value="${search.desc}">
-<input type="hidden" name="pprice" value="${search.price}">
-<input type="hidden" name="pquant" value="${item}">
-<input type="hidden" name="ppricetot" value="${item * search.price}">
-<tr>
-    <td>
-        <font>${index+1}</font>
-    </td>
-    <td>
-        <div class="table_cart_img">
-            <figure>
-                <img src=${search.img} alt="" />
-            </figure>
-        </div>
-        <div class="table_cart_cntnt">
-            <h1>${search.name}</h1>
-            <p style="font-size:10px;">${search.desc} </p>
-        </div>
-    </td>
-    <td class="cart_page_price">${search.price}</td>
-    <td>
-        <div class="counter">
-            <span class="down" onClick="decrement(${id})">-</span>
-            <div id=${id} class="quantity">${item}</div>
-            <span class="up" onClick="increment(${id})">+</span>
-        </div>
-    </td>
-    <td class="cart_page_totl">₹ ${item * search.price}</td>
-    <td>
-        <a href="javascript:;"> <i class="fa fa-trash" onclick="removeItem(${id})"></i></a>
-    </td>
-</tr>
-            
+          <tr>
+            <td>
+              ${id}
+            </td>
+            <td>
+              <div class="table_cart_img">
+                <figure>
+                  <img src=${search.img} alt="" />
+                </figure>
+              </div>
+              <div class="table_cart_cntnt">
+                <h1>${search.name}</h1>
+                <p style="font-size:10px;">${search.desc} </p>
+              </div>
+            </td>
+            <td></td>
+            <td class="cart_page_price">${search.price}</td>
+            <td>
+              <div class="counter">
+                <span class="down" onClick="decrement(${id})">-</span>
+                <div id=${id} class="quantity">${item}</div>
+                <span class="up" onClick="increment(${id})">+</span>
+              </div>
+            </td>
+            <td class="cart_page_totl">₹ ${item * search.price}</td>
+            <td>
+              <a href="javascript:;"> <i class="fa fa-trash" onclick="removeItem(${id})"></i></a>
+            </td>
+            <tr>
         `;
       })
       .join("");

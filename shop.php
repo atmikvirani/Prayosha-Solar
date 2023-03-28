@@ -47,6 +47,7 @@ Author:   Atmik X Prapti
     .counter{
         background-color: white;
     }
+    
     /* .counter:hover{
         
         
@@ -231,7 +232,30 @@ Author:   Atmik X Prapti
         <div class="header_btn">
             <ul>
                 <li>
-                    <a href="cart.php" class="waves-effect waves-light waves-ripple">Cart <span style="width: 15px;
+                <?php
+                        if(isset($_SESSION['uid']))
+                        {
+                            echo '<a href="cart.php" class="waves-effect waves-light waves-ripple">Cart<span style="width: 15px;
+                            height: 15px;
+                            color: #ffffff;
+                            background: #ff3232;
+                            border-radius: 100%;
+                            font-size: 10px;
+                            float: left;
+                            line-height: 15px;
+                            text-align: center;
+                            position: absolute;
+                            left: 90px;
+                            top: 7px;
+                        ;" id="cartAmount"
+                            class="cartAmount"></span></a>';
+                        }
+                        else{
+                            echo"<script>alert('You need to login inorder to access Cart.')</script>";
+                            echo '<a href="login.html" class="waves-effect waves-light waves-ripple">Login</a>';
+                        }
+                ?>
+                    <!-- <a href="cart.php" class="waves-effect waves-light waves-ripple">Cart<span style="width: 15px;
                         height: 15px;
                         color: #ffffff;
                         background: #ff3232;
@@ -244,7 +268,7 @@ Author:   Atmik X Prapti
                         left: 90px;
                         top: 7px;
                     ;" id="cartAmount"
-                        class="cartAmount"></span></a>
+                        class="cartAmount"></span></a> -->
                 </li>
             </ul>
         </div>
@@ -302,7 +326,7 @@ Author:   Atmik X Prapti
 
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 hidden-xs hidden-sm">
                     <div class="sidebar_widget">
-                        <h4>search here</h4>
+                        <h4>search</h4>
                         <img src="images/heading_line.png" alt="title">
                         <form class="search_form" role="search">
                             <div class="form-group">
@@ -476,14 +500,13 @@ Author:   Atmik X Prapti
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="tab-content btc_shop_index_content_tabs_main">
                                     <div id="grid" class="tab-pane fade in active" >
-                                        <div class="row" >
-                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" class="shop" id="shop">
+                                        <div class="row">
+                                            <div id="shop">
                                                 <!-- here is the card -->
-                                                <div >
-
-                                                </div>
+                                                
                                                 <!-- card ends -->
                                             </div>
+                                        </div>
                                             <!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                                 <div class="sw_product_box_wrapper sw_shop_sider_pder">
                                                     <div class="sw_product_indx_img_wrapper">
@@ -523,8 +546,8 @@ Author:   Atmik X Prapti
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                            </div> -->
+                                            <!--<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                                 <div class="sw_product_box_wrapper sw_shop_sider_pder">
                                                     <div class="sw_product_indx_img_wrapper">
 
@@ -926,7 +949,7 @@ Author:   Atmik X Prapti
                                                 </div>
                                             </div> -->
 
-                                        </div>
+                                        
                                     </div>
                                     <div id="list" class="tab-pane fade">
                                         <div class="row">
