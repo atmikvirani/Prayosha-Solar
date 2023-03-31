@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
     else
     
     {   
-        $_SESSION['uid']=$row['id'];
+        $_SESSION['uid']=$row['userid'];
         $_SESSION['user']=$row['username'];
         $_SESSION['email']=$row['email'];
         $_SESSION['status']=$row['stat'];

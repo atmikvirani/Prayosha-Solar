@@ -73,7 +73,6 @@ Author:   Atmik X Prapti
                             </li>
                             <li><a href="team.php" title="">team</a>
                             </li>
-                            <li><a href="blog.php" title="">blog</a>
                             </li>
                             <li><a href="shop.php" title="">shop</a>
                             </li>
@@ -159,8 +158,7 @@ Author:   Atmik X Prapti
                                                 </li>
                                                 <li><a href="team.php" title="">team</a>
                                                 </li>
-                                                <li><a href="blog.php" title="">blog</a>
-                                                </li>
+                                                                    </li>
                                                 <li><a href="shop.php" title="">shop</a>
                                                 </li>
                                                 <li><a href="contact_us.php" title="">Contact us</a>
@@ -414,6 +412,7 @@ Author:   Atmik X Prapti
     <script src="js/owl.carousel.js"></script>
     <script src="js/camera.min.js"></script>
     <script src="js/custom_2.js"></script>
+    <script src="cartdisp.js"></script>
     <!--js code-->
 </body>
 

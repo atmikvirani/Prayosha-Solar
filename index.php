@@ -124,12 +124,10 @@ Author:   Atmik X Prapti
                             </li>
                             <li><a href="team.php" title="">team</a>
                             </li>
-                            <li><a href="blog.php" title="">blog</a>
                             </li>
                             <li><a href="shop.php" title="">shop</a>
                             </li>
                             <li><a href="contact_us.php" title="">Contact us</a>
-                                
                             </li>
                             <li class="caret_btn">
                                 <a href="javascript:;"><i class="fa-regular fa-user"></i></a>
@@ -270,10 +268,23 @@ Author:   Atmik X Prapti
                                         </li>
                                         <li><a href="team.php" title="">team</a>
                                         </li>
-                                        <li><a href="blog.php" title="">blog</a>
-                                        </li>
                                         <li><a href="shop.php" title="">shop</a>
                                         </li>
+                                        <li>
+                                        <a href="cart.php" class="waves-effect waves-light waves-ripple">Cart<span style="width: 15px;
+                                                    height: 15px;
+                                                    color: #ffffff;
+                                                    background: #ff3232;
+                                                    border-radius: 100%;
+                                                    font-size: 10px;
+                                                    float: left;
+                                                    line-height: 15px;
+                                                    text-align: center;
+                                                    position: absolute;
+                                                    left: 50px;
+                                                    top: 7px;
+                                                ;" id="cartAmount"
+                                                    class="cartAmount"></span></a></li>
                                         <li><a href="contact_us.php" title="">Contact us</a>
                                         </li>
                                         <?php
@@ -996,7 +1007,7 @@ Author:   Atmik X Prapti
                                             <i class="fa fa-star-o"></i>
                                             <i class="fa fa-star-o"></i>
                                         </div>
-                                        <div class="cc_li_img_overlay">
+                                        <!-- <div class="cc_li_img_overlay">
                                             <div class="cc_li_img_text">
                                                 <ul>
                                                     <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a>
@@ -1006,7 +1017,7 @@ Author:   Atmik X Prapti
                                                     <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>
                                                 </ul>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -1031,7 +1042,7 @@ Author:   Atmik X Prapti
                                             <i class="fa fa-star-o"></i>
                                             <i class="fa fa-star-o"></i>
                                         </div>
-                                        <div class="cc_li_img_overlay">
+                                        <!-- <div class="cc_li_img_overlay">
                                             <div class="cc_li_img_text">
                                                 <ul>
                                                     <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a>
@@ -1041,7 +1052,7 @@ Author:   Atmik X Prapti
                                                     <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>
                                                 </ul>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -1049,7 +1060,7 @@ Author:   Atmik X Prapti
                                 <div class="sw_product_box_wrapper">
                                     <div class="sw_product_indx_img_wrapper">
 
-                                        <img src="images/prdct_4.png" alt="shop_img" class="img-responsive" />
+                                        <img src="images/prdct_4.jpg" alt="shop_img" class="img-responsive" />
                                     </div>
 
                                     <div class="sw_product_indx_img_cont_wrapper">
@@ -1066,7 +1077,7 @@ Author:   Atmik X Prapti
                                             <i class="fa fa-star-o"></i>
                                             <i class="fa fa-star-o"></i>
                                         </div>
-                                        <div class="cc_li_img_overlay">
+                                        <!-- <div class="cc_li_img_overlay">
                                             <div class="cc_li_img_text">
                                                 <ul>
                                                     <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a></li>
@@ -1076,7 +1087,7 @@ Author:   Atmik X Prapti
                                                     <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>
                                                 </ul>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -1101,7 +1112,7 @@ Author:   Atmik X Prapti
                                             <i class="fa fa-star-o"></i>
                                             <i class="fa fa-star-o"></i>
                                         </div>
-                                        <div class="cc_li_img_overlay">
+                                        <!-- <div class="cc_li_img_overlay">
                                             <div class="cc_li_img_text">
                                                 <ul>
                                                     <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a>
@@ -1111,7 +1122,7 @@ Author:   Atmik X Prapti
                                                     <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>
                                                 </ul>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -1337,6 +1348,7 @@ Author:   Atmik X Prapti
     <script src="js/owl.carousel.js"></script>
     <script src="js/camera.min.js"></script>
     <script src="js/custom_6.js"></script>
+    <script src="cartdisp.js"></script>
     <!--js code-->
 </body>
 

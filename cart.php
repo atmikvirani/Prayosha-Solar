@@ -80,7 +80,6 @@ Author:   Atmik X Prapti
                             </li>
                             <li><a href="team.php" title="">team</a>
                             </li>
-                            <li><a href="blog.php" title="">blog</a>
                             </li>
                             <li><a href="shop.php" title="">shop</a>
                             </li>
@@ -168,8 +167,6 @@ Author:   Atmik X Prapti
                                             </li>
                                             <li><a href="team.php" title="">team</a>
                                             </li>
-                                            <li><a href="blog.php" title="">blog</a>
-                                            </li>
                                             <li><a href="shop.php" title="">shop</a>
                                             </li>
                                             <li><a href="contact_us.php" title="">Contact us</a>
@@ -222,7 +219,7 @@ Author:   Atmik X Prapti
         <div class="header_btn">
             <ul>
                 <li>
-                    <a href="checkout.php" class="waves-effect waves-light waves-ripple">Checkout</a>
+                    <a href="shop.php" class="waves-effect waves-light waves-ripple">Shop</a>
                 </li>
             </ul>
         </div>
@@ -293,7 +290,7 @@ Author:   Atmik X Prapti
                                         <th>item</th>
 
                                         <th>product</th>
-                                        <th>&nbsp;</th>
+
                                         <th> price</th>
 
                                         <th>Quantity</th>
@@ -311,7 +308,6 @@ Author:   Atmik X Prapti
                             
                         <tfoot>
                             <td><b>Total</b></td>
-                            <td></td>
                             <td></td>
                             <td></td>
                             <td style="text-align: center;"><b><span id="cartAmount"></span></b></td>
@@ -426,12 +422,6 @@ Author:   Atmik X Prapti
                                         </tr>
                                     </tbody>
                                 </table>
-                                <div class="shop_btn_wrapper shop_btn_wrapper_shipping">
-                                    <ul>
-                                        <li><a href="checkout.php">Checkout</a>
-                                        </li>
-                                    </ul>
-                                </div>
                                 
                             </div>
                         </div>
@@ -668,7 +658,7 @@ $('select').each(function(){
     
     <!-- <script src="main.js"></script> -->
     <script src="Data.js"></script>
-    <script src="cart.js"></script> 
+    <script src="cartdisp.js"></script> 
     <script>
     document.getElementById('checkout-link').addEventListener('click', function(event) {
     event.preventDefault(); // prevent the default link behavior

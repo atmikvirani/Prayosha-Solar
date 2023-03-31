@@ -2,7 +2,7 @@
     session_start();
     if(isset($_SESSION['uid']))
     {
-        $id= $_SESSION['uid'];
+        $userid= $_SESSION['uid'];
         $name= $_SESSION['user'];
         $email= $_SESSION['email'];
         $subject= $_POST['subject'];
@@ -10,7 +10,7 @@
         $ip = $_SERVER['REMOTE_ADDR'];
 
         $conn = mysqli_connect("localhost","root","","project");
-        $query = "insert into contact values(NULL,'$id','$name','$email','$subject','$message',NULL,'$ip')";
+        $query = "insert into contact values(NULL,'$userid','$name','$email','$subject','$message',NULL,'$ip')";
         // echo $query;
         mysqli_query($conn,$query);
         mysqli_close($conn);

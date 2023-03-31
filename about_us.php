@@ -74,9 +74,8 @@ Author:   Atmik X Prapti
                             <li><a href="project.php" title="">projects</a>
                             </li>
                             <li><a href="team.php" title="">team</a>
-                            </li>
-                            <li><a href="blog.php" title="">blog</a>
-                            </li>
+                            <!-- </li>
+                            </li> -->
                             <li><a href="shop.php" title="">shop</a>
                             </li>
                             <li><a href="contact_us.php" title="">Contact us</a>
@@ -93,15 +92,6 @@ Author:   Atmik X Prapti
                                         echo '<p style="font-weight:550;font-family:Montserrat;text-transform:initial;font-size:15px;">'.'<font style="text-transform:initial;color:white;font-size:12px;">'.'<!--hello, --> '.'</font>'.'Guest User'.'</p>';
                                     }
                                     ?>
-                                    <!-- <?php
-                                    session_start();
-                                    if(isset($_SESSION['email'])){  
-                                        echo '<p style="font-weight:625;font-family:Montserrat;text-transform:initial;font-size:15px;">'.'<font style="text-transform:initial;font-size:12px;">'.'hello, '.'</font>'.$_SESSION['user'].'</p>';
-                                    }
-                                    else{
-                                        echo '<p style="font-weight:550;font-family:Montserrat;text-transform:initial;font-size:15px;">'.'<font style="text-transform:initial;color:white;font-size:12px;">'.'<!--hello, --> '.'</font>'.'Guest User'.'</p>';
-                                    }
-                                    ?> -->
 
                                 </ul>
                             </li>
@@ -159,27 +149,38 @@ Author:   Atmik X Prapti
                             <div class="col-xs-12 cc_menu_top_margin">
                                 <!-- mobile menu start -->
                                 <div class="mobile-menu">
-                                    <nav>
-                                        <ul class="nav">
-                                            <li><a href="index.php" title="">Home</a>
-                                            </li>
-                                            <li><a href="about_us.php" title="">about us</a>
-                                            </li>
-                                            <li><a href="services.php" title="">services</a>
-                                            </li>
-                                            <li><a href="project.php" title="">projects</a>
-                                            </li>
-                                            <li><a href="team.php" title="">team</a>
-                                            </li>
-                                            <li><a href="blog.php" title="">blog</a>
-                                            </li>
-                                            <li><a href="shop.php" title="">shop</a>
-                                            </li>
-                                            <li><a href="contact_us.php" title="">Contact us</a>
-                                                
-                                            </li>
-                                                </li>
-                                                <?php
+                                <nav>
+                                    <ul class="nav">
+                                        <li><a href="index.php" title="">Home</a>
+                                        </li>
+                                        <li><a href="about_us.php" title="">about us</a>
+                                        </li>
+                                        <li><a href="services.php" title="">services</a>
+                                        </li>
+                                        <li><a href="project.php" title="">projects</a>
+                                        </li>
+                                        <li><a href="team.php" title="">team</a>
+                                        </li>
+                                        <li><a href="shop.php" title="">shop</a>
+                                        </li>
+                                        <li>
+                                        <a href="cart.php" class="waves-effect waves-light waves-ripple">Cart<span style="width: 15px;
+                                                    height: 15px;
+                                                    color: #ffffff;
+                                                    background: #ff3232;
+                                                    border-radius: 100%;
+                                                    font-size: 10px;
+                                                    float: left;
+                                                    line-height: 15px;
+                                                    text-align: center;
+                                                    position: absolute;
+                                                    left: 50px;
+                                                    top: 7px;
+                                                ;" id="cartAmount"
+                                                    class="cartAmount"></span></a></li>
+                                        <li><a href="contact_us.php" title="">Contact us</a>
+                                        </li>
+                                        <?php
                                                 if(isset($_SESSION['email'])){
                                                     echo '<li class="dropdown_hover"><a href="logout.php">Log Out</a></li>';
                                                 }
@@ -193,23 +194,25 @@ Author:   Atmik X Prapti
                                                     echo '<li class="dropdown_hover"><a href="create_account.html">Create Account</a></li>';
                                                 }
                                             ?>
-                                            <li class="caret_btn">
-                                                <a href="javascript:;"><i class="fa-regular fa-user"></i></a>
-                                                <ul>
-                                                    <?php
+                                        <li class="caret_btn">
+                                            <a href="javascript:;"><i
+                                                    class="fa-regular fa-user"></i></a>
+                                            <ul>
+                                            <?php
                                                     if(isset($_SESSION['email'])){  
                                                     echo '<b><p style="font-weight:625;font-family:Montserrat;text-transform:initial;color:Black;font-size:15px;">'.'<font style="font-weight:525;text-transform:initial;color:black;font-size:12px;">'.'hello, '.'</font>'.$_SESSION['user'].'</p></b>';
                                                     }
                                                     else{
                                                         echo '<b><p style="font-weight:550;font-family:Montserrat; text-transform:initial; color:Black; font-size:15px;">'.'<font style="text-transform:initial;color:black;font-size:12px;">'.'<!--hello, --> '.'</font>'.'Guest User'.'</p></b>';
                                                     }
-                                                    ?>
-                                                </ul>
-                                            </li>
+                                                
+                                            ?>
+                                            </ul>
+                                        </li>
 
-                                        </ul>
-                                    </nav>
-                                </div>
+                                    </ul>
+                                </nav>
+                            </div>
                                 <!-- mobile menu end -->
                             </div>
                         </div>
@@ -994,6 +997,7 @@ Author:   Atmik X Prapti
     <script src="js/owl.carousel.js"></script>
     <script src="js/camera.min.js"></script>
     <script src="js/custom_2.js"></script>
+    <script src="cartdisp.js"></script>
     <!--js code-->
 </body>
 

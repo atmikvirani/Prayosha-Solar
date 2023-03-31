@@ -42,6 +42,8 @@ Author:   Atmik X Prapti
 
     <!-- favicon link-->
     <link rel="shortcut icon" type="image/icon" href="images/favicon.png" />
+
+    
 </head>
 <style>
     .counter{
@@ -90,7 +92,6 @@ Author:   Atmik X Prapti
                             </li>
                             <li><a href="team.php" title="">team</a>
                             </li>
-                            <li><a href="blog.php" title="">blog</a>
                             </li>
                             <li><a href="shop.php" title="">shop</a>
                             </li>
@@ -178,9 +179,9 @@ Author:   Atmik X Prapti
                                             </li>
                                             <li><a href="team.php" title="">team</a>
                                             </li>
-                                            <li><a href="blog.php" title="">blog</a>
-                                            </li>
                                             <li><a href="shop.php" title="">shop</a>
+                                            </li>
+                                            <li><a href="cart.php" title="">cart</a>
                                             </li>
                                             <li><a href="contact_us.php" title="">Contact us</a>
 
@@ -232,10 +233,7 @@ Author:   Atmik X Prapti
         <div class="header_btn">
             <ul>
                 <li>
-                <?php
-                        if(isset($_SESSION['uid']))
-                        {
-                            echo '<a href="cart.php" class="waves-effect waves-light waves-ripple">Cart<span style="width: 15px;
+                <a href="cart.php" class="waves-effect waves-light waves-ripple">Cart<span style="width: 15px;
                             height: 15px;
                             color: #ffffff;
                             background: #ff3232;
@@ -248,13 +246,7 @@ Author:   Atmik X Prapti
                             left: 90px;
                             top: 7px;
                         ;" id="cartAmount"
-                            class="cartAmount"></span></a>';
-                        }
-                        else{
-                            echo"<script>alert('You need to login inorder to access Cart.')</script>";
-                            echo '<a href="login.html" class="waves-effect waves-light waves-ripple">Login</a>';
-                        }
-                ?>
+                            class="cartAmount"></span></a>
                     <!-- <a href="cart.php" class="waves-effect waves-light waves-ripple">Cart<span style="width: 15px;
                         height: 15px;
                         color: #ffffff;
@@ -330,12 +322,12 @@ Author:   Atmik X Prapti
                         <img src="images/heading_line.png" alt="title">
                         <form class="search_form" role="search">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search here">
+                                <input type="text" id="search" class="form-control" placeholder="Search here">
                             </div>
                             <button type="submit"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
-                    <div class="sidebar_widget">
+                    <!-- <div class="sidebar_widget">
                         <h4>item categories</h4>
                         <img src="images/heading_line.png" alt="title">
                         <div class="archives_wrapper">
@@ -459,9 +451,9 @@ Author:   Atmik X Prapti
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="slidebar_add_img">
-                        <a href="javascript:;">
+                        <a href="shop.php">
                             <img src="images/add.png" alt="img" class="img-responsive">
                         </a>
                     </div>
@@ -478,13 +470,13 @@ Author:   Atmik X Prapti
                                                     href="shop.php#grid"
                                                     class="waves-effect waves-light waves-ripple"><i
                                                         class="flaticon-menu"></i></a></li>
-                                            <li><a data-toggle="pill" href="shop.php#list"
+                                            <!-- <li><a data-toggle="pill" href="shop.php#list"
                                                     class="waves-effect waves-light waves-ripple"><i
-                                                        class="flaticon-list"></i></a></li>
+                                                        class="flaticon-list"></i></a></li> -->
                                         </ul>
                                     </div>
                                     <div class="showpro">
-                                        <p>Showing 1-9 of 256 Results</p>
+                                        <p>Showing 1 of 1 Results</p>
                                     </div>
                                     <select>
                                         <option>sort by</option>
@@ -951,7 +943,7 @@ Author:   Atmik X Prapti
 
                                         
                                     </div>
-                                    <div id="list" class="tab-pane fade">
+                                    <!-- <div id="list" class="tab-pane fade">
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="btc_shop_indx_cont_list_box_wrapper">
@@ -1248,20 +1240,20 @@ Author:   Atmik X Prapti
                                             </div>
 
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
                                 <!-- blog_pagination_section start -->
-                                <div class="pager_wrapper gc_blog_pagination">
+                                <!-- <div class="pager_wrapper gc_blog_pagination">
                                     <ul class="pagination">
                                         <li><a href="javascript:;">Previous</a>
                                         </li>
-                                        <li><a href="javascript:;">1</a>
+                                        <li class="third_pagger"><a href="javascript:;">1</a>
                                         </li>
-                                        <li class="third_pagger"><a href="javascript:;">2</a>
+                                        <li ><a href="javascript:;">2</a>
                                         </li>
                                         <li><a href="javascript:;">3</a>
                                         </li>
@@ -1270,7 +1262,7 @@ Author:   Atmik X Prapti
                                         <li><a href="javascript:;">Next</a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> -->
                                 <!-- blog_pagination_section end -->
                             </div>
                         </div>
@@ -1601,5 +1593,24 @@ Author:   Atmik X Prapti
 </body>
 
 </html>
+<script>
+    $(document).ready(function() {
+        var searchInput = $('#search');
+        var cardsContainer = $('#shop');
+
+        searchInput.on('keyup', function() {
+            var searchValue = $(this).val().toLowerCase();
+
+            cardsContainer.find('.cardP').each(function() {
+                var cardText = $(this).text().toLowerCase();
+                if (cardText.indexOf(searchValue) > -1) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        });
+    });
+</script>
 <script src="Data.js"></script>
 <script src="main.js"></script>

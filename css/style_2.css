@@ -6202,14 +6202,15 @@ a.level {
     /*=============== Dropdown ===================*/
     nav ul li ul {
         background: #fff none repeat scroll 0 0;
-        text-align: left;
+        text-align: center;
         list-style: outside none none;
         margin: 0;
         padding: 0;
 		z-index:1;
         position: absolute;
         top: 120%;
-        width: 250px;
+        left:-7px;
+        width: 115px;
         visibility: hidden;
         opacity: 0;
         -webkit-border-radius: 15px;
@@ -6805,8 +6806,8 @@ nav ul li:nth-child(9) > ul {
   .checkout-page {
     float: left;
     width: 100%;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 0px;
+    padding-bottom: 50px;
 }
 
 .checkout_heading {

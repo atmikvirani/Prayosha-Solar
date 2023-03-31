@@ -34,63 +34,59 @@ const calculateTotals = (basket, shopItemsData) => {
 
 calculation();
 
+let total = localStorage.getItem("total");
+document.getElementById("cartTotal").innerHTML = total;
 
 // code for generating items in cart
 let generateCartItems = () => {
   if (basket.length !== 0) {
     ShoppingCart.innerHTML = basket
-      .map((x) => {
+      .map((x,index) => {
         let { id, item } = x;
         let search = shopItemsData.find((y) => y.id === id) || {};
         return `
-          <tr>
+        <tr>
             <td>
-              ${id}
+                <font>${index+1}</font>
             </td>
             <td>
-              <div class="table_cart_img">
-                <figure>
-                  <img src=${search.img} alt="" />
-                </figure>
-              </div>
-              <div class="table_cart_cntnt">
-                <h1>${search.name}</h1>
-                <p style="font-size:10px;">${search.desc} </p>
-              </div>
+                <div class="table_cart_img">
+                    <figure>
+                        <img src=${search.img} alt="" />
+                    </figure>
+                </div>
+                <div class="table_cart_cntnt">
+                    <h1>${search.name}</h1>
+                    <p style="font-size:10px;">${search.desc} </p>
+                </div>
             </td>
-            <td></td>
             <td class="cart_page_price">${search.price}</td>
             <td>
-              <div class="counter">
-                <span class="down" onClick="decrement(${id})">-</span>
-                <div id=${id} class="quantity">${item}</div>
-                <span class="up" onClick="increment(${id})">+</span>
-              </div>
+                <div class="counter">
+                    <span class="down" onClick="decrement(${id})">-</span>
+                    <div id=${id} class="quantity">${item}</div>
+                    <span class="up" onClick="increment(${id})">+</span>
+                </div>
             </td>
             <td class="cart_page_totl">₹ ${item * search.price}</td>
             <td>
-              <a href="javascript:;"> <i class="fa fa-trash" onclick="removeItem(${id})"></i></a>
+                <a href="javascript:;"> <i class="fa fa-trash" onclick="removeItem(${id})"></i></a>
             </td>
-            <tr>
+        </tr>
         `;
       })
       .join("");
   } else {
     ShoppingCart.innerHTML = "";
     label.innerHTML = `
-    
-    
         <td>
             <h5>Cart is currently empty, please <a href="shop.php"><u>add products</u></a> to Checkout.</h5>
         </td>
-   
-  
     `;
   }
 };
 
 generateCartItems();
-
 
 // code for increment
 let increment = (id) => {
@@ -165,3 +161,4 @@ let TotalAmount = () => {
 };
 
 TotalAmount();
+

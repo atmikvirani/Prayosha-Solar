@@ -3261,12 +3261,13 @@ margin-top: 15px;
     /*=============== Dropdown ===================*/
     nav ul li ul {
         background: #5e2ced none repeat scroll 0 0;
-        text-align: left;
+        text-align: center;
         list-style: outside none none;
         margin: 0;
         padding: 0;
         position: absolute;
         top: 120%;
+        left:-80px;
         width: 115px;
         visibility: hidden;
         opacity: 0;
@@ -3439,6 +3440,8 @@ nav ul li:nth-child(9) > ul {
     padding-top: 15px;
     padding-bottom: 10px;
     right: 0;
+    top: 27px;
+    left:-120px;
     border-radius: 15px;
     margin-top: 15px;
     border: 0;
