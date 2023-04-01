@@ -4,7 +4,7 @@ if(isset($_POST['submit'])){
     $email=$_POST['txtemail'];
     $pass=md5($_POST['txtpass']);
     $conn=mysqli_connect("localhost","root","","project");
-    $query="select * from regdb where email='$email' and password='$pass'";
+    $query="select * from regdb where useremail='$email' and password='$pass'";
     $result=mysqli_query($conn,$query);
     $row= mysqli_fetch_array($result);
 
@@ -20,7 +20,7 @@ if(isset($_POST['submit'])){
     {   
         $_SESSION['uid']=$row['userid'];
         $_SESSION['user']=$row['username'];
-        $_SESSION['email']=$row['email'];
+        $_SESSION['email']=$row['useremail'];
         $_SESSION['status']=$row['stat'];
         header("Location: ./index.php");
     }
