@@ -1,4 +1,4 @@
-<!-- <script src="cartdisp.js"></script>  -->
+
 <?php
     session_start();
     if(isset($_SESSION['email']))
@@ -26,6 +26,6 @@
         include "checkout.php";
    }
    else
-      // echo "<h3 align='center'>You need to <u><a href='login.html'>Login</a></u> inorder to checkout! </h3>";
-      // include "login.html";
+      echo "<h3 align='center'>You need to <u><a href='login.html'>Login</a></u> inorder to checkout! </h3>";
+      include "login.html";
     ?>

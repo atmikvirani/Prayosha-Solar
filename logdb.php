@@ -16,13 +16,20 @@ if(isset($_POST['submit'])){
         include "login.html";
     }
     else
-    
     {   
-        $_SESSION['uid']=$row['userid'];
-        $_SESSION['user']=$row['username'];
-        $_SESSION['email']=$row['useremail'];
-        $_SESSION['status']=$row['stat'];
-        header("Location: ./index.php");
+        if($row['stat']==0)
+        {
+            echo "<h3 align='center' style='color:red'><b>Your account is disabled! <a href='./contact_us.php'><u>Contact Us</u></a></b></h3>";
+            include "login.html";
+        }
+        else
+        {
+            $_SESSION['uid']=$row['userid'];
+            $_SESSION['user']=$row['username'];
+            $_SESSION['email']=$row['useremail'];
+            $_SESSION['status']=$row['stat'];
+            header("Location: ./index.php");
+        }
     }
 }
 else{
