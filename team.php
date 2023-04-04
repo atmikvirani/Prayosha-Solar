@@ -283,10 +283,10 @@ Author:   Atmik X Prapti
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="sw_product_box_wrapper team_pdr">
                             <div class="sw_product_indx_img_wrapper">
-                                <div class="sp_img_box_overlay"></div>
-                                <img src="images/abt_pdt_1.png" alt="shop_img" class="img-responsive" />
+                                <!-- <div class="sp_img_box_overlay"></div> -->
+                                <img src="images/e2.jpg" alt="shop_img" class="img-responsive" width="316px" height="316px" />
                                 <div class="abt_img_btn_wrapper tem_img_btn_wrapper">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><a href="javascript:;"><i class="fa fa-facebook"></i></a>
                                         </li>
                                         <li><a href="javascript:;"><i class="fa fa-twitter"></i></a>
@@ -297,14 +297,14 @@ Author:   Atmik X Prapti
                                         </li>
                                         <li><a href="javascript:;"><i class="fa fa-pinterest-p"></i></a>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
 
                             <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2 sw_prdct_11">
 
-                                <h1><a href="javascript:;">akshay H.</a></h1>
-                                <h5>(project manager)</h5>
+                                <h1><a href="javascript:;">Akshay H.</a></h1>
+                                <h5>(Project Manager)</h5>
 
                             </div>
                         </div>
@@ -312,10 +312,10 @@ Author:   Atmik X Prapti
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="sw_product_box_wrapper team_pdr">
                             <div class="sw_product_indx_img_wrapper">
-                                <div class="sp_img_box_overlay"></div>
-                                <img src="images/abt_pdt_3.png" alt="shop_img" class="img-responsive" />
+                                <!-- <div class="sp_img_box_overlay"></div> -->
+                                <img src="images/e1.jpg" alt="shop_img" class="img-responsive" width="262" height="262" />
                                 <div class="abt_img_btn_wrapper tem_img_btn_wrapper">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><a href="javascript:;"><i class="fa fa-facebook"></i></a>
                                         </li>
                                         <li><a href="javascript:;"><i class="fa fa-twitter"></i></a>
@@ -326,14 +326,14 @@ Author:   Atmik X Prapti
                                         </li>
                                         <li><a href="javascript:;"><i class="fa fa-pinterest-p"></i></a>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
 
                             <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2 sw_prdct_11">
 
-                                <h1><a href="javascript:;">ajay S.</a></h1>
-                                <h5>(site manager)</h5>
+                                <h1><a href="javascript:;">Shreya M.</a></h1>
+                                <h5>(Site Manager)</h5>
 
                             </div>
                         </div>
@@ -341,10 +341,10 @@ Author:   Atmik X Prapti
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="sw_product_box_wrapper team_pdr">
                             <div class="sw_product_indx_img_wrapper">
-                                <div class="sp_img_box_overlay"></div>
-                                <img src="images/abt_pdt_2.png" alt="shop_img" class="img-responsive" />
+                                <!-- <div class="sp_img_box_overlay"></div> -->
+                                <img src="images/e3.jpg" alt="shop_img" class="img-responsive" />
                                 <div class="abt_img_btn_wrapper tem_img_btn_wrapper">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><a href="javascript:;"><i class="fa fa-facebook"></i></a>
                                         </li>
                                         <li><a href="javascript:;"><i class="fa fa-twitter"></i></a>
@@ -355,14 +355,14 @@ Author:   Atmik X Prapti
                                         </li>
                                         <li><a href="javascript:;"><i class="fa fa-pinterest-p"></i></a>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
 
                             <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2 sw_prdct_11">
 
-                                <h1><a href="javascript:;"> farhan S.</a></h1>
-                                <h5>(site engineer)</h5>
+                                <h1><a href="javascript:;"> Rajesh S.</a></h1>
+                                <h5>(Site Engineer)</h5>
 
                             </div>
                         </div>
@@ -370,10 +370,10 @@ Author:   Atmik X Prapti
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="sw_product_box_wrapper team_pdr">
                             <div class="sw_product_indx_img_wrapper">
-                                <div class="sp_img_box_overlay"></div>
-                                <img src="images/abt_pdt_3.png" alt="shop_img" class="img-responsive" />
+                                <!-- <div class="sp_img_box_overlay"></div> -->
+                                <img src="images/e4.jpg" alt="shop_img" class="img-responsive" />
                                 <div class="abt_img_btn_wrapper tem_img_btn_wrapper">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><a href="javascript:;"><i class="fa fa-facebook"></i></a>
                                         </li>
                                         <li><a href="javascript:;"><i class="fa fa-twitter"></i></a>
@@ -384,14 +384,14 @@ Author:   Atmik X Prapti
                                         </li>
                                         <li><a href="javascript:;"><i class="fa fa-pinterest-p"></i></a>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
 
                             <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2 sw_prdct_11">
 
-                                <h1><a href="javascript:;">ajay S.</a></h1>
-                                <h5>(site manager)</h5>
+                                <h1><a href="javascript:;">Manali A.</a></h1>
+                                <h5>(Site Manager)</h5>
 
                             </div>
                         </div>
@@ -399,10 +399,10 @@ Author:   Atmik X Prapti
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="sw_product_box_wrapper team_pdr">
                             <div class="sw_product_indx_img_wrapper">
-                                <div class="sp_img_box_overlay"></div>
-                                <img src="images/abt_pdt_4.png" alt="shop_img" class="img-responsive" />
+                                <!-- <div class="sp_img_box_overlay"></div> -->
+                                <img src="images/e5.jpg" alt="shop_img" class="img-responsive" />
                                 <div class="abt_img_btn_wrapper tem_img_btn_wrapper">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><a href="javascript:;"><i class="fa fa-facebook"></i></a>
                                         </li>
                                         <li><a href="javascript:;"><i class="fa fa-twitter"></i></a>
@@ -413,14 +413,14 @@ Author:   Atmik X Prapti
                                         </li>
                                         <li><a href="javascript:;"><i class="fa fa-pinterest-p"></i></a>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
 
                             <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2 sw_prdct_11">
 
-                                <h1><a href="javascript:;">manali H.</a></h1>
-                                <h5>(site supervisor)</h5>
+                                <h1><a href="javascript:;">Krunal I.</a></h1>
+                                <h5>(Site Supervisor)</h5>
 
                             </div>
                         </div>
@@ -428,10 +428,10 @@ Author:   Atmik X Prapti
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="sw_product_box_wrapper team_pdr">
                             <div class="sw_product_indx_img_wrapper">
-                                <div class="sp_img_box_overlay"></div>
-                                <img src="images/abt_pdt_8.png" alt="shop_img" class="img-responsive" />
+                                <!-- <div class="sp_img_box_overlay"></div> -->
+                                <img src="images/e6.jpg" alt="shop_img" class="img-responsive" />
                                 <div class="abt_img_btn_wrapper tem_img_btn_wrapper">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><a href="javascript:;"><i class="fa fa-facebook"></i></a>
                                         </li>
                                         <li><a href="javascript:;"><i class="fa fa-twitter"></i></a>
@@ -442,14 +442,14 @@ Author:   Atmik X Prapti
                                         </li>
                                         <li><a href="javascript:;"><i class="fa fa-pinterest-p"></i></a>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
 
                             <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2 sw_prdct_11">
 
-                                <h1><a href="javascript:;">manali H.</a></h1>
-                                <h5>(site supervisor)</h5>
+                                <h1><a href="javascript:;">Harsh D.</a></h1>
+                                <h5>(Site Supervisor)</h5>
 
                             </div>
                         </div>
@@ -457,10 +457,10 @@ Author:   Atmik X Prapti
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="sw_product_box_wrapper team_pdr">
                             <div class="sw_product_indx_img_wrapper">
-                                <div class="sp_img_box_overlay"></div>
-                                <img src="images/abt_pdt_1.png" alt="shop_img" class="img-responsive" />
+                                <!-- <div class="sp_img_box_overlay"></div> -->
+                                <img src="images/e7.jpg" alt="shop_img" class="img-responsive" />
                                 <div class="abt_img_btn_wrapper tem_img_btn_wrapper">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><a href="javascript:;"><i class="fa fa-facebook"></i></a>
                                         </li>
                                         <li><a href="javascript:;"><i class="fa fa-twitter"></i></a>
@@ -471,14 +471,14 @@ Author:   Atmik X Prapti
                                         </li>
                                         <li><a href="javascript:;"><i class="fa fa-pinterest-p"></i></a>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
 
                             <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2 sw_prdct_11">
 
-                                <h1><a href="javascript:;">ajay S.</a></h1>
-                                <h5>(site manager)</h5>
+                                <h1><a href="javascript:;">Saurabh R.</a></h1>
+                                <h5>(Site Manager)</h5>
 
                             </div>
                         </div>
@@ -486,10 +486,10 @@ Author:   Atmik X Prapti
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="sw_product_box_wrapper team_pdr">
                             <div class="sw_product_indx_img_wrapper">
-                                <div class="sp_img_box_overlay"></div>
-                                <img src="images/abt_pdt_4.png" alt="shop_img" class="img-responsive" />
+                                <!-- <div class="sp_img_box_overlay"></div> -->
+                                <img src="images/e8.jpg" alt="shop_img" class="img-responsive" />
                                 <div class="abt_img_btn_wrapper tem_img_btn_wrapper">
-                                    <ul>
+                                    <!-- <ul>
                                         <li><a href="javascript:;"><i class="fa fa-facebook"></i></a>
                                         </li>
                                         <li><a href="javascript:;"><i class="fa fa-twitter"></i></a>
@@ -500,19 +500,19 @@ Author:   Atmik X Prapti
                                         </li>
                                         <li><a href="javascript:;"><i class="fa fa-pinterest-p"></i></a>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
 
                             <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2 sw_prdct_11">
 
-                                <h1><a href="javascript:;">manali H.</a></h1>
-                                <h5>(site supervisor)</h5>
+                                <h1><a href="javascript:;">Priya V.</a></h1>
+                                <h5>(Site Supervisor)</h5>
 
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <!-- <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="sw_product_box_wrapper team_pdr">
                             <div class="sw_product_indx_img_wrapper">
                                 <div class="sp_img_box_overlay"></div>
@@ -618,14 +618,14 @@ Author:   Atmik X Prapti
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
 
-                            <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2 sw_prdct_11">
+                            <!-- <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2 sw_prdct_11">
 
                                 <h1><a href="javascript:;">mack K.</a></h1>
                                 <h5>(environmentalist)</h5>
 
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

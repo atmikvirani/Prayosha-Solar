@@ -25,7 +25,8 @@
         mysqli_close($conn);
         include "checkout.php";
    }
-   else
+   else{
       echo "<h3 align='center'>You need to <u><a href='login.html'>Login</a></u> inorder to checkout! </h3>";
       include "login.html";
+  }
     ?>

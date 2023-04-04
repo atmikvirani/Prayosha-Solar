@@ -662,9 +662,9 @@ Author:   Atmik X Prapti
                                         <div class="view-list">
                                             <a href="images/img1.jpg" class="venobox info" data-title="PROJECT TITTLE"
                                                 data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i> --></a> 
+                                            <h1>HARSAD SOLAR PARK</h1>
+                                            <p>BANASKANTHA, GJ</p>
 
                                         </div>
                                     </div>
@@ -679,9 +679,10 @@ Author:   Atmik X Prapti
                                         <div class="view-list">
                                             <a href="images/img2.jpg" class="venobox info" data-title="PROJECT TITTLE"
                                                 data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i>  -->
+                                            </a>
+                                            <h1>TCS SOLAR PLANT</h1>
+                                            <p>SURAT, GJ</p>
 
                                         </div>
                                     </div>
@@ -696,9 +697,10 @@ Author:   Atmik X Prapti
                                         <div class="view-list">
                                             <a href="images/img3.jpg" class="venobox info" data-title="PROJECT TITTLE"
                                                 data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i>  -->
+                                            </a>
+                                            <h1>GUJARAT SOLAR PARK</h1>
+                                            <p>CHARANKA, GJ</p>
 
                                         </div>
                                     </div>
@@ -713,9 +715,10 @@ Author:   Atmik X Prapti
                                         <div class="view-list">
                                             <a href="images/img4.jpg" class="venobox info" data-title="PROJECT TITTLE"
                                                 data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i>  -->
+                                            </a>
+                                            <h1>DHOLERA SOLAR PARK PH-I</h1>
+                                            <p>DHOLERA, GJ</p>
 
                                         </div>
                                     </div>
@@ -730,9 +733,10 @@ Author:   Atmik X Prapti
                                         <div class="view-list">
                                             <a href="images/img5.jpg" class="venobox info" data-title="PROJECT TITTLE"
                                                 data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i>  -->
+                                            </a>
+                                            <h1>AZURE SOLAR POWER PARK</h1>
+                                            <p>KHADODA, GJ</p>
 
                                         </div>
                                     </div>
@@ -746,9 +750,10 @@ Author:   Atmik X Prapti
                                         <div class="view-list">
                                             <a href="images/img6.jpg" class="venobox info" data-title="PROJECT TITTLE"
                                                 data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="f a fa-arrows-alt"></i> -->
+                                             </a>
+                                            <h1>AATASH SOLAR POWER PLANT</h1>
+                                            <p>SARDI SARKHANDI, GJ</p>
 
                                         </div>
                                     </div>
@@ -764,9 +769,10 @@ Author:   Atmik X Prapti
                                         <div class="view-list">
                                             <a href="images/img7.jpg" class="venobox info" data-title="PROJECT TITTLE"
                                                 data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i> -->
+                                             </a>
+                                            <h1>LIVE LIFE PROJECT</h1>
+                                            <p>AHMEDABAD, GJ</p>
 
                                         </div>
                                     </div>
@@ -783,9 +789,10 @@ Author:   Atmik X Prapti
                                         <div class="view-list">
                                             <a href="images/img8.jpg" class="venobox info" data-title="PROJECT TITTLE"
                                                 data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i> -->
+                                             </a>
+                                            <h1>EASY GENERATE SOLAR PARK</h1>
+                                            <p>DIU, GJ</p>
 
                                         </div>
                                     </div>
@@ -800,9 +807,10 @@ Author:   Atmik X Prapti
                                         <div class="view-list">
                                             <a href="images/img9.jpg" class="venobox info" data-title="PROJECT TITTLE"
                                                 data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i> -->
+                                             </a>
+                                            <h1>SURYA SOLAR & WATER POWER PLANT</h1>
+                                            <p>DHANSURA, GJ</p>
 
                                         </div>
                                     </div>
@@ -845,14 +853,13 @@ Author:   Atmik X Prapti
                                     </div>
                                     <div class="sw_testimonial_img_wrapper">
                                         <div class="sw_image">
-                                            <img src="images/testi_1.png" class="img-responsive" alt="">
+                                            <img src="images/image1.jpg" class="img-responsive" alt="">
                                         </div>
                                     </div>
                                     <div class="sw_testimonial_text_wrapper">
-                                        <p>Cras mush pardon you knees up he lost his bottle it's all gone to pot faff
-                                            about porkies are, barney argy-bargy cracking goal.</p>
+                                        <p>Sarang drives our company's success with her visionary leadership and commitment to delivering exceptional value to our customers.</p>
                                         <div class="sw_author">
-                                            <h2>Jimmy Minna</h2>
+                                            <h2>Sarang Bhatt</h2>
                                             <h3>CEO</h3>
                                         </div>
                                     </div>
@@ -875,21 +882,20 @@ Author:   Atmik X Prapti
                                     </div>
                                     <div class="sw_testimonial_img_wrapper">
                                         <div class="sw_image">
-                                            <img src="images/testi_2.png" class="img-responsive" alt="">
+                                            <img src="images/image.jpg" class="img-responsive" alt="">
                                         </div>
                                     </div>
                                     <div class="sw_testimonial_text_wrapper">
-                                        <p>Cras mush pardon you knees up he lost his bottle it's all gone to pot faff
-                                            about porkies are, barney argy-bargy cracking goal.</p>
+                                        <p>As Manager for our solar company, Aisha oversees the planning, design, and execution of solar panel installations for our customers.</p>
                                         <div class="sw_author">
-                                            <h2>Teddy Hogan</h2>
+                                            <h2>Aisha Shah</h2>
                                             <h3>Manager</h3>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
-                            <div class="item">
+                            <!-- <div class="item">
 
                                 <div class="sw_testimonial_wrap">
                                     <div class="sw_quote_icon_wrapper">
@@ -916,7 +922,7 @@ Author:   Atmik X Prapti
                                     </div>
                                 </div>
 
-                            </div>
+                            </div> -->
 
                         </div>
                     </div>
@@ -962,7 +968,7 @@ Author:   Atmik X Prapti
                                         <div class="sw_pdct_img">
                                             <img src="images/line.png" alt="img" />
                                         </div>
-                                        <h5>$ 156</h5>
+                                        <h5>₹ 15000</h5>
                                         <h1><a href="javascript:;">AIR 30 Turbine</a></h1>
 
                                         <div class="cc_li_cont_wrapper">
@@ -972,7 +978,7 @@ Author:   Atmik X Prapti
                                             <i class="fa fa-star-o"></i>
                                             <i class="fa fa-star-o"></i>
                                         </div>
-                                        <div class="cc_li_img_overlay">
+                                        <!-- <div class="cc_li_img_overlay">
                                             <div class="cc_li_img_text">
                                                 <ul>
                                                     <li><a href="javascript:;"><i class="fa fa-shopping-cart"></i></a>
@@ -982,7 +988,7 @@ Author:   Atmik X Prapti
                                                     <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li>
                                                 </ul>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -997,7 +1003,7 @@ Author:   Atmik X Prapti
                                         <div class="sw_pdct_img">
                                             <img src="images/line.png" alt="img" />
                                         </div>
-                                        <h5>$ 156</h5>
+                                        <h5>₹ 22000</h5>
                                         <h1><a href="javascript:;">canadian 30 Turbine</a></h1>
 
                                         <div class="cc_li_cont_wrapper">
@@ -1032,7 +1038,7 @@ Author:   Atmik X Prapti
                                         <div class="sw_pdct_img">
                                             <img src="images/line.png" alt="img" />
                                         </div>
-                                        <h5>$ 156</h5>
+                                        <h5>₹ 17000</h5>
                                         <h1><a href="javascript:;">AIR Turbine 40</a></h1>
 
                                         <div class="cc_li_cont_wrapper">
@@ -1067,7 +1073,7 @@ Author:   Atmik X Prapti
                                         <div class="sw_pdct_img">
                                             <img src="images/line.png" alt="img" />
                                         </div>
-                                        <h5>$ 156</h5>
+                                        <h5>₹ 13000</h5>
                                         <h1><a href="javascript:;">Canadian Solar 255</a></h1>
 
                                         <div class="cc_li_cont_wrapper">
@@ -1102,7 +1108,7 @@ Author:   Atmik X Prapti
                                         <div class="sw_pdct_img">
                                             <img src="images/line.png" alt="img" />
                                         </div>
-                                        <h5>$ 156</h5>
+                                        <h5>₹ 21500</h5>
                                         <h1><a href="javascript:;">SolarWorld 280</a></h1>
 
                                         <div class="cc_li_cont_wrapper">

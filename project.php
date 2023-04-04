@@ -324,9 +324,10 @@ Author:   Atmik X Prapti
 
                                         <div class="tab_img_overlay tab_img_overlay_3">
                                             <a href="images/pj_1.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i>-->
+                                            </a>
+                                            <h1>RADHNESADA SOLAR PARK</h1>
+                                            <p>BANASKANTHA, GJ</p>
 
                                         </div>
 
@@ -339,13 +340,14 @@ Author:   Atmik X Prapti
                                     <div class="sp_img_box_overlay"></div>
                                     <div class="over">
 
-                                        <img src="images/pj_2.jpg" alt="" class="img-responsive" />
+                                        <img src="images/solar2.jpg" alt="" class="img-responsive" />
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_2.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i> -->
+                                            </a>
+                                            <h1>HARSAD SOLAR PARK</h1>
+                                            <p>BANASKANTHA, GJ</p>
                                         </div>
 
                                     </div>
@@ -357,13 +359,14 @@ Author:   Atmik X Prapti
                                     <div class="sp_img_box_overlay"></div>
                                     <div class="over">
 
-                                        <img src="images/pj_3.jpg" alt="" class="img-responsive" />
+                                        <img src="images/solar3.jpg" alt="" class="img-responsive" />
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_3.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i>  -->
+                                            </a>
+                                            <h1>GUJARAT SOLAR PARK</h1>
+                                            <p>CHARANKA, GJ</p>
                                         </div>
 
                                     </div>
@@ -375,13 +378,13 @@ Author:   Atmik X Prapti
                                     <div class="sp_img_box_overlay"></div>
                                     <div class="over">
 
-                                        <img src="images/pj_4.jpg" alt="" class="img-responsive" />
+                                        <img src="images/solar6.jpg" alt="" class="img-responsive" />
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_4.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i> </a> -->
+                                            <h1>AZURE SOLAR POWER PARK</h1>
+                                            <p>KHADODA, GJ</p>
                                         </div>
 
                                     </div>
@@ -393,13 +396,14 @@ Author:   Atmik X Prapti
                                     <div class="sp_img_box_overlay"></div>
                                     <div class="over ">
 
-                                        <img src="images/pj_5.jpg" alt="" class="img-responsive" />
+                                        <img src="images/solar7.jpg" alt="" class="img-responsive" />
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_5.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i> -->
+                                             </a>
+                                            <h1>AATASH SOLAR POWER PLANT</h1>
+                                            <p>SARDI SARKHANDI, GJ</p>
                                         </div>
 
                                     </div>
@@ -411,13 +415,14 @@ Author:   Atmik X Prapti
                                     <div class="sp_img_box_overlay"></div>
                                     <div class="over">
 
-                                        <img src="images/pj_6.jpg" alt="" class="img-responsive" />
+                                        <img src="images/solar8.jpg" alt="" class="img-responsive" />
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_6.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i>  -->
+                                            </a>
+                                            <h1>DHOLERA SOLAR PARK PH-I</h1>
+                                            <p>DHOLERA, GJ</p>
                                         </div>
 
                                     </div>
@@ -433,9 +438,10 @@ Author:   Atmik X Prapti
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_11.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i>  -->
+                                            </a>
+                                            <h1>LIVE LIFE PROJECT</h1>
+                                            <p>AHMEDABAD, GJ</p>
                                         </div>
 
                                     </div>
@@ -451,9 +457,10 @@ Author:   Atmik X Prapti
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_5.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i>  -->
+                                            </a>
+                                            <h1>EASY GENERATE SOLAR PARK</h1>
+                                            <p>DIU, GJ</p>
                                         </div>
 
                                     </div>
@@ -469,9 +476,10 @@ Author:   Atmik X Prapti
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_7.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i>  -->
+                                            </a>
+                                            <h1>SURYA SOLAR & WATER POWER PLANT</h1>
+                                            <p>DHANSURA, GJ</p>
                                         </div>
 
                                     </div>
@@ -483,13 +491,14 @@ Author:   Atmik X Prapti
                                     <div class="sp_img_box_overlay"></div>
                                     <div class="over">
 
-                                        <img src="images/pj_8.jpg" alt="" class="img-responsive" />
+                                        <img src="images/solar9.jpg" alt="" class="img-responsive" />
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_8.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i>  -->
+                                            </a>
+                                            <h1>SIKOTAR SOLAR PLANT</h1>
+                                            <p>GODHRA, GJ</p>
                                         </div>
 
                                     </div>
@@ -505,9 +514,10 @@ Author:   Atmik X Prapti
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_9.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i> -->
+                                             </a>
+                                            <h1>SUN SOLAR PARK</h1>
+                                            <p>GANDHINAGAR, GJ</p>
                                         </div>
 
                                     </div>
@@ -523,9 +533,10 @@ Author:   Atmik X Prapti
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_10.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <i class="fa fa-arrows-alt"></i> </a>
-                                            <h1>project title here</h1>
-                                            <p>(solar pannels)</p>
+                                                <!-- <i class="fa fa-arrows-alt"></i>  -->
+                                            </a>
+                                            <h1>TCS POWER PLANT</h1>
+                                            <p>SURAT, GJ</p>
                                         </div>
 
                                     </div>

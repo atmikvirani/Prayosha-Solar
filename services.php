@@ -479,7 +479,7 @@ Systems</a></h4>
 
     <!-- counter wrapper end-->
     <!-- sw pricing section start-->
-    <div class="sw_pricing_wrapper">
+    <!-- <div class="sw_pricing_wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12 col-lg-offset-3">
@@ -493,7 +493,7 @@ Systems</a></h4>
                 <div class="pricing_box1_wrapper">
                     <div class="box1_heading_wrapper box1_orange">
 
-                        <h1><sup>$</sup>75<span> /  month</span></h1>
+                        <h1><sup>₹</sup>8500<span> /  month</span></h1>
                         <div class="jp_pricing_label_wrapper">
 
                         </div>
@@ -529,7 +529,7 @@ Systems</a></h4>
                 <div class="pricing_box1_wrapper sw_pricing_box_transition">
                     <div class="box1_heading_wrapper box1_blue">
 
-                        <h1><sup>$</sup>95<span> /  month</span></h1>
+                        <h1><sup>₹</sup>10000<span> /  month</span></h1>
                         <div class="jp_pricing_label_wrapper jp_pricing_label_blue">
 
                         </div>
@@ -564,7 +564,7 @@ Systems</a></h4>
                 <div class="pricing_box1_wrapper padder_btm_0">
                     <div class="box1_heading_wrapper box1_green">
 
-                        <h1><sup>$</sup>125<span> /  month</span></h1>
+                        <h1><sup>₹</sup>12500<span> /  month</span></h1>
                         <div class="jp_pricing_label_wrapper jp_pricing_label_green">
 
                         </div>
@@ -599,7 +599,7 @@ Systems</a></h4>
 
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- sw pricing section end-->
     <!-- sw contact form section start-->
     <div class="sw_contact_form_wrapper sw_contact_form_padder">
