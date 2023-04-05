@@ -23,7 +23,7 @@
                             <th>Price Total</th>
                             <th>Time</th>
                             <th>IP Address</th>
-                            <th>Options</th>
+                            <!-- <th>Options</th> -->
                         </tr>
                     </thead>
                     <tbody>
@@ -46,7 +46,7 @@
                                     echo '<td>'. $row['ppricetot'].'</td>';
                                     echo '<td>'. $row['time'].'</td>';
                                     echo '<td>'. $row['ip'].'</td>';
-                                    echo '<td><a type="button" class="btn btn-sm btn-warning fa fa-pencil-alt" href="#" data-toggle="modal" data-target="#AddRes'.$row['srno'].'">Add Result</a>';
+                                    // echo '<td><a type="button" class="btn btn-sm btn-warning fa fa-pencil-alt" href="#" data-toggle="modal" data-target="#AddRes'.$row['srno'].'">Add Result</a>';
                                 echo '</tr>';
                             }
                         ?>

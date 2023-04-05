@@ -10,7 +10,7 @@
         $stat = $_POST['stat'];
 
         $connect = mysqli_connect("localhost", "root", "", "project");
-        $query = "update regdb set userid='$id',username='$name',useremail='$email', password='$pswd',time='$time',ip='$ip',stat='$stat' where srno=$id";
+        $query = "update regdb set userid='$id',username='$name',useremail='$email', password='$pswd',time='$time',ip='$ip',stat='$stat' where userid=$id";
      
         mysqli_query($connect, $query);
 

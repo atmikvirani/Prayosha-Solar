@@ -13,4 +13,4 @@ const shopItemsData = [
         desc: "KSolare",
         img: "cart/prdct_6.jpg",
     }
-];
+,{"id":"a1","name":"ACDB","price":"75000","desc":"Rayzon 350KW Monoperc","img":"cart\/prdct_4.jpg"}];

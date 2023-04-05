@@ -313,9 +313,42 @@ Author:   Atmik X Prapti
                             </div>
                         </div>
 
-                        <div class="grid galler_2_btm_section">
+                        
 
-                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 grid-item rresentation branding * project_pdr_btm">
+                        <div class="grid galler_2_btm_section">
+                            
+                            <?php
+                                $conn = mysqli_connect("localhost","root","","project");
+                                $query = "Select * from project where stat =1";
+                                $result=mysqli_query($conn,$query);
+                                // if($row['stat']==1){
+                                while ($row = mysqli_fetch_assoc($result)){
+                                echo '
+                                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 grid-item rresentation branding * project_pdr_btm">
+                                    <div class="gallery-list img-effect zoom-slow">
+                                        <div class="sp_img_box_overlay"></div>
+                                        <div class="over">
+
+                                            <img src="project/'.$row['imgpath'].'" alt="" class="img-responsive" />
+
+                                            <div class="tab_img_overlay tab_img_overlay_3">
+                                                <h1 style:"position:absolute;top:0px;">'. $row['protitle'] .'</h1>
+                                                <p>'. $row['proloc'] .'</p>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div> ';
+                                }
+                                // }
+                                // else{
+                                //     echo 'Nothing to Display';
+                                // }
+                                mysqli_close($conn);
+                                ?>
+                            
+                            <!-- <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 grid-item rresentation branding * project_pdr_btm">
                                 <div class="gallery-list img-effect zoom-slow">
                                     <div class="sp_img_box_overlay"></div>
                                     <div class="over">
@@ -324,7 +357,6 @@ Author:   Atmik X Prapti
 
                                         <div class="tab_img_overlay tab_img_overlay_3">
                                             <a href="images/pj_1.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <!-- <i class="fa fa-arrows-alt"></i>-->
                                             </a>
                                             <h1>RADHNESADA SOLAR PARK</h1>
                                             <p>BANASKANTHA, GJ</p>
@@ -344,7 +376,7 @@ Author:   Atmik X Prapti
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_2.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <!-- <i class="fa fa-arrows-alt"></i> -->
+                                                
                                             </a>
                                             <h1>HARSAD SOLAR PARK</h1>
                                             <p>BANASKANTHA, GJ</p>
@@ -363,7 +395,7 @@ Author:   Atmik X Prapti
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_3.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <!-- <i class="fa fa-arrows-alt"></i>  -->
+                                                
                                             </a>
                                             <h1>GUJARAT SOLAR PARK</h1>
                                             <p>CHARANKA, GJ</p>
@@ -382,7 +414,6 @@ Author:   Atmik X Prapti
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_4.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <!-- <i class="fa fa-arrows-alt"></i> </a> -->
                                             <h1>AZURE SOLAR POWER PARK</h1>
                                             <p>KHADODA, GJ</p>
                                         </div>
@@ -400,7 +431,7 @@ Author:   Atmik X Prapti
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_5.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <!-- <i class="fa fa-arrows-alt"></i> -->
+                                                
                                              </a>
                                             <h1>AATASH SOLAR POWER PLANT</h1>
                                             <p>SARDI SARKHANDI, GJ</p>
@@ -419,7 +450,7 @@ Author:   Atmik X Prapti
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_6.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <!-- <i class="fa fa-arrows-alt"></i>  -->
+                                                
                                             </a>
                                             <h1>DHOLERA SOLAR PARK PH-I</h1>
                                             <p>DHOLERA, GJ</p>
@@ -438,7 +469,7 @@ Author:   Atmik X Prapti
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_11.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <!-- <i class="fa fa-arrows-alt"></i>  -->
+                                                
                                             </a>
                                             <h1>LIVE LIFE PROJECT</h1>
                                             <p>AHMEDABAD, GJ</p>
@@ -457,7 +488,7 @@ Author:   Atmik X Prapti
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_5.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <!-- <i class="fa fa-arrows-alt"></i>  -->
+                                                
                                             </a>
                                             <h1>EASY GENERATE SOLAR PARK</h1>
                                             <p>DIU, GJ</p>
@@ -476,7 +507,7 @@ Author:   Atmik X Prapti
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_7.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <!-- <i class="fa fa-arrows-alt"></i>  -->
+                                                
                                             </a>
                                             <h1>SURYA SOLAR & WATER POWER PLANT</h1>
                                             <p>DHANSURA, GJ</p>
@@ -495,7 +526,7 @@ Author:   Atmik X Prapti
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_8.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <!-- <i class="fa fa-arrows-alt"></i>  -->
+                                                
                                             </a>
                                             <h1>SIKOTAR SOLAR PLANT</h1>
                                             <p>GODHRA, GJ</p>
@@ -514,8 +545,8 @@ Author:   Atmik X Prapti
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_9.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <!-- <i class="fa fa-arrows-alt"></i> -->
-                                             </a>
+                                                
+                                            </a>
                                             <h1>SUN SOLAR PARK</h1>
                                             <p>GANDHINAGAR, GJ</p>
                                         </div>
@@ -533,7 +564,7 @@ Author:   Atmik X Prapti
                                         <div class="tab_img_overlay tab_img_overlay_3">
 
                                             <a href="images/pj_10.jpg" class="venobox info" data-title="PROJECT TITTLE" data-gall="gall12">
-                                                <!-- <i class="fa fa-arrows-alt"></i>  -->
+                                                
                                             </a>
                                             <h1>TCS POWER PLANT</h1>
                                             <p>SURAT, GJ</p>
@@ -542,7 +573,7 @@ Author:   Atmik X Prapti
                                     </div>
                                 </div>
 
-                            </div>
+                            </div> -->
 
                         </div>
 

@@ -31,14 +31,6 @@
                             while ($row = mysqli_fetch_assoc($result))
                             {                     
                                 echo '<tr>';
-                                    // echo '<td><input name="srno" value="'. $row['userid'] .'"class="form-control border-0 shadow-none"></td>';
-                                    // echo '<td><input name="srno" value="'. $row['username'] .'"class="form-control border-0 shadow-none"></td>';
-                                    // echo '<td><input name="srno" value="'. $row['useremail'] .'"class="form-control border-0 shadow-none"></td>';
-                                    // echo '<td><input name="srno" value="'. $row['password'] .'"class="form-control border-0 shadow-none"></td>';
-                                    // echo '<td><input name="srno" value="'. $row['time'] .'"class="form-control border-0 shadow-none"></td>';
-                                    // echo '<td><input name="srno" value="'. $row['ip'] .'"class="form-control border-0 shadow-none"></td>';
-                                    // echo '<td><input name="srno" value="'. $row['stat'] .'"class="form-control border-0 shadow-none"></td>';
-
                                     echo '<td>'. $row['srno'].'</td>';
                                     echo '<td>'. $row['pid'].'</td>';
                                     echo '<td>'. $row['pname'].'</td>';
