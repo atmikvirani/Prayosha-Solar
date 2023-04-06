@@ -45,27 +45,13 @@ let generateCartItems = () => {
         let { id, item } = x;
         let search = shopItemsData.find((y) => y.id === id) || {};
         return `
-        <input type="hidden" name="pid" value="${id}">
-        <input type="hidden" name="pname" value="${search.name}">
-        <input type="hidden" name="pdesc" value="${search.desc}">
-        <input type="hidden" name="pprice" value="${search.price}">
-        <input type="hidden" name="pquant" value="${item}">
-        <input type="hidden" name="ppricetot" value="${item * search.price}">
-        <?php
-          session_start();
-          if (isset($_POST['pid']))
-          {
-            if (!empty($_SESSION['cart']))
-            {
-              $cart = array_unique(array_merge( $_SESSION['cart'], $_POST['pid']));
-            } 
-            else
-            {
-              $cart = $_POST['pid'];
-            }
-            $_SESSION['cart'] = $cart;
-          }
-        ?>
+        <input type="hidden" name="pid[]" value="${id}">
+        <input type="hidden" name="pname[]" value="${search.name}">
+        <input type="hidden" name="pdesc[]" value="${search.desc}">
+        <input type="hidden" name="pprice[]" value="${search.price}">
+        <input type="hidden" name="pquant[]" value="${item}">
+        <input type="hidden" name="ppricetot[]" value="${item * search.price}">
+
         <tr>
             <td>
                 <font>${index+1}</font>
