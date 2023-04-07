@@ -663,5 +663,5 @@ $('select').each(function(){
     document.getElementById('checkout-link').addEventListener('click', function(event) {
     event.preventDefault(); // prevent the default link behavior
     document.querySelector('form').submit(); // submit the form
-  });
-</script>
+    });
+    </script>

@@ -372,35 +372,44 @@ Author:   Atmik X Prapti
                             <div class="btc_shop_single_prod_right_section related_pdt_shop_head checkout_heading">
                                 <h1>BILLING DETAILS </h1>
                             </div>
-                        <form id="bill" action="checkbilldb.php" method="post">
+                        <form id="bill" action="" method="post">
+                            <?php
+                             if(isset($_SESSION['uid']))
+                             {
+                                 $id=$_SESSION['uid'];
+                                 $conn=mysqli_connect("localhost","root","","project");
+                                 $query="select * from billing where userid=$id";
+                                 $records=mysqli_query($conn,$query);
+                                 $row=mysqli_fetch_array($records);
+                            echo'
                             <div class="row clearfix">
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
                                     <div class="field-label">First Name<sup>*</sup></div>
-                                    <input type="text" id="billfname" name="fname" value="" placeholder="" required>
+                                    <input type="text" id="billfname" name="fname" value="'.$row["fname"].'" placeholder="" required>
                                 </div>
 
                                 
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
                                     <div class="field-label">Last Name<sup>*</sup></div>
-                                    <input type="text" id="billlname" name="lname" value="" placeholder="" required>
+                                    <input type="text" id="billlname" name="lname" value="'.$row["lname"].'" placeholder="" required>
                                 </div>
 
                                 
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                     <div class="field-label">Company Name</div>
-                                    <input type="text" id="billcname" name="cname" value="" placeholder="" >
+                                    <input type="text" id="billcname" name="cname" value="'.$row["cname"].'" placeholder="" >
                                 </div>
 
                                 
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
                                     <div class="field-label">Email Address<sup>*</sup></div>
-                                    <input type="text" id="billemail" name="email" value="" placeholder="" required>
+                                    <input type="text" id="billemail" name="email" value="'.$row["email"].'" placeholder="" required>
                                 </div>
 
                                 
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
                                     <div class="field-label">Phone<sup>*</sup></div>
-                                    <input type="text" id="billphone" name="phone" value="" placeholder="" required>
+                                    <input type="text" id="billphone" name="phone" value="'.$row["phone"].'" placeholder="" required>
                                 </div>
 
                                 
@@ -414,28 +423,30 @@ Author:   Atmik X Prapti
                                 
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                     <div class="field-label">Address<sup>*</sup></div>
-                                    <input type="text" id="billsaddress" name="saddress" value="" placeholder="Street address" required>
-                                    <input type="text" id="billlandmark" name="landmark" value=""
+                                    <input type="text" id="billsaddress" name="saddress" value="'.$row["saddress"].'" placeholder="Street address" required>
+                                    <input type="text" id="billlandmark" name="landmark" value="'.$row["landmark"].'"
                                         placeholder="Landmark" required>
                                 </div>
 
                                 
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                     <div class="field-label">City<sup>*</sup></div>
-                                    <input type="text" id="billcity" name="city" value="" placeholder="" required>
+                                    <input type="text" id="billcity" name="city" value="'.$row["city"].'" placeholder="" required>
                                 </div>
 
                                 
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
                                     <div class="field-label">State<sup>*</sup></div>
-                                    <input type="text" id="billstate" name="state" value="" placeholder="" required>
+                                    <input type="text" id="billstate" name="state" value="'.$row["state"].'" placeholder="" required>
                                 </div>
 
                                 
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
                                     <div class="field-label">Pincode<sup>*</sup></div>
-                                    <input type="text" id="billpincode" name="pincode" value="" placeholder="" required>
-                                </div>
+                                    <input type="text" id="billpincode" name="pincode" value="'.$row["pincode"].'" placeholder="" required>
+                                </div>';
+                             }
+                                ?>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <!-- <input type="checkbox" name="sameAsShipping" id="sameAsShipping" onchange="copyShippingAddress()"> -->
                                 <!-- <label class="control control--checkbox" for="sameAsShipping">Same for Shipping?

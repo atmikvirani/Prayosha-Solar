@@ -17,7 +17,7 @@
       $conn = mysqli_connect("localhost","root","","project");
       
         for ($i = 0; $i < count($pname); $i++) {
-          $query = "INSERT INTO cart VALUES (NULL,'$userid','$email','".$pid[$i]."','".$pname[$i]."', '".$pdesc[$i]."', '".$pprice[$i]."', '".$pquant[$i]."', '".$ppricetot[$i]."',NULL,1)";
+          $query = "INSERT INTO cart VALUES (NULL,'$userid','$email','".$pid[$i]."','".$pname[$i]."', '".$pdesc[$i]."', '".$pprice[$i]."', '".$pquant[$i]."', '".$ppricetot[$i]."',NULL,'$ip',0)";
           if (mysqli_query($conn, $query)) {
               echo "";
           } else {
