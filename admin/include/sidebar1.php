@@ -25,6 +25,12 @@
           </a>
         </li>
         <li class="nav-item active">
+          <a class="nav-link" href="deletedproduct.php">
+            <i class="fa fa-fw fa-minus"></i>
+            <span>Deleted Products</span>
+          </a>
+        </li>
+        <li class="nav-item active">
           <a class="nav-link" href="project.php">
             <i class="fa fa-fw fa-pie-chart"></i>
             <span>Projects</span>
@@ -32,8 +38,8 @@
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="deletedproject.php">
-            <i class="fa fa-fw fa-folder-minus"></i>
-            <span>Deleted Project</span>
+            <i class="fa fa-fw fa-minus"></i>
+            <span>Deleted Projects</span>
           </a>
         </li>
         <li class="nav-item active">
@@ -46,12 +52,6 @@
           <a class="nav-link" href="newsletter.php">
             <i class="fa fa-newspaper"></i>
             <span>Newsletter</span>
-          </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="order.php">
-            <i class="fa fa-fw fa-suitcase"></i>
-            <span>Orders</span>
           </a>
         </li>
         <li class="nav-item active">

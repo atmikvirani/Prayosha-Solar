@@ -81,7 +81,7 @@ Author:   Atmik X Prapti
                             <li><a href="team.php" title="">team</a>
                             </li>
                             </li>
-                            <li><a href="shop.php" title="">shop</a>
+                            <li><a href="product.php" title="">products</a>
                             </li>
                             <li><a href="contact_us.php" title="">Contact us</a>
                                         </li>
@@ -167,7 +167,7 @@ Author:   Atmik X Prapti
                                             </li>
                                             <li><a href="team.php" title="">team</a>
                                             </li>
-                                            <li><a href="shop.php" title="">shop</a>
+                                            <li><a href="product.php" title="">products</a>
                                             </li>
                                             <li><a href="contact_us.php" title="">Contact us</a>
                                                 
@@ -219,7 +219,7 @@ Author:   Atmik X Prapti
         <div class="header_btn">
             <ul>
                 <li>
-                    <a href="shop.php" class="waves-effect waves-light waves-ripple">Shop</a>
+                    <a href="product.php" class="waves-effect waves-light waves-ripple">Shop</a>
                 </li>
             </ul>
         </div>
@@ -316,7 +316,7 @@ Author:   Atmik X Prapti
                             <td class="shop_btn_wrapper shop_car_btn_wrapper">
 
                                 <ul>
-                                    <li><a href="shop.php">continue shopping</a>
+                                    <li><a href="product.php">continue shopping</a>
                                     </li>
                                 </ul>
     
@@ -473,7 +473,7 @@ Author:   Atmik X Prapti
                             <ul>
                                 <li><a href="about_us.php"><i class="fa fa-angle-right"></i>About us</a>
                                 </li>
-                                <li><a href="shop.php"><i class="fa fa-angle-right"></i>shop </a>
+                                <li><a href="product.php"><i class="fa fa-angle-right"></i>shop </a>
                                 </li>
                                 <li><a href="contact_us.php"><i class="fa fa-angle-right"></i>contact </a>
                                 </li>

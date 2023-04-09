@@ -41,11 +41,11 @@ Author:   Atmik X Prapti
 
 <body>
     <!-- preloader Start -->
-    <!-- <div id="preloader">
+    <div id="preloader">
         <div id="status">
             <img src="images/preloader.gif" id="preloader_image" alt="loader">
         </div>
-    </div> -->
+    </div>
     <!--sw header wrapper start-->
 
     <div class="transparent-menu header-area hidden-menu-bar stick">
@@ -74,7 +74,7 @@ Author:   Atmik X Prapti
                             <li><a href="team.php" title="">team</a>
                             </li>
                             </li>
-                            <li><a href="shop.php" title="">shop</a>
+                            <li><a href="product.php" title="">products</a>
                             </li>
                             <li><a href="contact_us.php" title="">Contact us</a>
                                         </li>
@@ -158,7 +158,7 @@ Author:   Atmik X Prapti
                                         </li>
                                         <li><a href="team.php" title="">team</a>
                                         </li>
-                                        <li><a href="shop.php" title="">shop</a>
+                                        <li><a href="product.php" title="">products</a>
                                         </li>
                                         <li>
                                         <a href="cart.php" class="waves-effect waves-light waves-ripple">Cart<span style="width: 15px;
@@ -808,7 +808,7 @@ Systems</a></h4>
                             <ul>
                                 <li><a href="about_us.php"><i class="fa fa-angle-right"></i>About us</a>
                                 </li>
-                                <li><a href="shop.php"><i class="fa fa-angle-right"></i>shop </a>
+                                <li><a href="product.php"><i class="fa fa-angle-right"></i>shop </a>
                                 </li>
                                 <li><a href="contact_us.php"><i class="fa fa-angle-right"></i>contact </a>
                                 </li>

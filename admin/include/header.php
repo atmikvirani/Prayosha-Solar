@@ -60,7 +60,7 @@ if(!$_SESSION["name"]){
              }
              ?></a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item fas fa-sign-out-alt" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"><span class="fa fa-sign-out"></span> Log out</a>
           </div>
         </li>
       </ul>

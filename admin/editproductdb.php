@@ -7,11 +7,12 @@ if(isset($_POST['submit']))
     $pprice= $_POST['pprice'];
     $pdesc= $_POST['pdesc'];
     $imgpath= $_POST['imgpath'];
+    $rating= $_POST['rating'];
     $time=$_POST['time'];
     $stat= $_POST['stat'];
 
     $conn = mysqli_connect("localhost","root","","project");
-    $query = "update product set pid='$pid',pname='$pname',pprice='$pprice', pdesc='$pdesc',imgpath='$imgpath',time='$time',stat='$stat' where pid='$pid'";
+    $query = "update product set pid='$pid',pname='$pname',pprice='$pprice', pdesc='$pdesc',imgpath='$imgpath',rating='$rating',time='$time',stat='$stat' where pid='$pid'";
     
     mysqli_query($conn,$query);
     mysqli_close($conn);

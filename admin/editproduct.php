@@ -51,7 +51,10 @@
                 <label> Image Path</label>
                 <input type="text" class="form-control" name="imgpath" value="<?php echo $row['imgpath'] ?>" >
                 <i style="color:grey">*You need to put your images in <u>cart</u> folder...</i>
-
+            </div>
+            <div class="form-group col-12">
+                <label> Ratings</label>
+                <input type="text" class="form-control" name="rating" value="<?php echo $row['rating'] ?>" >
             </div>
             <div class="form-group col-12">
                 <label> Time</label>

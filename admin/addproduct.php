@@ -46,6 +46,10 @@
                 <i style="color:grey">*You need to put your images in <u>cart</u> folder...</i>
             </div>
             <div class="form-group col-12">
+                <label> Ratings</label>
+                <input type="text" class="form-control" name="rating" value="">
+            </div>
+            <div class="form-group col-12">
                 <label> Status</label>
                 <input type="text" class="form-control" name="stat" value="">
             </div>

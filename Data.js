@@ -19,5 +19,4 @@ const shopItemsData = [
     price: "75000",
     desc: "Rayzon 350KW Monoperc",
     img: "cart/prdct_4.jpg",
-  },
-];
+  },{"id":"a2","name":"Solar Panel","price":"50000","desc":"Rayzon 350KW Monoperc","img":"cart\/prdct_2.jpg"}];

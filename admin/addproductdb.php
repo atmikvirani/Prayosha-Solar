@@ -7,10 +7,11 @@ if(isset($_POST['submit']))
     $pprice = $_POST['pprice'];
     $pdesc = $_POST['pdesc'];
     $imgpath = $_POST['imgpath'];
+    $rating = $_POST['rating'];
     $stat = $_POST['stat'];
 
     $conn = mysqli_connect("localhost","root","","project");
-    $query = "insert into product  values(NULL,'$pid','$pname','$pprice','$pdesc','$imgpath',NULL,'$stat')";
+    $query = "insert into product  values(NULL,'$pid','$pname','$pprice','$pdesc','$imgpath','$rating',NULL,'$stat')";
     
     mysqli_query($conn,$query);
     mysqli_close($conn);

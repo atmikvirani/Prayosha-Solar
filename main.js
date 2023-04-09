@@ -9,43 +9,43 @@ let generateShop = () => {
       let search = basket.find((x) => x.id === id) || [];
       return `
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 cardP">
-      <div class="sw_product_box_wrapper sw_shop_sider_pder">
-          <div class="sw_product_indx_img_wrapper">
-  
-              <!--<img src=${img} alt="" class="img-responsive">-->
-              <img width="220" src=${img} alt="" class="img-responsive">
-          </div>
-  
-          <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-              <div class="sw_pdct_img">
-                  <img src="images/line.png" alt="img" />
-              </div>
-              <h5>₹${price}</h5>
-              <h1>${name}</h1>
-              <p>${desc}
-              <p>
-              <div class="cc_li_img_overlay">
-                  <div class="cc_li_img_text">
-                      <ul>
-                          <div class="counter">
-                              <li><span class="down" onClick="decrement(${id})" class="countermin">&minus;</span></li>
-                              <li>
-                                  <p class="" style="font-size:60%;">
-                                  <div id=${id} class="quantity">${search.item === undefined ? 0 : search.item}</div>
-                                  </p>
-                              </li>
-                              <li><span class="up" onClick="increment(${id})">&plus;</span></li>
-                          </div>
-                          <!-- <li><a href="javascript:;"><i class="fa fa-heart"></i></a></li>
-                              <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li> -->
-                      </ul>
-                  </div>
-              </div>
-              <div>
-              </div>
-          </div>
+        <div class="sw_product_box_wrapper sw_shop_sider_pder">
+            <div class="sw_product_indx_img_wrapper">
+    
+                <!--<img src=${img} alt="" class="img-responsive">-->
+                <img width="220" src=${img} alt="" class="img-responsive">
+            </div>
+    
+            <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
+                <div class="sw_pdct_img">
+                    <img src="images/line.png" alt="img" />
+                </div>
+                <h5>₹${price}</h5>
+                <h1>${name}</h1>
+                <p>${desc}
+                <p>
+                <div class="cc_li_img_overlay">
+                    <div class="cc_li_img_text">
+                        <ul>
+                            <div class="counter">
+                                <li><span class="down" onClick="decrement(${id})" class="countermin">&minus;</span></li>
+                                <li>
+                                    <p class="" style="font-size:60%;">
+                                    <div id=${id} class="quantity">${search.item === undefined ? 0 : search.item}</div>
+                                    </p>
+                                </li>
+                                <li><span class="up" onClick="increment(${id})">&plus;</span></li>
+                            </div>
+                            <!-- <li><a href="javascript:;"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="javascript:;"><i class="fa fa-expand"></i></a></li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
       </div>
-  </div>
     `;
     })
     .join(""));

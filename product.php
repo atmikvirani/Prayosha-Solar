@@ -12,7 +12,7 @@ Author:   Atmik X Prapti
 
 <head>
     <meta charset="utf-8" />
-    <title>Shop</title>
+    <title>Products</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta name="description" content="smart pest" />
     <meta name="keywords" content="solar system /sun & wind" />
@@ -43,18 +43,19 @@ Author:   Atmik X Prapti
     <!-- favicon link-->
     <link rel="shortcut icon" type="image/icon" href="images/favicon.png" />
 
-    
+
 </head>
 <style>
-    .counter{
+    .counter {
         background-color: white;
     }
-    
+
     /* .counter:hover{
         
         
     } */
 </style>
+
 <body ng-app="Items" ng-controller="dispItems">
     <?php
     session_start();
@@ -93,7 +94,7 @@ Author:   Atmik X Prapti
                             <li><a href="team.php" title="">team</a>
                             </li>
                             </li>
-                            <li><a href="shop.php" title="">shop</a>
+                            <li><a href="product.php" title="">products</a>
                             </li>
                             <li><a href="contact_us.php" title="">Contact us</a>
                             </li>
@@ -179,7 +180,7 @@ Author:   Atmik X Prapti
                                             </li>
                                             <li><a href="team.php" title="">team</a>
                                             </li>
-                                            <li><a href="shop.php" title="">shop</a>
+                                            <li><a href="product.php" title="">products</a>
                                             </li>
                                             <li><a href="cart.php" title="">cart</a>
                                             </li>
@@ -233,7 +234,7 @@ Author:   Atmik X Prapti
         <div class="header_btn">
             <ul>
                 <li>
-                <a href="cart.php" class="waves-effect waves-light waves-ripple">Cart<span style="width: 15px;
+                    <a href="cart.php" class="waves-effect waves-light waves-ripple">Cart<span style="width: 15px;
                             height: 15px;
                             color: #ffffff;
                             background: #ff3232;
@@ -245,8 +246,7 @@ Author:   Atmik X Prapti
                             position: absolute;
                             left: 90px;
                             top: 7px;
-                        ;" id="cartAmount"
-                            class="cartAmount"></span></a>
+                        ;" id="cartAmount" class="cartAmount"></span></a>
                     <!-- <a href="cart.php" class="waves-effect waves-light waves-ripple">Cart<span style="width: 15px;
                         height: 15px;
                         color: #ffffff;
@@ -491,15 +491,57 @@ Author:   Atmik X Prapti
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="tab-content btc_shop_index_content_tabs_main">
-                                    <div id="grid" class="tab-pane fade in active" >
+                                    <div id="grid" class="tab-pane fade in active">
                                         <div class="row">
-                                            <div id="shop">
-                                                <!-- here is the card -->
+                                        <?php
+                                            $conn = mysqli_connect("localhost","root","","project");
+                                            $query = "SELECT * FROM product WHERE stat = 1";
+                                            $result = mysqli_query($conn, $query);
+                                            
+                                            while ($row = mysqli_fetch_assoc($result)) {
+                                                $rating = $row['rating'];
+                                                $stars = floor($rating); // get the integer part of rating
+                                                $hasHalfStar = $rating - $stars >= 0.5; // check if rating has half star
                                                 
+                                                echo '
+                                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 cardP">
+                                                        <div class="sw_product_box_wrapper sw_shop_sider_pder">
+                                                            <div class="sw_product_indx_img_wrapper">
+                                                                <img width="220" src="cart/'.$row['imgpath'].'" alt="" class="img-responsive">
+                                                            </div>
+                                                            <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
+                                                                <div class="sw_pdct_img">
+                                                                    <img src="images/line.png" alt="img" />
+                                                                </div>
+                                                                <h5>₹'.$row['pprice'].'</h5>
+                                                                <h1>'.$row['pname'].'</h1>
+                                                                <p>'.$row['pdesc'].'</p>
+                                                                <div class="cc_li_cont_wrapper">';
+                                                                    for ($i = 0; $i < $stars; $i++) {
+                                                                        echo '<i class="fa fa-star"></i>';
+                                                                    }
+                                                                    if ($hasHalfStar) {
+                                                                        echo '<i class="fa fa-star-half-stroke"></i>';
+                                                                        $stars++; // increment stars if there is a half star
+                                                                    }
+                                                                    for ($i = $stars; $i < 5; $i++) {
+                                                                        echo '<i class="fa fa-star-o"></i>';
+                                                                    }
+                                                echo '
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                ';
+                                            }
+                                        ?>
+                                            <!-- <div id="shop"> -->
+                                                <!-- here is the card -->
+
                                                 <!-- card ends -->
-                                            </div>
+                                            <!-- </div> -->
                                         </div>
-                                            <!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                        <!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                                 <div class="sw_product_box_wrapper sw_shop_sider_pder">
                                                     <div class="sw_product_indx_img_wrapper">
 
@@ -539,7 +581,7 @@ Author:   Atmik X Prapti
                                                     </div>
                                                 </div>
                                             </div> -->
-                                            <!--<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                        <!--<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                                 <div class="sw_product_box_wrapper sw_shop_sider_pder">
                                                     <div class="sw_product_indx_img_wrapper">
 
@@ -941,7 +983,7 @@ Author:   Atmik X Prapti
                                                 </div>
                                             </div> -->
 
-                                        
+
                                     </div>
                                     <!-- <div id="list" class="tab-pane fade">
                                         <div class="row">
@@ -1534,7 +1576,8 @@ Author:   Atmik X Prapti
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                     <div class="section3_copyright">
                         <p>Copyright 2022-23 <a href="index.php"> Prayosha Solar</a>. all right reserved - designed by
-                            <a href="https://www.linkedin.com/in/atmik-virani-7b7316241/">Atmik X Prapti. </a></p>
+                            <a href="https://www.linkedin.com/in/atmik-virani-7b7316241/">Atmik X Prapti. </a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -1594,14 +1637,14 @@ Author:   Atmik X Prapti
 
 </html>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         var searchInput = $('#search');
         var cardsContainer = $('#shop');
 
-        searchInput.on('keyup', function() {
+        searchInput.on('keyup', function () {
             var searchValue = $(this).val().toLowerCase();
 
-            cardsContainer.find('.cardP').each(function() {
+            cardsContainer.find('.cardP').each(function () {
                 var cardText = $(this).text().toLowerCase();
                 if (cardText.indexOf(searchValue) > -1) {
                     $(this).show();
