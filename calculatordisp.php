@@ -211,7 +211,11 @@
                     <br>
                     <br>
                     <center>
+<<<<<<< HEAD
                         <label for="">*The figures which are being displayed here are just an estimate, We encourage you to <a href="contact_us.php"><u>Contact Us</u></a> for more query!</label>
+=======
+                        <label for="">*The figures which are being displayed here are just an estimate, We encourage you to <a href="contact_us.php">Contact Us</a> for more query!</label>
+>>>>>>> cd077fbaa15323976767898438b8ddf967b155c2
                     </center>
             </div>
         </div>
