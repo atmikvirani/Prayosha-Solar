@@ -476,109 +476,112 @@ Author:   Atmik X Prapti
     <!-- sw footer section start-->
     <div class="sw_footer_main_wrapper">
 
-        <div class="circle_btm">
-            <a href="javascript:" id="return-to-top"><i class="fa fa-long-arrow-up"></i></a>
-        </div>
-        <div class="footer_wrapper">
+<div class="circle_btm">
+    <a href="javascript:" id="return-to-top"><i class="fa fa-long-arrow-up"></i></a>
+</div>
+<div class="footer_wrapper">
 
-            <div class="container">
+    <div class="container">
 
-                <div class="row">
-                    <div class="foter_padder">
-                        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
-                            <div class="wrapper_second_about">
-                                <div class="wrapper_first_image">
-                                    <a href="index.php"><img src="images/hd_logo.png" class="img-responsive"
-                                            alt="logo" /></a>
-                                </div>
-                                <div class="abotus_content">
-                                    <p>Prayosha Solar is a highly respected and trusted company in the solar
-                                        industry. Our commitment to excellence in every aspect of our business has earned us
-                                        a reputation as a reliable and customer-focused organization.</p>
-                                    <ul>
-                                        <li><a href="javascript:;"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="javascript:;"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="javascript:;"><i class="fa fa-youtube-play"></i></a></li>
-                                        <li><a href="javascript:;"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="javascript:;"><i class="fa fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-
-                            </div>
+        <div class="row">
+            <div class="foter_padder">
+                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
+                    <div class="wrapper_second_about">
+                        <div class="wrapper_first_image">
+                            <a href="index.php"><img src="images/hd_logo.png" class="img-responsive"
+                                    alt="logo" /></a>
                         </div>
-
-                        <div class="col-lg-2 col-md-2 col-xs-12 col-sm-4" style="left:70px">
-                        <div class="wrapper_second_useful">
-                            <h4>useful links </h4>
-                            <img src="images/heading_line3.png" alt="title" class="pd_btm_3">
+                        <div class="abotus_content">
+                            <p>Prayosha Solar is a highly respected and trusted company in the solar
+                                industry. Our commitment to excellence in every aspect of our business has
+                                earned us
+                                a reputation as a reliable and customer-focused organization.</p>
                             <ul>
-                                <li><a href="about_us.php"><i class="fa fa-angle-right"></i>About us</a>
-                                </li>
-                                <li><a href="product.php"><i class="fa fa-angle-right"></i>shop </a>
-                                </li>
-                                <li><a href="contact_us.php"><i class="fa fa-angle-right"></i>contact </a>
-                                </li>
-                                <li><a href="services.php"><i class="fa fa-angle-right"></i>services</a>
-                                </li>
-                                <li><a href="blog.php"><i class="fa fa-angle-right"></i>news</a> </li>
+                                <li><a href="javascript:;"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="javascript:;"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="javascript:;"><i class="fa fa-youtube-play"></i></a></li>
+                                <li><a href="javascript:;"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="javascript:;"><i class="fa fa-instagram"></i></a></li>
                             </ul>
-
                         </div>
-                    </div>
-                        <!-- <div class="col-lg-2 col-md-2 col-xs-12 col-sm-4">
-                            <div class="wrapper_second_useful wrapper_second_links">
 
-                                <ul>
-                                    <li><a href="javascript:;"><i class="fa fa-angle-right"></i>sitemap</a>
-                                    </li>
-                                    <li><a href="javascript:;"><i class="fa fa-angle-right"></i>FAQ </a>
-                                    </li>
-                                    <li><a href="javascript:;"><i class="fa fa-angle-right"></i>awards </a>
-                                    </li>
-                                    <li><a href="javascript:;"><i class="fa fa-angle-right"></i>tstimonials</a>
-                                    </li>
-                                    <li><a href="javascript:;"><i class="fa fa-angle-right"></i>career</a> </li>
-                                </ul>
-
-                            </div>
-                        </div> -->
-
-                        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
-                            <div class="wrapper_second_useful wrapper_second_useful_2">
-                                <h4>contact us</h4>
-                                <img src="images/hd_line_dark.png" alt="title" class="pd_btm_3">
-                                <ul>
-                                    <li>
-                                        <h1><a class="contact-info" href="tel:+919879182811"></a>(+91) 987 918 2811</h1>
-                                    </li>
-                                    <li><a class="contact-info" href="mailto:sales.prayoshacorporation@gmail.com"><i
-                                                class="flaticon-new-email-outline"
-                                                aria-hidden="true"></i>sales.prayoshacorporation@gmail.com</a></li>
-    
-                                    </li>
-                                    <!-- <li><a href="javascript:;"><i class="flaticon-internet"></i>www.example.com</a>
-                                    </li> -->
-    
-                                    <li>
-                                        <a href="https://goo.gl/maps/pSnrrjZaDm2GzbCw7"><i
-                                                class="flaticon-placeholder"></i>Katargam, Surat GJ, 395004</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-                    <div class="section3_copyright">
-                        <p>Copyright 2022-23 <a href="index.php"> Prayosha Solar</a>. all right reserved - designed by
-                            <a href="https://www.linkedin.com/in/atmik-virani-7b7316241/">Atmik X Prapti. </a></p>
+
+                <div class="col-lg-2 col-md-2 col-xs-12 col-sm-4" style="left:70px">
+                    <div class="wrapper_second_useful">
+                        <h4>useful links </h4>
+                        <img src="images/heading_line3.png" alt="title" class="pd_btm_3">
+                        <ul>
+                            <li><a href="about_us.php"><i class="fa fa-angle-right"></i>About us</a>
+                            </li>
+                            <li><a href="shop.php"><i class="fa fa-angle-right"></i>shop </a>
+                            </li>
+                            <li><a href="contact_us.php"><i class="fa fa-angle-right"></i>contact </a>
+                            </li>
+                            <li><a href="services.php"><i class="fa fa-angle-right"></i>services</a>
+                            </li>
+                            <li><a href="blog.php"><i class="fa fa-angle-right"></i>news</a> </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <!-- <div class="col-lg-2 col-md-2 col-xs-12 col-sm-4">
+                    <div class="wrapper_second_useful wrapper_second_links">
+
+                        <ul>
+                            <li><a href="javascript:;"><i class="fa fa-angle-right"></i>sitemap</a>
+                            </li>
+                            <li><a href="javascript:;"><i class="fa fa-angle-right"></i>FAQ </a>
+                            </li>
+                            <li><a href="javascript:;"><i class="fa fa-angle-right"></i>awards </a>
+                            </li>
+                            <li><a href="javascript:;"><i class="fa fa-angle-right"></i>tstimonials</a>
+                            </li>
+                            <li><a href="javascript:;"><i class="fa fa-angle-right"></i>career</a> </li>
+                        </ul>
+
+                    </div>
+                </div> -->
+
+
+                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12" style="left:100px">
+                    <div class="wrapper_second_useful wrapper_second_useful_2">
+                        <h4>contact us</h4>
+                        <img src="images/heading_line3.png" alt="title" class="pd_btm_3">
+                        <ul>
+                            <li>
+                                <h1><a class="contact-info" href="tel:+919879182811"></a>(+91) 987 918 2811</h1>
+                            </li>
+                            <li><a class="contact-info" href="mailto:sales.prayoshacorporation@gmail.com"><i
+                                        class="flaticon-new-email-outline"
+                                        aria-hidden="true"></i>sales.prayoshacorporation@gmail.com</a></li>
+
+                            </li>
+                            <!-- <li><a href="javascript:;"><i class="flaticon-internet"></i>www.example.com</a>
+                        </li> -->
+
+                            <li>
+                                <a href="https://goo.gl/maps/pSnrrjZaDm2GzbCw7"><i
+                                        class="flaticon-placeholder"></i>Katargam, Surat GJ, 395004</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-
         </div>
-
+        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+            <div class="section3_copyright">
+                <p>Copyright &copy; <span id="website-year">2022-23</span> <a href="index.php"> Prayosha Solar</a>. all right reserved - designed by
+                    <a href="https://www.linkedin.com/in/atmik-virani-7b7316241/">Atmik X Prapti. </a>
+                </p>
+            </div>
+        </div>
     </div>
+
+</div>
+
+</div>
     <!-- sw footer section end-->
     <!--main js files-->
 

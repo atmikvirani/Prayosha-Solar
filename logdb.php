@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
     mysqli_close($conn);
     if($count==0)
     {
-        echo "<h3 align='center' style='color:red'><b>Invalid Username and Password</b></h3>";
+        echo "<h3 align='center' style='color:red'><b>Invalid Username or Password</b></h3>";
         include "login.html";
     }
     else

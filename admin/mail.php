@@ -15,16 +15,15 @@ $mail->isSMTP(); // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com'; //Specify main and backup SMTP servers 
 $mail->SMTPAuth = 'true'; // Enable SMTP authentication 
 $mail->Username = ' atmikpatel2003@gmail.com'; // SMTP username
-$mail->Password = 'eftbobtremqpyuwx'; // SMTP password 
+$mail->Password = 'qglikovyhrzyhthg'; // SMTP password 
 $mail->SMTPSecure ='tls'; // Enable TLS encryption, `ssl` also accepted 
 $mail->Port = 587; // TCPport to connect to 
 $mail->setFrom('atmikpatel2003@gmail.com', 'Atmik Virani');
 $mail->addReplyTo('atmikpatel2003@gmail.com', 'Atmik Virani');
 $mail->addAddress($toemail); // Add a recipient //
-$mail->addCC('cc@example.com'); // $mail->addBCC('bcc@example.com');
 $mail->isHTML(true); // Set email format to HTML $bodyContent=$message;
 $mail->Subject =$subject; $bodyContent = 'Hello, '.$fname; $bodyContent .='
-<p>'.$message.'</p>
+<p>'.$message.'</p> <br><br>Thank you for contacting us! 
 '; $mail->Body = $bodyContent; if(!$mail->send()) { echo 'Message could not be
 sent.'; echo 'Mailer Error: ' . $mail->ErrorInfo; } else { echo '<h6 align="center" id="pop" style="color:green;"> Email has
 been sent! </h6>'; echo"    <script>
