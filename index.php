@@ -228,9 +228,6 @@ Author:   Atmik X Prapti
                                                     echo '<li class="dropdown_hover"><a href="create_account.html">Create Account</a></li>';
                                                 }
                                             ?>
-                                            
-                                            <li class="dropdown_hover hidden-lg"><a href="contact_us.php#contact-section">Free Quote</a>
-                                            </li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -238,7 +235,7 @@ Author:   Atmik X Prapti
                             <div class="header_btn">
                                 <ul>
                                     <li>
-                                        <a href="contact_us.php#contact-section" class="waves-effect waves-purple waves-ripple">free
+                                        <a href="cart.php" class="waves-effect waves-purple waves-ripple">free
                                             quote</a>
                                     </li>
                                 </ul>

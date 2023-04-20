@@ -234,7 +234,7 @@ Author:   Atmik X Prapti
         <div class="header_btn">
             <ul>
                 <li>
-                    <a href="cart.php" class="waves-effect waves-light waves-ripple">Calculator</a>
+                    <a href="cart.php" class="waves-effect waves-light waves-ripple">Free Quote</a>
                     <!-- <a href="cart.php" class="waves-effect waves-light waves-ripple">Cart<span style="width: 15px;
                         height: 15px;
                         color: #ffffff;
