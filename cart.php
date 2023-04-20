@@ -13,7 +13,7 @@ Author:   Atmik X Prapti
 
 <head>
     <meta charset="utf-8" />
-    <title>Cart</title>
+    <title>Calculator</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta name="description" content="smart pest" />
     <meta name="keywords" content="solar system /sun & wind" />
@@ -40,11 +40,33 @@ Author:   Atmik X Prapti
     
     <!-- <script src="angular/angular.js"></script> -->
     <!-- <script src="script.js"></script>   -->
-    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="calculation.js"></script>
 
     <!-- favicon link-->
     <link rel="shortcut icon" type="image/icon" href="images/favicon.png" />
 </head>
+
+<style>
+    .cardbox{
+    background: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 0px #00000080;
+    height: 100px;
+    }
+    .cardbox:hover{
+    transition: opacity 153ms cubic-bezier(0.335, 0.055, 0.585, 0.11) 10ms;
+    background: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px #7e7e7e;
+    height: 100px;
+    }
+    
+</style>
 
 <body ng-app="Items" ng-controller="dispItems">
     <!-- preloader Start -->
@@ -219,7 +241,7 @@ Author:   Atmik X Prapti
         <div class="header_btn">
             <ul>
                 <li>
-                    <a href="product.php" class="waves-effect waves-light waves-ripple">Shop</a>
+                    <a href="product.php" class="waves-effect waves-light waves-ripple">Products</a>
                 </li>
             </ul>
         </div>
@@ -236,7 +258,7 @@ Author:   Atmik X Prapti
                         <div class="sub_title_section">
                             <ul class="sub_title">
                                 <li><a href="index.php"> Home </a></li>
-                                <li>Shopping Cart</li>
+                                <li>Calculator</li>
                             </ul>
                         </div>
                     </div>
@@ -276,159 +298,118 @@ Author:   Atmik X Prapti
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="btc_shop_single_prod_right_section shop_product_single_head related_pdt_shop_head">
-                        <h1>Your Cart</h1>
+                        <h1>Calculator</h1>
                     </div>
                 </div>
                 <div class="shop_cart_page_wrapper" >
-                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" >
-                        <div class="table-responsive cart-calculations">
-                            <form action="cartadd.php" method="post">
-                            <table class="table">
-
-                                <thead class="cart_table_heading">
-                                    <tr>
-                                        <th>item</th>
-
-                                        <th>product</th>
-
-                                        <th> price</th>
-
-                                        <th>Quantity</th>
-
-                                        <th>Total price</th>
-                                        <th>&nbsp;</th>
-                                    </tr>
-                                </thead>
-                                <div id="label"></div>
-                                
-                                
-                                <tbody id="shopping-cart">
-
-                                </tbody>
-                            
-                        <tfoot>
-                            <td><b>Total</b></td>
-                            <td></td>
-                            <td></td>
-                            <td style="text-align: center;"><b><span id="cartAmount"></span></b></td>
-                            <td><b><span id="cartTotal"></span></b></td>
-                            <tr>
-                            <td class="shop_btn_wrapper shop_car_btn_wrapper">
-
-                                <ul>
-                                    <li><a href="product.php">continue shopping</a>
-                                    </li>
-                                </ul>
-    
-                            </td>
-                            <td>
-
-                                <!-- <ul>
-                                    <input type="submit" value="Checkout" name="submit">
-                                </ul> -->
-
-                                <div class="shop_btn_wrapper shop_btn_wrapper_shipping">
-                                    <ul>
-                                        <li><a href="#" id="checkout-link" name="submit">Checkout</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-    
-                            </td>
-                        </tr>
-                        </tfoot>
-                        
-                    </table>
-                    </form>
-                </div>
-
-                        <!-- coupon code -->
-                        <!-- <div class="estimate_shiping_Wrapper_cntnt estimate_shiping_Wrapper_cntnt_2">
-                            <div
-                                class="btc_shop_single_prod_right_section shop_product_single_head related_pdt_shop_head related_pdt_shop_head_2">
-                                <h1> code enetr here : </h1>
-                                <div class="lr_nl_form_wrapper">
-                                    <input type="text" placeholder="Type Your Code">
-                                    <button type="submit">apply</button>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- coupon code ends -->
-
-                    </div>
-                    <div id="label" class="text-center"></div>
-
-                    <div class="shopping-cart" id="shopping-cart"></div>
-
-                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                        <!-- estimate shipping -->
-                        <!-- <div class="shipping_Wrapper">
-                            <div
-                                class="btc_shop_single_prod_right_section shop_product_single_head related_pdt_shop_head related_pdt_shop_head_2">
-                                <h1>estimate shipping : </h1>
-                            </div>
-                            
-                           <div class="estimate_shiping_Wrapper_cntnt">
-                                <div class="custome-select style2">
-                                    <select id="year">
-                                        <option value="hide">Select country </option>
-                                        <option value="USA">USA</option>
-                                        <option value="Austraila">Austraila</option>
-                                        <option value="London">London</option>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                        <!-- <table>
+                            <tbody>
+                                <tr>
+                                    <td class="col-lg-3">
+                                        State
+                                        <select name="" id="" class="selectpicker" value="Gujarat">
+                                            <option >Gujarat</option>   
+                                        </select>
+                                    </td>
+                                    <td class="col-lg-3">
+                                        Area
+                                        <select name="" class="selectpicker" id="select">
+                                            <option id="residential">Residential</option>   
+                                            <option id="commercial" >Commercial</option>   
+                                            <option >Industrial</option>   
+                                        </select>
+                                    </td>
+                                    <td class="col-lg-3">
+                                        Calculate With
+                                        <select name=""  class="selectpicker" id="input_method">
+                                            <option id="unit_select">Unit</option>   
+                                            <option id="electricity_bill" >Electricity Bill</option>   
+                                        </select>
+                                    </td>
+                                    <td class="col-lg-3">
+                                        Value
+                                        
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> -->
+                        <div class="container">
+                            <div class="row form-details">
+                                <div class="col-md-3 mt-5">
+                                    <div class="label"> STATE</div>
+                                    <select class="selectpicker" value="Gujarat" style="border: 1px solid #009846;">
+                                        <option>Gujarat</option>
                                     </select>
                                 </div>
-                                <div class="custome-select style2">
-                                    <select id="year">
-                                        <option value="hide">Select State</option>
-                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
-                                        <option value="Rajsthan">Rajsthan</option>
-                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <div class="col-md-3 mt-5">
+                                    <div class="label"> AREA</div>
+                                    <select class="selectpicker" id="select" style="border: 1px solid #009846;">
+                                        <option id="residential" selected data-default>Residential</option>
+                                        <option id="commercial">Commercial</option>
+                                        <option>Industrial</option>
                                     </select>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Enter ZIP code" />
-                                <div class="shop_btn_wrapper shop_btn_wrapper_shipping">
-                                    <ul>
-                                        <li><a href="javascript:;">check</a>
-                                        </li>
-                                    </ul>
+                                <div class="col-md-3 mt-5">
+                                    <div class="label"> CALCULATE WITH</div>
+                                    <select class="selectpicker" id="input_method" style="border: 1px solid #009846;">
+                                        <option id="unit_select" selected data-default>Unit</option>
+                                        <option id="electricity_bill">Electricity Bill</option>
+
+                                    </select>
                                 </div>
-                            </div>  -->
-                        <!-- estimate shipping ends -->
-
-                            <div class="estimate_shiping_Wrapper_cntnt estimate_shiping_Wrapper_repsnse">
-
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <th>Sub Total : </th>
-                            <td><b><span id="cartTotal1"></span></b></td>
-                                        </tr>
-                                        <tr>
-                                            <th>CGST 18% :</th>
-                                            <td><span id="cgst"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <th>SGST 20% :</th>
-                                            <td><span id="sgst"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <th> Discount :</th>
-                                            <td><span id="discount"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <th class="cart_btn_cntnt">Total :</th>
-                                            <td><span class="cart_btn_cntnt_clr" id="Total"></span> </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                
+                                <div class="col-md-3 mt-5">
+                                    <div class="label"> VALUE</div>
+                                    <input type="number" min="0" id="unit" style="border-radius: 0px; border:1px solid #009846; padding-left:10px; width: 100% height:75%">
+                                </div>
+                            </div>
+                            <div class="calculat_button mt-5">
+                                <center>
+                                    <button type="button" class="btn" id="click">Calculate</button>
+                                </center>
                             </div>
                         </div>
-
+                        
+                        <hr>
+                            
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3 p-3" style="margin-top: -15;">
+                                    <div class="cardbox">
+                                        <h5 style="text-align: center;"> Electricity Bill</h5>
+                                        <div class="d1">
+                                            <div id="bill" class="calculated-number"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 p-3 " style="margin-top: -15;">
+                                    <div class="cardbox">
+                                        <h5 style="text-align: center;">Needed KW</h5>
+                                        <div id="kw" class="calculated-number"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 p-3" style="margin-top: -15;">
+                                    <div class="cardbox">
+                                        <h5 style="text-align: center;">Cost</h5>
+                                        <div id="rupiya" class="calculated-number"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 p-3">
+                                    <div class="cardbox" style="margin-top: -15;">
+                                        <h5 style="text-align: center;">Area (SQ F)</h5>
+                                        <div id="area" class="calculated-number"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 p-3" style="margin-top: -15;">
+                                    <div class="cardbox">
+                                        <h5 style="text-align: center;">Generation Annually</h5>
+                                        <div id="generation" class="calculated-number"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -657,11 +638,10 @@ $('select').each(function(){
 </html>
     
     <!-- <script src="main.js"></script> -->
-    <script src="Data.js"></script>
-    <script src="cartdisp.js"></script> 
-    <script>
+    
+    <!-- <script>
     document.getElementById('checkout-link').addEventListener('click', function(event) {
     event.preventDefault(); // prevent the default link behavior
     document.querySelector('form').submit(); // submit the form
     });
-    </script>
+</script>     -->

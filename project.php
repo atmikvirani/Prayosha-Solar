@@ -722,7 +722,7 @@ Author:   Atmik X Prapti
                 </div>
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                     <div class="section3_copyright">
-                        <p>Copyright 2022-23 <a href="index.php"> Prayosha Solar</a>. all right reserved - designed by <a href="https://www.linkedin.com/in/atmik-virani-7b7316241/">Atmik X Prapti. </a></p>
+                        <p>Copyright &copy; <span id="website-year">2022-23</span> <a href="index.php"> Prayosha Solar</a>. all right reserved - designed by <a href="https://www.linkedin.com/in/atmik-virani-7b7316241/">Atmik X Prapti. </a></p>
                     </div>
                 </div>
             </div>
@@ -753,3 +753,9 @@ Author:   Atmik X Prapti
 </body>
 
 </html>
+<script>
+    var d = new Date();
+    var n = d.getFullYear();
+    var year = document.getElementById("website-year")
+    year.innerHTML = n
+  </script>

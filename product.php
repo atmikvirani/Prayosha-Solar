@@ -234,19 +234,7 @@ Author:   Atmik X Prapti
         <div class="header_btn">
             <ul>
                 <li>
-                    <a href="cart.php" class="waves-effect waves-light waves-ripple">Cart<span style="width: 15px;
-                            height: 15px;
-                            color: #ffffff;
-                            background: #ff3232;
-                            border-radius: 100%;
-                            font-size: 10px;
-                            float: left;
-                            line-height: 15px;
-                            text-align: center;
-                            position: absolute;
-                            left: 90px;
-                            top: 7px;
-                        ;" id="cartAmount" class="cartAmount"></span></a>
+                    <a href="cart.php" class="waves-effect waves-light waves-ripple">Calculator</a>
                     <!-- <a href="cart.php" class="waves-effect waves-light waves-ripple">Cart<span style="width: 15px;
                         height: 15px;
                         color: #ffffff;
@@ -277,7 +265,7 @@ Author:   Atmik X Prapti
                         <div class="sub_title_section">
                             <ul class="sub_title">
                                 <li><a href="index.php"> Home </a></li>
-                                <li>shop</li>
+                                <li>Products</li>
                             </ul>
                         </div>
                     </div>
@@ -1575,7 +1563,7 @@ Author:   Atmik X Prapti
                 </div>
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                     <div class="section3_copyright">
-                        <p>Copyright 2022-23 <a href="index.php"> Prayosha Solar</a>. all right reserved - designed by
+                        <p>Copyright &copy; <span id="website-year">2022-23</span> <a href="index.php"> Prayosha Solar</a>. all right reserved - designed by
                             <a href="https://www.linkedin.com/in/atmik-virani-7b7316241/">Atmik X Prapti. </a>
                         </p>
                     </div>
@@ -1636,6 +1624,12 @@ Author:   Atmik X Prapti
 </body>
 
 </html>
+<script>
+    var d = new Date();
+    var n = d.getFullYear();
+    var year = document.getElementById("website-year")
+    year.innerHTML = n
+  </script>
 <script>
     $(document).ready(function () {
         var searchInput = $('#search');
