@@ -202,7 +202,7 @@ Author:   Atmik X Prapti
         <div class="header_btn">
             <ul>
                 <li>
-                    <a href="contact_us.php" class="waves-effect waves-light waves-ripple">free quote</a>
+                    <a href="cart.php" class="waves-effect waves-light waves-ripple">free quote</a>
                 </li>
             </ul>
         </div>

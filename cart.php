@@ -1,3 +1,6 @@
+<?php
+    session_start();
+    ?>
 <!DOCTYPE html>
 <!--
 Project:  Prayosha Solar HTML
@@ -45,6 +48,60 @@ Author:   Atmik X Prapti
 
     <!-- favicon link-->
     <link rel="shortcut icon" type="image/icon" href="images/favicon.png" />
+    <style>
+        .select {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+            width: 100%;
+        }    .select select {
+                font-family: 'Arial';
+                display: inline-block;
+                width: 100%;
+                cursor: pointer;
+                padding: 10px 22px;
+                outline: 0;
+                border: 0px solid #000000;
+                border-radius: 0px;
+                background: #2c86c7;
+                color: #ffffff;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+            }
+                .select select::-ms-expand {
+                    display: none;
+                }
+                .select select:hover,
+                .select select:focus {
+                    color: #ffffff;
+                    background: #2c86c7;
+                }
+                .select select:disabled {
+                    opacity: 0.5;
+                    pointer-events: none;
+                }
+        .select_arrow {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 0px;
+            height: 0px;
+            border: solid #ffffff;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+        .select select:hover ~ .select_arrow,
+        .select select:focus ~ .select_arrow {
+            border-color: #ffffff;
+        }
+        .select select:disabled ~ .select_arrow {
+            border-top-color: #ffffff;
+        }
+    </style>
 </head>
 
 <style>
@@ -111,7 +168,6 @@ Author:   Atmik X Prapti
                                 <a href="javascript:;"><i class="fa-regular fa-user"></i></a>
                                 <ul>
                                     <?php
-                                    session_start();
                                     if(isset($_SESSION['email'])){  
                                         echo '<p style="font-weight:625;font-family:Montserrat;text-transform:initial;font-size:15px;">'.'<font style="text-transform:initial;font-size:12px;">'.'hello, '.'</font>'.$_SESSION['user'].'</p>';
                                     }
@@ -293,7 +349,7 @@ Author:   Atmik X Prapti
         </div>
     </div> -->
     <!--sw about us top end-->
-    <div class="cart_product_wrapper">
+    <!-- <div class="cart_product_wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -302,7 +358,7 @@ Author:   Atmik X Prapti
                     </div>
                 </div>
                 <div class="shop_cart_page_wrapper" >
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" > -->
                         <!-- <table>
                             <tbody>
                                 <tr>
@@ -334,7 +390,7 @@ Author:   Atmik X Prapti
                                 </tr>
                             </tbody>
                         </table> -->
-                        <div class="container">
+                        <!-- <div class="container">
                             <div class="row form-details">
                                 <div class="col-md-3 mt-5">
                                     <div class="label"> STATE</div>
@@ -407,12 +463,16 @@ Author:   Atmik X Prapti
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </div> -->
+                        
+                    <!-- </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+                        <?php
+                        include('calculatordisp.php')
+                        ?>
     <!-- sw footer section start-->
     <div class="sw_footer_main_wrapper">
 
@@ -539,6 +599,7 @@ Author:   Atmik X Prapti
     <script src="js/camera.min.js"></script>
     <script src="js/custom_2.js"></script>
     
+</body>
     <script>
         const body = document.querySelector("body");
         const fab_nav = document.querySelector(".fab-container");
@@ -578,7 +639,7 @@ Author:   Atmik X Prapti
         }
 
     </script>
-    <script>
+    <!-- <script>
         /*
 Reference: http://jsfiddle.net/BB3JK/47/
 */
@@ -632,8 +693,7 @@ $('select').each(function(){
 
 });
     </script>
-    <!--js code-->
-</body>
+    js code -->
 
 </html>
     
