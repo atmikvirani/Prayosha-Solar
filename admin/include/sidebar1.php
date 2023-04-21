@@ -54,10 +54,10 @@
             <span>Newsletter</span>
           </a>
         </li>
-        <!-- <li class="nav-item active">
-          <a class="nav-link" href="bill.php">
-            <i class="fa fa-fw fa-dollar-sign"></i>
-            <span>Bill</span>
+        <li class="nav-item active">
+          <a class="nav-link" href="forgotpass.php">
+            <i class="fa fa-fw fa-user"></i>
+            <span>Forgot Password</span>
           </a>
-        </li> -->
+        </li>
       </ul>

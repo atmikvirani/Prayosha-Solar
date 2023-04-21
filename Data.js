@@ -1,0 +1,1 @@
+let shopItemsData = [{"id":"a3","name":"ACDB","price":"4000","desc":"KSolare ACDB","img":"cart\/prdct_3.jpg"}];

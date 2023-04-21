@@ -179,7 +179,8 @@
                                 <div class="col-lg-3 ">
                                     <div class="cardbox">
                                         <h5 style="text-align: center;"> Electricity Bill</h5>
-                                        <div id="bill" class="calculated-number"></div>
+                                        <!-- <div id="bill" class="calculated-number"></div> -->
+                                        <text align="center" id="bill"></span>
                                     </div>
                                 </div>
                                 <div class="col-lg-2">
@@ -211,11 +212,7 @@
                     <br>
                     <br>
                     <center>
-<<<<<<< HEAD
-                        <label for="">*The figures which are being displayed here are just an estimate, We encourage you to <a href="contact_us.php"><u>Contact Us</u></a> for more query!</label>
-=======
                         <label for="">*The figures which are being displayed here are just an estimate, We encourage you to <a href="contact_us.php">Contact Us</a> for more query!</label>
->>>>>>> cd077fbaa15323976767898438b8ddf967b155c2
                     </center>
             </div>
         </div>

@@ -13,7 +13,7 @@ Author:   Atmik X Prapti
 
   <head>
     <meta charset="utf-8" />
-    <title>Login</title>
+    <title>Forgot Password</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta name="description" content="smart pest" />
     <meta name="keywords" content="solar system /sun & wind" />
@@ -64,52 +64,34 @@ Author:   Atmik X Prapti
               <div class="contact_right_wrapper">
                 <div class="cmnt_area_div_mn">
                   <div class="sw_left_heading_wraper sw_dark_heading_wraper">
-                    <h1>Login</h1>
+                    <h1>Forgot Password?</h1>
                     <img src="images/heading_line.png" alt="title" />
                   </div>
                   <div class="row">
-                    <form action="logdb.php" method="post">
+                    <form action="pass_otpcheck.php" method="post">
                       <div class="cont_main_section">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                           <div class="contect_form1">
+                            <p>We have sent a code to your <u><?php echo $_SESSION['forgot']?></u> email.</p>
+                            <div id="">Enter code within (<span id="timer"></span>) Seconds.</div>
                             <input
-                              type="email"
-                              name="txtemail"
-                              placeholder="Email*"
+                              type="text"
+                              name="txtotp"
+                              placeholder="Enter Code"
                               class="require"
-                            required title="Enter Email">
+                              value=""
+                            required title="Enter Code">
                           </div>
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                          <div class="contect_form1">
-                            <input
-                              type="password"
-                              name="txtpass"
-                              placeholder="Password*"
-                              class="require"
-                              data-valid="email"
-                              data-error="Email should be valid."
-                              id="pass"
-                            required title="Enter Password">
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                            <input
-                              type="checkbox"
-                              onclick="myFunction()"
-                              id="show"
-                            />
-                            <label for="show">Show Password</label>
-                          </div>
-                        </div>
-                        <ul>
+                        <!-- <ul>
                           <li>
-                            <a href="forgot_pass.html"
-                              >&nbsp;&nbsp;&nbsp;&nbsp;<u>Forget Password?</u></a>
+                            <a href="javascript:;"
+                              >&nbsp;&nbsp;&nbsp;&nbsp;Forget Password</a>
                           </li>
-                        </ul>
+                        </ul> -->
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                           <div class="buttons">
-                            <input type="submit" value="Login" name="submit" class="form-btn">
-                            <a href="create_account.html">Create Account</a>
+                            <input type="submit" value="Submit" name="submit" class="form-btn">
                           </div>
                         </div>
                       </div>
@@ -144,3 +126,33 @@ Author:   Atmik X Prapti
   </body>
 </html>
 
+
+<script>
+    // Set the countdown time in seconds
+    var countdown = 60;
+    
+    // Display the initial time on the webpage
+    document.getElementById("timer").innerHTML = countdown;
+    
+    // Start the timer and update the countdown every second
+    var timer = setInterval(function() {
+        countdown--;
+        document.getElementById("timer").innerHTML = countdown;
+        
+        // When the timer reaches 0, fire the query
+        if (countdown <= 0) {
+            clearInterval(timer); // Stop the timer
+            
+            // Use AJAX to call a PHP script that updates the database
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // Display a message indicating the query was fired successfully
+                    document.getElementById("timer").innerHTML = "Time Out!";
+                }
+            };
+            xhttp.open("GET", "passotp.php", true);
+            xhttp.send();
+        }
+    }, 1000); // 1000 milliseconds = 1 second
+</script>
