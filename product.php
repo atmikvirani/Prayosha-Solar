@@ -481,6 +481,7 @@ Author:   Atmik X Prapti
                                 <div class="tab-content btc_shop_index_content_tabs_main">
                                     <div id="grid" class="tab-pane fade in active">
                                         <div class="row">
+                                            <div id="shop">
                                         <?php
                                             $conn = mysqli_connect("localhost","root","","project");
                                             $query = "SELECT * FROM product WHERE stat = 1";
@@ -523,6 +524,7 @@ Author:   Atmik X Prapti
                                                 ';
                                             }
                                         ?>
+                                        </div>
                                             <!-- <div id="shop"> -->
                                                 <!-- here is the card -->
 
@@ -1304,7 +1306,7 @@ Author:   Atmik X Prapti
                         <img src="images/heading_line.png" alt="title">
                         <form class="search_form" role="search">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search here">
+                                <input type="text" id="search" class="form-control" placeholder="Search here">
                             </div>
                             <button type="submit"><i class="fa fa-search"></i></button>
                         </form>

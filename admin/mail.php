@@ -5,27 +5,29 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 $mail = new PHPMailer;
+print_r(error_log);
 if(isset($_POST['send'])){
-// getting post values
-$fname=$_POST['fname'];		
-$toemail=$_POST['toemail'];	
-$subject=$_POST['subject'];	
-$message=$_POST['message'];
-$mail->isSMTP(); // Set mailer to use SMTP 
-$mail->Host = 'smtp.gmail.com'; //Specify main and backup SMTP servers 
-$mail->SMTPAuth = 'true'; // Enable SMTP authentication 
-$mail->Username = ' atmikpatel2003@gmail.com'; // SMTP username
-$mail->Password = 'qglikovyhrzyhthg'; // SMTP password 
-$mail->SMTPSecure ='tls'; // Enable TLS encryption, `ssl` also accepted 
-$mail->Port = 587; // TCPport to connect to 
-$mail->setFrom('atmikpatel2003@gmail.com', 'Atmik Virani');
-$mail->addReplyTo('atmikpatel2003@gmail.com', 'Atmik Virani');
-$mail->addAddress($toemail); // Add a recipient //
-$mail->isHTML(true); // Set email format to HTML $bodyContent=$message;
-$mail->Subject =$subject; $bodyContent = 'Hello, '.$fname; $bodyContent .='
-<p>'.$message.'</p> <br><br>Thank you for contacting us! 
-'; $mail->Body = $bodyContent; if(!$mail->send()) { echo 'Message could not be
-sent.'; echo 'Mailer Error: ' . $mail->ErrorInfo; } else { echo '<h6 align="center" id="pop" style="color:green;"> Email has
+  // getting post values
+  $fname=$_POST['fname'];		
+  $toemail=$_POST['toemail'];	
+  $subject=$_POST['subject'];	
+  $message=$_POST['message'];
+  $mail->isSMTP(); // Set mailer to use SMTP 
+  $mail->Host = 'smtp.yandex.com'; //Specify main and backup SMTP servers 
+  $mail->SMTPAuth = 'true'; // Enable SMTP authentication 
+  $mail->Username = 'noreplyotp1-prayosha@yandex.com'; // SMTP username
+  $mail->Password = 'cmvuleofddzdsfvy'; // SMTP password 
+  $mail->SMTPSecure ='tls'; // Enable TLS encryption, `ssl` also accepted 
+  $mail->Port = 587; // TCPport to connect to 
+  $mail->setFrom('noreplyotp1-prayosha@yandex.com', 'noreplyotp1-prayosha');
+  $mail->addReplyTo('noreplyotp1-prayosha@yandex.com', 'noreplyotp1-prayosha');
+  $mail->addAddress($toemail); // Add a recipient //
+  $mail->isHTML(true); // Set email format to HTML $bodyContent=$message;
+  $mail->Debugoutput = 'echo';
+  $mail->Subject =$subject; $bodyContent = 'Hello, '.$fname; $bodyContent .='
+  <p>'.$message.'</p> <br><br>Thank you for contacting us! 
+  '; $mail->Body = $bodyContent; if(!$mail->send()) { echo 'Message could not be
+    sent.'; echo 'Mailer Error: ' . $mail->ErrorInfo; } else { echo '<h6 align="center" id="pop" style="color:green;"> Email has
 been sent! </h6>'; echo"    <script>
 const h6 = document.getElementById('pop');
 

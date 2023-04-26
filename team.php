@@ -797,7 +797,7 @@ Author:   Atmik X Prapti
     <script src="js/owl.carousel.js"></script>
     <script src="js/camera.min.js"></script>
     <script src="js/custom_2.js"></script>
-    <script src="cartdisp.js"></script>
+    
     <!--js code-->
 </body>
 

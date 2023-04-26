@@ -640,7 +640,7 @@ Author:   Atmik X Prapti
                             <button data-filter=".organization">Organization</button>
                             <button data-filter=".research">Research</button>
                             <button data-filter=".solar_pannels">Solar Pannels</button>
-                            <button data-filter=".wind_energy">Wind Energy</button>
+                            <!-- <button data-filter=".wind_energy">Wind Energy</button> -->
                         </div>
                         <!-- /filter-->
                     </div><!--/.portfolio_nav-->
@@ -1351,7 +1351,7 @@ Author:   Atmik X Prapti
     <script src="js/owl.carousel.js"></script>
     <script src="js/camera.min.js"></script>
     <script src="js/custom_6.js"></script>
-    <script src="cartdisp.js"></script>
+    
     <!--js code-->
 </body>
 

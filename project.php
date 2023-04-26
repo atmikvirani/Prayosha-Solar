@@ -288,7 +288,7 @@ Author:   Atmik X Prapti
 
                 <div class="gallery-area">
 
-                    <div id="gallery">
+                    <!-- <div id="gallery">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="filter filter-demo portfolio-nav galery_2_wraper my_slide_filter">
                                 <ul>
@@ -311,7 +311,7 @@ Author:   Atmik X Prapti
                                         wind energy</li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
 
                         
 
@@ -748,7 +748,7 @@ Author:   Atmik X Prapti
     <script src="js/owl.carousel.js"></script>
     <script src="js/camera.min.js"></script>
     <script src="js/custom_2.js"></script>
-    <script src="cartdisp.js"></script>
+    
     <!--js code-->
 </body>
 
