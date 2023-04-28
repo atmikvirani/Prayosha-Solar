@@ -268,20 +268,7 @@ Author:   Atmik X Prapti
                                         <li><a href="product.php" title="">products</a>
                                         </li>
                                         <li>
-                                        <a href="cart.php" class="waves-effect waves-light waves-ripple">Cart<span style="width: 15px;
-                                                    height: 15px;
-                                                    color: #ffffff;
-                                                    background: #ff3232;
-                                                    border-radius: 100%;
-                                                    font-size: 10px;
-                                                    float: left;
-                                                    line-height: 15px;
-                                                    text-align: center;
-                                                    position: absolute;
-                                                    left: 50px;
-                                                    top: 7px;
-                                                ;" id="cartAmount"
-                                                    class="cartAmount"></span></a></li>
+                                        <a href="calculatordisp.php" class="waves-effect waves-light waves-ripple">Calculator</a></li>
                                         <li><a href="contact_us.php" title="">Contact us</a>
                                         </li>
                                         <?php
@@ -346,8 +333,8 @@ Author:   Atmik X Prapti
                                         <div class="content">
                                             
                                             <h2 data-animation="animated fadeInUp">Gujarat's biggest bidder</h2>
-                                            <p data-animation="animated fadeInUp">Prayosha Solar is the Gujarat's
-                                                Biggest Bid taker for household projects in the year 2023-24.</p>
+                                            <p data-animation="animated fadeInUp" style="color:#4f25ba"><b>Prayosha Solar is the Gujarat's
+                                                Biggest Bid taker for household projects in the year 2023-24.</b></p>
                                             <div data-animation="animated fadeInUp" class="disc_btn slider_btn">
                                                 <!-- <ul>
                                                         <li>
@@ -374,9 +361,9 @@ Author:   Atmik X Prapti
                                                 Renewable Energy
 
                                                 for a Sustainable World.</h2>
-                                            <p data-animation="animated fadeInUp">Windtech redefines your relationship
+                                            <p data-animation="animated fadeInUp" style="color:#4f25ba"><b>Windtech redefines your relationship
                                                 with energy, save money minimize
-                                                your carbon footprint, take control of your power costs.</p>
+                                                your carbon footprint, take control of your power costs.</b></p>
 
                                             <div data-animation="animated fadeInUp" class="disc_btn slider_btn">
                                                 <!-- <ul>
@@ -403,9 +390,9 @@ Author:   Atmik X Prapti
                                                 Renewable Energy
 
                                                 for a Sustainable World.</h2>
-                                            <p data-animation="animated fadeInUp">Windtech redefines your relationship
+                                            <p data-animation="animated fadeInUp" style="color:#4f25ba"><b>Windtech redefines your relationship
                                                 with energy, save money minimize
-                                                your carbon footprint, take control of your power costs.</p>
+                                                your carbon footprint, take control of your power costs.</b></p>
 
                                             <div data-animation="animated fadeInUp" class="disc_btn slider_btn">
                                                 <!-- <ul>

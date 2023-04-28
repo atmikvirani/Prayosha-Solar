@@ -130,6 +130,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="btc_shop_single_prod_right_section shop_product_single_head related_pdt_shop_head">
                         <h1>Calculator</h1>
+                        <i style="font-size:12px">(For your convenience, please provide the average of your last 6 months' data of units or electricity bill.)</i>
                     </div>
                 </div>
                 <div class="container">
@@ -212,7 +213,7 @@
                     <br>
                     <br>
                     <center>
-                        <label for="">*The figures which are being displayed here are just an estimate, We encourage you to <a href="contact_us.php">Contact Us</a> for more query!</label>
+                        <label for="">*The figures which are being displayed here are just an estimate, We encourage you to <u><a href="contact_us.php">Contact Us</a></u> for more query!</label>
                     </center>
             </div>
         </div>

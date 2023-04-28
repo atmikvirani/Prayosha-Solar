@@ -284,11 +284,11 @@ Author:   Atmik X Prapti
                             <img src="images/spec_1.png" alt="title">
                         </div>
                         <div class="gb_icon_content">
-                            <h4><a href="javascript:;">Solar as a <br>
-Service(SaaS)</a></h4>
+                            <h4><a href="javascript:;">Site  <br>
+                            Evaluation</a></h4>
 
                         </div>
-                        <p>Business model installs solar energy and maintains solar power service by third-party on customer's property and the later monthly fees.</p>
+                        <p>In order to create a unique solar power system that performs at its best, a solar company assesses the location's solar potential, shading, and other elements.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
@@ -297,11 +297,11 @@ Service(SaaS)</a></h4>
                             <img src="images/spec_2.png" alt="title">
                         </div>
                         <div class="gb_icon_content">
-                            <h4><a href="javascript:;">Solar PV <br>
-Systems</a></h4>
+                            <h4><a href="javascript:;">Design and <br>
+Engineering</a></h4>
 
                         </div>
-                        <p>A solar PV(photovoltaic) system uses solar cells to absorb sunlight in solar panels and create a flow of electrons which generates DC electricity.</p>
+                        <p>Site assessments inform solar firms' custom solar power system designs and detailed engineering plans to ensure safe and efficient installations.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
@@ -310,11 +310,10 @@ Systems</a></h4>
                             <img src="images/spec_3.png" alt="title">
                         </div>
                         <div class="gb_icon_content">
-                            <h4><a href="javascript:;">Wind Generators<br>
-Systems</a></h4>
+                            <h4><a href="javascript:;">Installation</a></h4>
 
                         </div>
-                        <p>The system works by using the wind’s kinetic energy to turn the blades of the wind turbine, which in turn spins a generator to create electricity.</p>
+                        <p>Solar firms install complete solar power systems, including panels, inverters, and mounting hardware for electricity generation from sunlight.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
@@ -323,11 +322,11 @@ Systems</a></h4>
                             <img src="images/spec_4.png" alt="title">
                         </div>
                         <div class="gb_icon_content">
-                            <h4><a href="javascript:;">Other Alternative<br>
-Energy</a></h4>
+                            <h4><a href="javascript:;">Maintenance and<br>
+Repair</a></h4>
 
                         </div>
-                        <p>Other alternatives can be Hydroelectric power, Geothermal energy, Biomass energy, Tidal Power or Hydrogen fuel cells.</p>
+                        <p>We maintain and repair solar power systems to including cleaning, electrical checks, and component replacements as needed.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
@@ -336,11 +335,11 @@ Energy</a></h4>
                             <img src="images/spec_5.png" alt="title">
                         </div>
                         <div class="gb_icon_content">
-                            <h4><a href="javascript:;">Commercial <br>
-Systems</a></h4>
+                            <h4><a href="javascript:;">Financing and <br>
+Incentives</a></h4>
 
                         </div>
-                        <p>It is a solar panel system that is installed on a commercial or industrial property, such as business or factory meet the higher energy needs.</p>
+                        <p>Solar firms guide customers on financing options, incentives, and financing methods such as leases or loans for solar power systems.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
@@ -349,10 +348,10 @@ Systems</a></h4>
                             <img src="images/spec_6.png" alt="title">
                         </div>
                         <div class="gb_icon_content">
-                            <h4><a href="javascript:;">recyling <br> rubbish</a></h4>
+                            <h4><a href="javascript:;">Energy storage  <br> Solutions</a></h4>
 
                         </div>
-                        <p>It involves collecting and processing waste materials to create new products and helps reducing the amount of waste to landfills and reduce pollution.</p>
+                        <p>For consumers who want to store surplus solar energy and use it later, several solar companies provide energy storage options like batteries.</p>
                     </div>
                 </div>
             </div>

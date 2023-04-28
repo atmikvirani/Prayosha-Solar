@@ -5,7 +5,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 $mail = new PHPMailer;
-print_r(error_log);
+// print_r(error_log);
 if(isset($_POST['send'])){
   // getting post values
   $fname=$_POST['fname'];		
@@ -13,19 +13,19 @@ if(isset($_POST['send'])){
   $subject=$_POST['subject'];	
   $message=$_POST['message'];
   $mail->isSMTP(); // Set mailer to use SMTP 
-  $mail->Host = 'smtp.yandex.com'; //Specify main and backup SMTP servers 
+  $mail->Host = 'smtp.gmail.com'; //Specify main and backup SMTP servers 
   $mail->SMTPAuth = 'true'; // Enable SMTP authentication 
-  $mail->Username = 'noreplyotp1-prayosha@yandex.com'; // SMTP username
-  $mail->Password = 'cmvuleofddzdsfvy'; // SMTP password 
+  $mail->Username = 'atmikvirani1@gmail.com'; // SMTP username
+  $mail->Password = 'sukqmkufazddwqgt'; // SMTP password 
   $mail->SMTPSecure ='tls'; // Enable TLS encryption, `ssl` also accepted 
   $mail->Port = 587; // TCPport to connect to 
-  $mail->setFrom('noreplyotp1-prayosha@yandex.com', 'noreplyotp1-prayosha');
-  $mail->addReplyTo('noreplyotp1-prayosha@yandex.com', 'noreplyotp1-prayosha');
+  $mail->setFrom('atmikvirani1@gmail.com', 'Atmik Virani');
+  $mail->addReplyTo('atmikvirani1@gmail.com', 'Atmik Virani');
   $mail->addAddress($toemail); // Add a recipient //
   $mail->isHTML(true); // Set email format to HTML $bodyContent=$message;
   $mail->Debugoutput = 'echo';
   $mail->Subject =$subject; $bodyContent = 'Hello, '.$fname; $bodyContent .='
-  <p>'.$message.'</p> <br><br>Thank you for contacting us! 
+  <p>'.$message.'</p> <br><br>Thank you for contacting us!,  Mail us on <u><b>prayoshacorporation@gmail.com</b></u> for any query. 
   '; $mail->Body = $bodyContent; if(!$mail->send()) { echo 'Message could not be
     sent.'; echo 'Mailer Error: ' . $mail->ErrorInfo; } else { echo '<h6 align="center" id="pop" style="color:green;"> Email has
 been sent! </h6>'; echo"    <script>

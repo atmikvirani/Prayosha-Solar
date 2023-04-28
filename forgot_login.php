@@ -46,12 +46,12 @@ if(isset($_POST['submit'])){
             $mail->isSMTP(); // Set mailer to use SMTP 
             $mail->Host = 'smtp.gmail.com'; //Specify main and backup SMTP servers 
             $mail->SMTPAuth = 'true'; // Enable SMTP authentication 
-            $mail->Username = ' atmikpatel2003@gmail.com'; // SMTP username
-            $mail->Password = 'qglikovyhrzyhthg'; // SMTP password 
+            $mail->Username = ' atmikvirani1@gmail.com'; // SMTP username
+            $mail->Password = 'sukqmkufazddwqgt'; // SMTP password 
             $mail->SMTPSecure ='tls'; // Enable TLS encryption, `ssl` also accepted 
             $mail->Port = 587; // TCPport to connect to 
-            $mail->setFrom('atmikpatel2003@gmail.com', 'Atmik Virani');
-            $mail->addReplyTo('atmikpatel2003@gmail.com', 'Atmik Virani');
+            $mail->setFrom('atmikvirani1@gmail.com', 'Atmik Virani');
+            $mail->addReplyTo('atmikvirani1@gmail.com', 'Atmik Virani');
             $mail->addAddress($email); // Add a recipient //
             $mail->isHTML(true); // Set email format to HTML $bodyContent=$message;
             $mail->Subject =$subject; $bodyContent = 'Hello, '.$user; $bodyContent .='

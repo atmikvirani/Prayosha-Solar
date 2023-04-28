@@ -14,7 +14,8 @@
         // echo $query;
         mysqli_query($conn,$query);
         mysqli_close($conn);
-        // echo "<h3 align='center'>inserted successfully ! </h3>";
+        // echo"<script>".alert('your query submitted!');."</script>";
+        // echo "<h3 align='center' id='pop'>We have received your query, we will get back to you soon! </h3>";
         header("Location: ./index.php");
     }
     else
@@ -30,7 +31,7 @@
         // echo $query;
         mysqli_query($conn,$query);
         mysqli_close($conn);
-        // echo "<h3 align='center'>inserted successfully ! </h3>";
+        // echo "<h3 align='center' id='pop'>We have received your query, we will get back to you soon! </h3>";
         header("Location: ./index.php");
     }
     ?>

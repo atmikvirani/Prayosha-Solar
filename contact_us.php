@@ -191,20 +191,7 @@ Author:   Atmik X Prapti
                                         <li><a href="product.php" title="">products</a>
                                         </li>
                                         <li>
-                                        <a href="cart.php" class="waves-effect waves-light waves-ripple">Cart<span style="width: 15px;
-                                                    height: 15px;
-                                                    color: #ffffff;
-                                                    background: #ff3232;
-                                                    border-radius: 100%;
-                                                    font-size: 10px;
-                                                    float: left;
-                                                    line-height: 15px;
-                                                    text-align: center;
-                                                    position: absolute;
-                                                    left: 50px;
-                                                    top: 7px;
-                                                ;" id="cartAmount"
-                                                    class="cartAmount"></span></a></li>
+                                        <a href="calculatordisp.php" class="waves-effect waves-light waves-ripple">Calculator</a></li>
                                         <li><a href="contact_us.php" title="">Contact us</a>
                                         </li>
                                         <?php
@@ -593,7 +580,7 @@ Author:   Atmik X Prapti
         var map = new mapboxgl.Map({
             container: 'map', // container id
             style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
-            center: [-74.50, 40], // starting position [lng, lat]
+            center: [72.82121893589097,21.231289966540732], // starting position [lng, lat]  21.231289966540732, 72.82121893589097
             zoom: 10 // starting zoom
         });
     </script>

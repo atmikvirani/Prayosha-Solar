@@ -7,12 +7,12 @@
         
         mysqli_query($conn,$query);
         mysqli_close($conn);
-        echo "<h3 align='center' id='h3'>We value your inbox, you will receieve Newsletters periodically! </h3>";
+        echo "<h3 align='center' id='pop'>We value your inbox, you will receieve Newsletters periodically! </h3>";
         include "index.php";
 ?>
 <script>
   // Get the h3 element by its id
-  const h3 = document.getElementById('h3');
+  const h3 = document.getElementById('pop');
   
   setTimeout(() => {
     h3.style.display = 'none';

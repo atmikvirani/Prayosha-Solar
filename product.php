@@ -466,12 +466,12 @@ Author:   Atmik X Prapti
                                     <div class="showpro">
                                         <p>Showing 1 of 1 Results</p>
                                     </div>
-                                    <select>
+                                    <!-- <select>
                                         <option>sort by</option>
                                         <option>Laptop</option>
                                         <option>usb cable</option>
                                         <option>cpu</option>
-                                    </select>
+                                    </select> -->
                                 </div>
 
                                 <!-- index content tab -->
@@ -482,824 +482,110 @@ Author:   Atmik X Prapti
                                     <div id="grid" class="tab-pane fade in active">
                                         <div class="row">
                                             <div id="shop">
-                                        <?php
-                                            $conn = mysqli_connect("localhost","root","","project");
-                                            $query = "SELECT * FROM product WHERE stat = 1";
-                                            $result = mysqli_query($conn, $query);
-                                            
-                                            while ($row = mysqli_fetch_assoc($result)) {
-                                                $rating = $row['rating'];
-                                                $stars = floor($rating); // get the integer part of rating
-                                                $hasHalfStar = $rating - $stars >= 0.5; // check if rating has half star
-                                                
-                                                echo '
-                                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 cardP">
-                                                        <div class="sw_product_box_wrapper sw_shop_sider_pder">
-                                                            <div class="sw_product_indx_img_wrapper">
-                                                                <img width="220" src="cart/'.$row['imgpath'].'" alt="" class="img-responsive">
-                                                            </div>
-                                                            <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                                                <div class="sw_pdct_img">
-                                                                    <img src="images/line.png" alt="img" />
+                                                <?php
+                                                    $conn = mysqli_connect("localhost","root","","project");
+                                                    $query = "SELECT * FROM product WHERE stat = 1";
+                                                    $result = mysqli_query($conn, $query);
+                                                    
+                                                    while ($row = mysqli_fetch_assoc($result)) {
+                                                        $rating = $row['rating'];
+                                                        $stars = floor($rating); // get the integer part of rating
+                                                        $hasHalfStar = $rating - $stars >= 0.5; // check if rating has half star
+                                                        
+                                                        echo '
+                                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 cardP">
+                                                                <div class="sw_product_box_wrapper sw_shop_sider_pder">
+                                                                    <div class="sw_product_indx_img_wrapper">
+                                                                        <img width="220" src="cart/'.$row['imgpath'].'" alt="" class="img-responsive">
+                                                                    </div>
+                                                                    <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
+                                                                        <div class="sw_pdct_img">
+                                                                            <img src="images/line.png" alt="img" />
+                                                                        </div>
+                                                                        <h5>₹'.$row['pprice'].'</h5>
+                                                                        <h1>'.$row['pname'].'</h1>
+                                                                        <p>'.$row['pdesc'].'</p>
+                                                                        <div class="cc_li_cont_wrapper">';
+                                                                            for ($i = 0; $i < $stars; $i++) {
+                                                                                echo '<i class="fa fa-star"></i>';
+                                                                            }
+                                                                            if ($hasHalfStar) {
+                                                                                echo '<i class="fa fa-star-half-stroke"></i>';
+                                                                                $stars++; // increment stars if there is a half star
+                                                                            }
+                                                                            for ($i = $stars; $i < 5; $i++) {
+                                                                                echo '<i class="fa fa-star-o"></i>';
+                                                                            }
+                                                        echo '
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
-                                                                <h5>₹'.$row['pprice'].'</h5>
-                                                                <h1>'.$row['pname'].'</h1>
-                                                                <p>'.$row['pdesc'].'</p>
-                                                                <div class="cc_li_cont_wrapper">';
-                                                                    for ($i = 0; $i < $stars; $i++) {
-                                                                        echo '<i class="fa fa-star"></i>';
-                                                                    }
-                                                                    if ($hasHalfStar) {
-                                                                        echo '<i class="fa fa-star-half-stroke"></i>';
-                                                                        $stars++; // increment stars if there is a half star
-                                                                    }
-                                                                    for ($i = $stars; $i < 5; $i++) {
-                                                                        echo '<i class="fa fa-star-o"></i>';
-                                                                    }
-                                                echo '
-                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                ';
-                                            }
-                                        ?>
+                                                        ';
+                                                    }
+                                                ?>
+                                            </div>
                                         </div>
-                                            <!-- <div id="shop"> -->
-                                                <!-- here is the card -->
-
-                                                <!-- card ends -->
-                                            <!-- </div> -->
-                                        </div>
-                                        <!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                <div class="sw_product_box_wrapper sw_shop_sider_pder">
-                                                    <div class="sw_product_indx_img_wrapper">
-
-                                                        <img src="cart/prdct_4.png" alt="shop_img"
-                                                            class="img-responsive" />
-                                                    </div>
-
-                                                    <div
-                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                                        <div class="sw_pdct_img">
-                                                            <img src="images/line.png" alt="img" />
-                                                        </div>
-                                                        <h5>$ 156</h5>
-                                                        <h1><a href="javascript:;">SolarWorld 280</a></h1>
-
-                                                        <div class="cc_li_cont_wrapper">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-                                                        <div class="cc_li_img_overlay">
-                                                            <div class="cc_li_img_text">
-                                                                <ul>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-shopping-cart"></i></a>
-                                                                    </li>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-heart"></i></a></li>
-
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-expand"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                        <!--<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                <div class="sw_product_box_wrapper sw_shop_sider_pder">
-                                                    <div class="sw_product_indx_img_wrapper">
-
-                                                        <img src="cart/prdct_5.png" alt="shop_img"
-                                                            class="img-responsive" />
-                                                    </div>
-
-                                                    <div
-                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                                        <div class="sw_pdct_img">
-                                                            <img src="images/line.png" alt="img" />
-                                                        </div>
-                                                        <h5>$ 156</h5>
-                                                        <h1><a href="javascript:;">SolarWorld 280</a></h1>
-
-                                                        <div class="cc_li_cont_wrapper">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-                                                        <div class="cc_li_img_overlay">
-                                                            <div class="cc_li_img_text">
-                                                                <ul>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-shopping-cart"></i></a>
-                                                                    </li>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-heart"></i></a></li>
-
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-expand"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                <div class="sw_product_box_wrapper sw_shop_sider_pder">
-                                                    <div class="sw_product_indx_img_wrapper">
-
-                                                        <img src="cart/prdct_4.png" alt="shop_img"
-                                                            class="img-responsive" />
-                                                    </div>
-
-                                                    <div
-                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                                        <div class="sw_pdct_img">
-                                                            <img src="images/line.png" alt="img" />
-                                                        </div>
-                                                        <h5>$ 156</h5>
-                                                        <h1><a href="javascript:;">Canadian Solar 255</a></h1>
-
-                                                        <div class="cc_li_cont_wrapper">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-                                                        <div class="cc_li_img_overlay">
-                                                            <div class="cc_li_img_text">
-                                                                <ul>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-shopping-cart"></i></a>
-                                                                    </li>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-heart"></i></a></li>
-
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-expand"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                <div class="sw_product_box_wrapper sw_shop_sider_pder">
-                                                    <div class="sw_product_indx_img_wrapper">
-
-                                                        <img src="cart/prdct_6.png" alt="shop_img"
-                                                            class="img-responsive" />
-                                                    </div>
-
-                                                    <div
-                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                                        <div class="sw_pdct_img">
-                                                            <img src="images/line.png" alt="img" />
-                                                        </div>
-                                                        <h5>$ 156</h5>
-                                                        <h1><a href="javascript:;">SolarWorld 280</a></h1>
-
-                                                        <div class="cc_li_cont_wrapper">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-                                                        <div class="cc_li_img_overlay">
-                                                            <div class="cc_li_img_text">
-                                                                <ul>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-shopping-cart"></i></a>
-                                                                    </li>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-heart"></i></a></li>
-
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-expand"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                <div class="sw_product_box_wrapper sw_shop_sider_pder">
-                                                    <div class="sw_product_indx_img_wrapper">
-
-                                                        <img src="cart/prdct_4.png" alt="shop_img"
-                                                            class="img-responsive" />
-                                                    </div>
-
-                                                    <div
-                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                                        <div class="sw_pdct_img">
-                                                            <img src="images/line.png" alt="img" />
-                                                        </div>
-                                                        <h5>$ 156</h5>
-                                                        <h1><a href="javascript:;">Canadian Solar 255</a></h1>
-
-                                                        <div class="cc_li_cont_wrapper">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-                                                        <div class="cc_li_img_overlay">
-                                                            <div class="cc_li_img_text">
-                                                                <ul>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-shopping-cart"></i></a>
-                                                                    </li>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-heart"></i></a></li>
-
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-expand"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                <div class="sw_product_box_wrapper sw_shop_sider_pder">
-                                                    <div class="sw_product_indx_img_wrapper">
-
-                                                        <img src="cart/prdct_2.jpg" alt="shop_img"
-                                                            class="img-responsive" />
-                                                    </div>
-
-                                                    <div
-                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                                        <div class="sw_pdct_img">
-                                                            <img src="images/line.png" alt="img" />
-                                                        </div>
-                                                        <h5>$ 156</h5>
-                                                        <h1><a href="javascript:;">SolarWorld 280</a></h1>
-
-                                                        <div class="cc_li_cont_wrapper">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-                                                        <div class="cc_li_img_overlay">
-                                                            <div class="cc_li_img_text">
-                                                                <ul>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-shopping-cart"></i></a>
-                                                                    </li>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-heart"></i></a></li>
-
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-expand"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                <div class="sw_product_box_wrapper sw_shop_sider_pder">
-                                                    <div class="sw_product_indx_img_wrapper">
-
-                                                        <img src="cart/prdct_1.jpg" alt="shop_img"
-                                                            class="img-responsive" />
-                                                    </div>
-
-                                                    <div
-                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                                        <div class="sw_pdct_img">
-                                                            <img src="images/line.png" alt="img" />
-                                                        </div>
-                                                        <h5>$ 156</h5>
-                                                        <h1><a href="javascript:;">SolarWorld 280</a></h1>
-
-                                                        <div class="cc_li_cont_wrapper">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-                                                        <div class="cc_li_img_overlay">
-                                                            <div class="cc_li_img_text">
-                                                                <ul>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-shopping-cart"></i></a>
-                                                                    </li>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-heart"></i></a></li>
-
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-expand"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                <div class="sw_product_box_wrapper sw_shop_sider_pder">
-                                                    <div class="sw_product_indx_img_wrapper">
-
-                                                        <img src="cart/prdct_3.jpg" alt="shop_img"
-                                                            class="img-responsive" />
-                                                    </div>
-
-                                                    <div
-                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                                        <div class="sw_pdct_img">
-                                                            <img src="images/line.png" alt="img" />
-                                                        </div>
-                                                        <h5>$ 156</h5>
-                                                        <h1><a href="javascript:;">solar pannel 280</a></h1>
-
-                                                        <div class="cc_li_cont_wrapper">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-                                                        <div class="cc_li_img_overlay">
-                                                            <div class="cc_li_img_text">
-                                                                <ul>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-shopping-cart"></i></a>
-                                                                    </li>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-heart"></i></a></li>
-
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-expand"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                <div class="sw_product_box_wrapper sw_shop_sider_pder">
-                                                    <div class="sw_product_indx_img_wrapper">
-
-                                                        <img src="cart/prdct_4.png" alt="shop_img"
-                                                            class="img-responsive" />
-                                                    </div>
-
-                                                    <div
-                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                                        <div class="sw_pdct_img">
-                                                            <img src="images/line.png" alt="img" />
-                                                        </div>
-                                                        <h5>$ 156</h5>
-                                                        <h1><a href="javascript:;">SolarWorld 280</a></h1>
-
-                                                        <div class="cc_li_cont_wrapper">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-                                                        <div class="cc_li_img_overlay">
-                                                            <div class="cc_li_img_text">
-                                                                <ul>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-shopping-cart"></i></a>
-                                                                    </li>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-heart"></i></a></li>
-
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-expand"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                <div class="sw_product_box_wrapper sw_shop_sider_pder">
-                                                    <div class="sw_product_indx_img_wrapper">
-
-                                                        <img src="cart/prdct_6.png" alt="shop_img"
-                                                            class="img-responsive" />
-                                                    </div>
-
-                                                    <div
-                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                                        <div class="sw_pdct_img">
-                                                            <img src="images/line.png" alt="img" />
-                                                        </div>
-                                                        <h5>$ 156</h5>
-                                                        <h1><a href="javascript:;">SolarWorld 280</a></h1>
-
-                                                        <div class="cc_li_cont_wrapper">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-                                                        <div class="cc_li_img_overlay">
-                                                            <div class="cc_li_img_text">
-                                                                <ul>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-shopping-cart"></i></a>
-                                                                    </li>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-heart"></i></a></li>
-
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-expand"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                <div class="sw_product_box_wrapper sw_shop_sider_pder">
-                                                    <div class="sw_product_indx_img_wrapper">
-
-                                                        <img src="cart/prdct_3.jpg" alt="shop_img"
-                                                            class="img-responsive" />
-                                                    </div>
-
-                                                    <div
-                                                        class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                                        <div class="sw_pdct_img">
-                                                            <img src="images/line.png" alt="img" />
-                                                        </div>
-                                                        <h5>$ 156</h5>
-                                                        <h1><a href="javascript:;">SolarWorld 280</a></h1>
-
-                                                        <div class="cc_li_cont_wrapper">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-                                                        <div class="cc_li_img_overlay">
-                                                            <div class="cc_li_img_text">
-                                                                <ul>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-shopping-cart"></i></a>
-                                                                    </li>
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-heart"></i></a></li>
-
-                                                                    <li><a href="javascript:;"><i
-                                                                                class="fa fa-expand"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-
-
                                     </div>
+
                                     <!-- <div id="list" class="tab-pane fade">
                                         <div class="row">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="btc_shop_indx_cont_list_box_wrapper">
+                                                    <?php
+                                                $conn = mysqli_connect("localhost","root","","project");
+                                                $query = "SELECT * FROM product WHERE stat = 1";
+                                                $result = mysqli_query($conn, $query);
+                                                
+                                                while ($row = mysqli_fetch_assoc($result)) {
+                                                    $rating = $row['rating'];
+                                                    $stars = floor($rating); // get the integer part of rating
+                                                    $hasHalfStar = $rating - $stars >= 0.5; // check if rating has half star
+                                                
+                                                    echo'
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="btc_shop_indx_cont_list_box_wrapper">
                                                     <div class="btc_shop_list_img_wrapper">
-
-                                                        <img src="cart/prdct_5.png" alt="shop_img"
-                                                            class="img-responsive" />
+                                                    <img src="cart/'.$row['imgpath'].'" alt="shop_img" class="img-responsive" />
                                                     </div>
                                                     <div class="btc_shop_list_img_cont_wrapper">
                                                         <div class="btc_shop_product_price_wrapper pdt">
                                                             <ul>
-                                                                <li>$150</li>
+                                                            <li>₹'.$row['pprice'].'</li>
                                                             </ul>
                                                         </div>
 
-                                                        <h1><a href="javascript:;">Solaris Panel V405</a></h1>
-                                                        <div class="cc_shop_list">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
+                                                        <h1><a href="javascript:;">'.$row['pname'].'</a></h1>
+                                                        <div class="cc_shop_list">';
+                                                        for ($i = 0; $i < $stars; $i++) {
+                                                                            echo '<i class="fa fa-star"></i>';
+                                                                        }
+                                                                        if ($hasHalfStar) {
+                                                                            echo '<i class="fa fa-star-half-stroke"></i>';
+                                                                            $stars++; // increment stars if there is a half star
+                                                                        }
+                                                                        for ($i = $stars; $i < 5; $i++) {
+                                                                            echo '<i class="fa fa-star-o"></i>';
+                                                                        }
+                                                                        echo '
                                                         </div>
 
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                                            do enim ad minimveniam, quis do enim ad minimven trud
-                                                            exercitation ullamco.</p>
+                                                        <p>'.$row['pdesc'].'</p>
 
-                                                        <div class="btc_shop_list_bottom_social_wrapper ">
-                                                            <ul>
-                                                                <li class="shop_list_first_btn"><a href="shop.php#!"
-                                                                        class="waves-effect waves-light waves-ripple"><i
-                                                                            class="fa fa-heart"></i>wishlist</a></li>
-                                                                <li><a href="shop.php#!"
-                                                                        class="waves-effect waves-light waves-ripple"><i
-                                                                            class="fa fa-shopping-cart"></i>add to
-                                                                        cart</a></li>
-
-                                                            </ul>
+                                                        
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="btc_shop_indx_cont_list_box_wrapper">
-                                                    <div class="btc_shop_list_img_wrapper">
-
-                                                        <img src="cart/prdct_6.png" alt="shop_img"
-                                                            class="img-responsive" />
-                                                    </div>
-                                                    <div class="btc_shop_list_img_cont_wrapper">
-                                                        <div class="btc_shop_product_price_wrapper pdt">
-                                                            <ul>
-                                                                <li>$150</li>
-                                                            </ul>
-                                                        </div>
-
-                                                        <h1><a href="javascript:;">Solaris Panel V405</a></h1>
-                                                        <div class="cc_shop_list">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                                            do enim ad minimveniam, quis do enim ad minimven trud
-                                                            exercitation ullamco.</p>
-
-                                                        <div class="btc_shop_list_bottom_social_wrapper ">
-                                                            <ul>
-                                                                <li class="shop_list_first_btn"><a href="shop.php#!"
-                                                                        class="waves-effect waves-light waves-ripple"><i
-                                                                            class="fa fa-heart"></i>wishlist</a></li>
-                                                                <li><a href="shop.php#!"
-                                                                        class="waves-effect waves-light waves-ripple"><i
-                                                                            class="fa fa-shopping-cart"></i>add to
-                                                                        cart</a></li>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="btc_shop_indx_cont_list_box_wrapper">
-                                                    <div class="btc_shop_list_img_wrapper">
-
-                                                        <img src="cart/prdct_5.png" alt="shop_img"
-                                                            class="img-responsive" />
-                                                    </div>
-                                                    <div class="btc_shop_list_img_cont_wrapper">
-                                                        <div class="btc_shop_product_price_wrapper pdt">
-                                                            <ul>
-                                                                <li>$150</li>
-                                                            </ul>
-                                                        </div>
-
-                                                        <h1><a href="javascript:;">Solaris Panel V405</a></h1>
-                                                        <div class="cc_shop_list">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                                            do enim ad minimveniam, quis do enim ad minimven trud
-                                                            exercitation ullamco.</p>
-
-                                                        <div class="btc_shop_list_bottom_social_wrapper ">
-                                                            <ul>
-                                                                <li class="shop_list_first_btn"><a href="shop.php#!"
-                                                                        class="waves-effect waves-light waves-ripple"><i
-                                                                            class="fa fa-heart"></i>wishlist</a></li>
-                                                                <li><a href="shop.php#!"
-                                                                        class="waves-effect waves-light waves-ripple"><i
-                                                                            class="fa fa-shopping-cart"></i>add to
-                                                                        cart</a></li>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="btc_shop_indx_cont_list_box_wrapper">
-                                                    <div class="btc_shop_list_img_wrapper">
-
-                                                        <img src="cart/prdct_4.png" alt="shop_img"
-                                                            class="img-responsive" />
-                                                    </div>
-                                                    <div class="btc_shop_list_img_cont_wrapper">
-                                                        <div class="btc_shop_product_price_wrapper pdt">
-                                                            <ul>
-                                                                <li>$150</li>
-                                                            </ul>
-                                                        </div>
-
-                                                        <h1><a href="javascript:;">Solaris Panel V405</a></h1>
-                                                        <div class="cc_shop_list">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                                            do enim ad minimveniam, quis do enim ad minimven trud
-                                                            exercitation ullamco.</p>
-
-                                                        <div class="btc_shop_list_bottom_social_wrapper ">
-                                                            <ul>
-                                                                <li class="shop_list_first_btn"><a href="shop.php#!"
-                                                                        class="waves-effect waves-light waves-ripple"><i
-                                                                            class="fa fa-heart"></i>wishlist</a></li>
-                                                                <li><a href="shop.php#!"
-                                                                        class="waves-effect waves-light waves-ripple"><i
-                                                                            class="fa fa-shopping-cart"></i>add to
-                                                                        cart</a></li>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="btc_shop_indx_cont_list_box_wrapper">
-                                                    <div class="btc_shop_list_img_wrapper">
-
-                                                        <img src="cart/prdct_3.jpg" alt="shop_img"
-                                                            class="img-responsive" />
-                                                    </div>
-                                                    <div class="btc_shop_list_img_cont_wrapper">
-                                                        <div class="btc_shop_product_price_wrapper pdt">
-                                                            <ul>
-                                                                <li>$150</li>
-                                                            </ul>
-                                                        </div>
-
-                                                        <h1><a href="javascript:;">Solaris Panel V405</a></h1>
-                                                        <div class="cc_shop_list">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                                            do enim ad minimveniam, quis do enim ad minimven trud
-                                                            exercitation ullamco.</p>
-
-                                                        <div class="btc_shop_list_bottom_social_wrapper ">
-                                                            <ul>
-                                                                <li class="shop_list_first_btn"><a href="shop.php#!"
-                                                                        class="waves-effect waves-light waves-ripple"><i
-                                                                            class="fa fa-heart"></i>wishlist</a></li>
-                                                                <li><a href="shop.php#!"
-                                                                        class="waves-effect waves-light waves-ripple"><i
-                                                                            class="fa fa-shopping-cart"></i>add to
-                                                                        cart</a></li>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="btc_shop_indx_cont_list_box_wrapper">
-                                                    <div class="btc_shop_list_img_wrapper">
-
-                                                        <img src="cart/prdct_2.jpg" alt="shop_img"
-                                                            class="img-responsive" />
-                                                    </div>
-                                                    <div class="btc_shop_list_img_cont_wrapper">
-                                                        <div class="btc_shop_product_price_wrapper pdt">
-                                                            <ul>
-                                                                <li>$150</li>
-                                                            </ul>
-                                                        </div>
-                                                        <h1><a href="javascript:;">Solaris Panel V405</a></h1>
-                                                        <div class="cc_shop_list">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                                            do enim ad minimveniam, quis do enim ad minimven trud
-                                                            exercitation ullamco.</p>
-
-                                                        <div class="btc_shop_list_bottom_social_wrapper ">
-                                                            <ul>
-                                                                <li class="shop_list_first_btn"><a href="shop.php#!"
-                                                                        class="waves-effect waves-light waves-ripple"><i
-                                                                            class="fa fa-heart"></i>wishlist</a></li>
-                                                                <li><a href="shop.php#!"
-                                                                        class="waves-effect waves-light waves-ripple"><i
-                                                                            class="fa fa-shopping-cart"></i>add to
-                                                                        cart</a></li>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="btc_shop_indx_cont_list_box_wrapper">
-                                                    <div class="btc_shop_list_img_wrapper">
-
-                                                        <img src="cart/prdct_1.jpg" alt="shop_img"
-                                                            class="img-responsive" />
-                                                    </div>
-                                                    <div class="btc_shop_list_img_cont_wrapper">
-                                                        <div class="btc_shop_product_price_wrapper pdt">
-                                                            <ul>
-                                                                <li>$150</li>
-                                                            </ul>
-                                                        </div>
-                                                        <h1><a href="javascript:;">Solaris Panel V405</a></h1>
-                                                        <div class="cc_shop_list">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div>
-
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                                            do enim ad minimveniam, quis do enim ad minimven trud
-                                                            exercitation ullamco.</p>
-
-                                                        <div class="btc_shop_list_bottom_social_wrapper ">
-                                                            <ul>
-                                                                <li class="shop_list_first_btn"><a href="shop.php#!"
-                                                                        class="waves-effect waves-light waves-ripple"><i
-                                                                            class="fa fa-heart"></i>wishlist</a></li>
-                                                                <li><a href="shop.php#!"
-                                                                        class="waves-effect waves-light waves-ripple"><i
-                                                                            class="fa fa-shopping-cart"></i>add to
-                                                                        cart</a></li>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
+                                                    ';
+                                                }
+                                                ?>                       
                                         </div>
                                     </div> -->
-
                                 </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-                                <!-- blog_pagination_section start -->
-                                <!-- <div class="pager_wrapper gc_blog_pagination">
-                                    <ul class="pagination">
-                                        <li><a href="javascript:;">Previous</a>
-                                        </li>
-                                        <li class="third_pagger"><a href="javascript:;">1</a>
-                                        </li>
-                                        <li ><a href="javascript:;">2</a>
-                                        </li>
-                                        <li><a href="javascript:;">3</a>
-                                        </li>
-                                        <li class="hidden-xs"><a href="javascript:;">4</a>
-                                        </li>
-                                        <li><a href="javascript:;">Next</a>
-                                        </li>
-                                    </ul>
-                                </div> -->
-                                <!-- blog_pagination_section end -->
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 visible-xs visible-sm">
                     <div class="sidebar_widget">
                         <h4>search here</h4>

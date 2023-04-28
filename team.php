@@ -161,20 +161,7 @@ Author:   Atmik X Prapti
                                         <li><a href="product.php" title="">products</a>
                                         </li>
                                         <li>
-                                        <a href="cart.php" class="waves-effect waves-light waves-ripple">Cart<span style="width: 15px;
-                                                    height: 15px;
-                                                    color: #ffffff;
-                                                    background: #ff3232;
-                                                    border-radius: 100%;
-                                                    font-size: 10px;
-                                                    float: left;
-                                                    line-height: 15px;
-                                                    text-align: center;
-                                                    position: absolute;
-                                                    left: 50px;
-                                                    top: 7px;
-                                                ;" id="cartAmount"
-                                                    class="cartAmount"></span></a></li>
+                                        <a href="calculatordisp.php" class="waves-effect waves-light waves-ripple">Calculator</a></li>
                                         <li><a href="contact_us.php" title="">Contact us</a>
                                         </li>
                                         <?php
@@ -284,7 +271,7 @@ Author:   Atmik X Prapti
                         <div class="sw_product_box_wrapper team_pdr">
                             <div class="sw_product_indx_img_wrapper">
                                 <!-- <div class="sp_img_box_overlay"></div> -->
-                                <img src="images/e2.jpg" alt="shop_img" class="img-responsive" width="316px" height="316px" />
+                                <img src="images/atmik.jpg" alt="shop_img" class="img-responsive" width="316px" height="316px" />
                                 <div class="abt_img_btn_wrapper tem_img_btn_wrapper">
                                     <!-- <ul>
                                         <li><a href="javascript:;"><i class="fa fa-facebook"></i></a>
@@ -303,8 +290,8 @@ Author:   Atmik X Prapti
 
                             <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2 sw_prdct_11">
 
-                                <h1><a href="javascript:;">Akshay H.</a></h1>
-                                <h5>(Project Manager)</h5>
+                                <h1><a href="javascript:;">Atmik Virani</a></h1>
+                                <h5>(Director)</h5>
 
                             </div>
                         </div>
